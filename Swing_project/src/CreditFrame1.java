@@ -43,7 +43,7 @@ public class CreditFrame1 extends javax.swing.JFrame {
         jLabel2.setText("Timmy Lin, 015073799");
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jLabel3.setText("Owen Lovett, 015073799");
+        jLabel3.setText("Owen Lovett, 014846715 ");
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jButton1.setText("Back");
