@@ -1,13 +1,13 @@
 /***************************************************************  
-*  file: DoubleIt.java  
-*  author: Timmy.Lin  
-*  class: CS 245 – User Interface  
+*  file: Swing_project.java  
+*  author: Timmy Lin, Owen Lovett, Kristine Trevino Kinoshita,  
+*  class: CS 2450 – User Interface Design and Programming 
 *  
-*  assignment: Swing project 1  
-*  date last modified: 9/12/2021  
+*  assignment: Swing Project 1  
+*  date last modified: 9/16/2021  
 *  
-*  purpose: This program accepts integer input from the command line, doubles the  
-*  value of input; the result is output to both the screen and a file called data.txt  
+*  purpose: This program accepts creates a hangman game in a separate window that has a title screen, main menu,
+*           game screen, high score screen, and credits.
 *  
 ****************************************************************/  
 
@@ -18,7 +18,6 @@
 package swing_project;
 
 /**
- *
  * @author timmy
  */
 public class Swing_project {
