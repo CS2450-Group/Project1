@@ -1,6 +1,6 @@
 /***************************************************************  
 *  file: Swing_project.java  
-*  author: Timmy Lin, Owen Lovett, Kristine Trevino Kinoshita,  
+*  author: Timmy Lin, Owen Lovett, Kristine Trevino Kinoshita, Scott Lee
 *  class: CS 2450 – User Interface Design and Programming 
 *  
 *  assignment: Swing Project 1  
