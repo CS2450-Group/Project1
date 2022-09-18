@@ -50,6 +50,11 @@ public class NewJFrame1 extends javax.swing.JFrame {
         playButton.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
         playButton.setForeground(new java.awt.Color(255, 255, 255));
         playButton.setText("Play");
+        playButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                playButtonActionPerformed(evt);
+            }
+        });
 
         creditsButton.setBackground(new java.awt.Color(0, 0, 0));
         creditsButton.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
@@ -136,6 +141,13 @@ public class NewJFrame1 extends javax.swing.JFrame {
         cf1.show();
         dispose();
     }//GEN-LAST:event_creditsButtonActionPerformed
+
+    private void playButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playButtonActionPerformed
+        // TODO add your handling code here:
+        GameFrame gf = new GameFrame();
+        gf.show();
+        dispose();
+    }//GEN-LAST:event_playButtonActionPerformed
 
     /**
      * @param args the command line arguments
