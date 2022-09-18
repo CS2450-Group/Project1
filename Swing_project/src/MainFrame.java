@@ -3,26 +3,47 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
-/***************************************************************  
-*  file: MainFrame.java  
-*  author: Timmy Lin, Owen Lovett, Kristine Trevino Kinoshita, Scott Lee 
-*  class: CS 2450 – User Interface Design and Programming 
-*  
-*  assignment: Swing Project 1  
-*  date last modified: 9/16/2021  
-*  
-*  purpose: This program accepts creates a hangman game in a separate window that has a title screen, main menu,
-*           game screen, high score screen, and credits.
-*  
-****************************************************************/
-public class MainFrame extends javax.swing.JFrame {
+/**
+ *
+ * @author timmy
+ */
+import java.awt.event.ActionListener;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
+import javax.swing.Timer;
+
+
+public class MainFrame extends javax.swing.JFrame implements Runnable{
+
 
     /**
      * Creates new form MainFrame
      */
     public MainFrame() {
+    
         initComponents();
+        setSize(600,400);
+        Thread t = new Thread(this);
+        t.start();
         
+        
+    }
+    
+        @Override
+    public void run() {
+        for(int i = 1; i <= 100; i++){
+            try {
+                Thread.sleep(30);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            
+            progressBar.setValue(i);
+        }
+        
+        NewJFrame1 optionsScreen = new NewJFrame1();
+        optionsScreen.setVisible(true);
+        dispose();
     }
 
     /**
@@ -37,6 +58,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        progressBar = new javax.swing.JProgressBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(600, 400));
@@ -75,6 +97,10 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 588, Short.MAX_VALUE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(219, 219, 219))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -83,7 +109,9 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 182, Short.MAX_VALUE)
                 .addComponent(jLabel2)
-                .addGap(101, 101, 101))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(75, 75, 75))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -153,5 +181,8 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JProgressBar progressBar;
     // End of variables declaration//GEN-END:variables
+
+    
 }
