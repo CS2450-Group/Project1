@@ -7,10 +7,18 @@ import java.awt.Graphics2D;
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
-/**
- *
- * @author olove
- */
+/***************************************************************  
+*  file: GameFrame.java  
+*  author: Timmy Lin, Owen Lovett, Kristine Trevino Kinoshita, Scott Lee 
+*  class: CS 2450 – User Interface Design and Programming 
+*  
+*  assignment: Swing Project 1  
+*  date last modified: 9/18/2021  
+*  
+*  purpose: This program accepts creates a hangman game in a separate window that has a title screen, main menu,
+*           game screen, high score screen, and credits.
+*  
+****************************************************************/
 public class GameFrame extends javax.swing.JFrame {
 
     /**
