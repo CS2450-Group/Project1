@@ -8,53 +8,43 @@
 *  class: CS 2450 – User Interface Design and Programming 
 *  
 *  assignment: Swing Project 1  
-*  date last modified: 9/16/2021  
+*  date last modified: 9/18/2021  
 *  
 *  purpose: This program accepts creates a hangman game in a separate window that has a title screen, main menu,
 *           game screen, high score screen, and credits.
 *  
 ****************************************************************/
-/**
- *
- * @author timmy
- */
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.lang.System.Logger;
-import java.lang.System.Logger.Level;
 import javax.swing.Timer;
+import javax.swing.JFrame;
 
 
-public class MainFrame extends javax.swing.JFrame implements Runnable{
+public class MainFrame extends JFrame {
 
-
+    Timer timer;
+        
     /**
      * Creates new form MainFrame
      */
     public MainFrame() {
     
-        initComponents();
-        setSize(600,400);
-        Thread t = new Thread(this);
-        t.start();
-        
-        
+        initComponents(); 
+        startTimer();
     }
     
-        @Override
-    public void run() {
-        for(int i = 1; i <= 100; i++){
-            try {
-                Thread.sleep(30);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            
-            progressBar.setValue(i);
-        }
-        
+    private void startTimer() {
         NewJFrame1 optionsScreen = new NewJFrame1();
-        optionsScreen.setVisible(true);
-        dispose();
+        ActionListener wait = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                optionsScreen.setVisible(true);
+                dispose();
+            }
+        };
+        timer = new Timer(3000, wait);
+        timer.setRepeats(false);
+        timer.start();
     }
 
     /**
@@ -67,9 +57,8 @@ public class MainFrame extends javax.swing.JFrame implements Runnable{
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        progressBar = new javax.swing.JProgressBar();
+        titleLabel = new javax.swing.JLabel();
+        teamNameLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(600, 400));
@@ -90,13 +79,13 @@ public class MainFrame extends javax.swing.JFrame implements Runnable{
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("   CS 2450 Quarter Project");
+        titleLabel.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
+        titleLabel.setForeground(new java.awt.Color(255, 255, 255));
+        titleLabel.setText("   CS 2450 Quarter Project");
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("                                               By: Team Storm");
+        teamNameLabel.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        teamNameLabel.setForeground(new java.awt.Color(255, 255, 255));
+        teamNameLabel.setText("                                               By: Team Storm");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -105,24 +94,18 @@ public class MainFrame extends javax.swing.JFrame implements Runnable{
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 588, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(titleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 588, Short.MAX_VALUE)
+                    .addComponent(teamNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(219, 219, 219))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(40, 40, 40)
-                .addComponent(jLabel1)
+                .addComponent(titleLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 182, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(75, 75, 75))
+                .addComponent(teamNameLabel)
+                .addGap(101, 101, 101))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -180,19 +163,19 @@ public class MainFrame extends javax.swing.JFrame implements Runnable{
         //</editor-fold>
 
         /* Create and display the form */
+        MainFrame title = new MainFrame();
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainFrame().setVisible(true);
+                title.setVisible(true);
             }
         });
     }
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JProgressBar progressBar;
+    private javax.swing.JLabel teamNameLabel;
+    private javax.swing.JLabel titleLabel;
     // End of variables declaration//GEN-END:variables
 
     
