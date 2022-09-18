@@ -30,27 +30,27 @@ public class GameFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("jButton1");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hanger(1).png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addComponent(jButton1)
-                .addContainerGap(474, Short.MAX_VALUE))
+                .addGap(159, 159, 159)
+                .addComponent(jLabel1)
+                .addContainerGap(261, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(260, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(117, 117, 117))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addContainerGap(200, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -103,31 +103,10 @@ public class GameFrame extends javax.swing.JFrame {
         });
     }
     
-    public void paint(Graphics g) {
-        Graphics2D g2D = (Graphics2D) g;
-        
-        //vertical
-        g2D.drawLine(250, 50, 250, 200);
-        g2D.drawLine(251, 50, 251, 200);
-        g2D.drawLine(252, 50, 252, 200);
-        
-        //top
-        g2D.drawLine(250, 50, 325, 50);
-        g2D.drawLine(250, 51, 325, 51);
-        g2D.drawLine(250, 52, 325, 52);
-        
-        g2D.drawLine(325, 50, 325, 70);
-        g2D.drawLine(324, 50, 324, 70);
-        g2D.drawLine(323, 50, 323, 70);
-        
-        //bottom
-        g2D.drawLine(200, 200, 325, 200);
-        g2D.drawLine(200, 201, 325, 201);
-        g2D.drawLine(200, 202, 325, 202);
-    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
