@@ -25,7 +25,7 @@ public class EndHighScores extends javax.swing.JFrame {
     }
     
     public void setFinalScore(int score) {
-        finalScoreLabel.setText(finalScoreLabel.getText() + " " + score);
+        finalScoreLabel.setText(finalScoreLabel.getText() + "               " + score);
     }
 
     /**
@@ -49,7 +49,7 @@ public class EndHighScores extends javax.swing.JFrame {
         highscoreTitle.setText("Game Over");
 
         finalScoreLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        finalScoreLabel.setText("ABC... ");
+        finalScoreLabel.setText("Player 1");
 
         endButton.setBackground(new java.awt.Color(242, 242, 242));
         endButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -93,8 +93,8 @@ public class EndHighScores extends javax.swing.JFrame {
 
     private void endButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_endButtonActionPerformed
         // TODO add your handling code here:
-        NewJFrame1 jf1 = new NewJFrame1();
-        jf1.setVisible(true);
+        MenuScreen ms = new MenuScreen();
+        ms.setVisible(true);
         dispose();
     }//GEN-LAST:event_endButtonActionPerformed
 
