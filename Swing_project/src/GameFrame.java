@@ -38,6 +38,7 @@ public class GameFrame extends javax.swing.JFrame {
     //current time
     private Timer t;
     private SimpleDateFormat st;
+    private Object org;
     
     /**
      * Creates new form GameFrame
@@ -51,6 +52,7 @@ public class GameFrame extends javax.swing.JFrame {
         makeLetterSpaceInvisible();
         setLines();
         makeBodyPartsInvisible();
+        makeMistakePromptInvisible();
     }
     //current date
     private void curDate(){
@@ -96,9 +98,11 @@ public class GameFrame extends javax.swing.JFrame {
         int length = selectedWord.length();
         if (length == 5)
         {
-            jSeparator1.setVisible(false);
-            jSeparator8.setVisible(false);
-            jSeparator9.setVisible(false);
+            java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new GameFrame2().setVisible(true);
+            }
+        });
         }
     }
     
@@ -124,6 +128,14 @@ public class GameFrame extends javax.swing.JFrame {
         letter8.setVisible(false);
     }
     
+    //set mistake prompt invisible
+    private void makeMistakePromptInvisible() {
+        mistakePrompt.setVisible(false);
+    }
+    //set mistake prompt visible
+    private void makeMistakePromptVisible(){
+        mistakePrompt.setVisible(true);
+    }
     // check to see if letter is in selected word, if so, add it
     private void isLetterInWord(char letter) {
         boolean notFound = true;
@@ -143,6 +155,7 @@ public class GameFrame extends javax.swing.JFrame {
     
     // add accepted letter in space on game screen
     private void addLetter(char letter, int index) {
+        makeMistakePromptInvisible();
         letterCorrect++;
         switch (index) {
             case 0:
@@ -189,6 +202,7 @@ public class GameFrame extends javax.swing.JFrame {
     
     // marks a mistake when the user picks a wrong letter
     private void addMistake() {
+        makeMistakePromptVisible();
         mistakes++;
         switch (mistakes) {
             case 1:
@@ -287,11 +301,14 @@ public class GameFrame extends javax.swing.JFrame {
         leftArm = new javax.swing.JLabel();
         rightLeg = new javax.swing.JLabel();
         leftLeg = new javax.swing.JLabel();
+        mistakePrompt = new javax.swing.JLabel();
 
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(600, 400));
 
+        jPanel1.setMinimumSize(new java.awt.Dimension(600, 400));
         jPanel1.setPreferredSize(new java.awt.Dimension(600, 400));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -543,35 +560,35 @@ public class GameFrame extends javax.swing.JFrame {
 
         letter1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         letter1.setText("letter1");
-        jPanel1.add(letter1, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 245, -1, -1));
+        jPanel1.add(letter1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 30, -1));
 
         letter2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         letter2.setText("letter2");
-        jPanel1.add(letter2, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 245, -1, -1));
+        jPanel1.add(letter2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 30, -1));
 
         letter3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         letter3.setText("letter3");
-        jPanel1.add(letter3, new org.netbeans.lib.awtextra.AbsoluteConstraints(163, 245, -1, -1));
+        jPanel1.add(letter3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 30, -1));
 
         letter4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         letter4.setText("letter4");
-        jPanel1.add(letter4, new org.netbeans.lib.awtextra.AbsoluteConstraints(231, 245, -1, -1));
+        jPanel1.add(letter4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 30, -1));
 
         letter5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         letter5.setText("letter5");
-        jPanel1.add(letter5, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 245, -1, -1));
+        jPanel1.add(letter5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 30, -1));
 
         letter6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         letter6.setText("letter6");
-        jPanel1.add(letter6, new org.netbeans.lib.awtextra.AbsoluteConstraints(367, 245, -1, -1));
+        jPanel1.add(letter6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 250, 30, -1));
 
         letter7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         letter7.setText("letter7");
-        jPanel1.add(letter7, new org.netbeans.lib.awtextra.AbsoluteConstraints(435, 245, -1, -1));
+        jPanel1.add(letter7, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 250, 30, -1));
 
         letter8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         letter8.setText("letter8");
-        jPanel1.add(letter8, new org.netbeans.lib.awtextra.AbsoluteConstraints(503, 245, -1, -1));
+        jPanel1.add(letter8, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 250, 30, -1));
 
         currentScore.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         currentScore.setText("Points:  100");
@@ -602,6 +619,11 @@ public class GameFrame extends javax.swing.JFrame {
         leftLeg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/leftLeg.png"))); // NOI18N
         jPanel1.add(leftLeg, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, -1, -1));
 
+        mistakePrompt.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        mistakePrompt.setForeground(new java.awt.Color(255, 0, 51));
+        mistakePrompt.setText("Wrong letter! Try another");
+        jPanel1.add(mistakePrompt, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 210, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -628,131 +650,157 @@ public class GameFrame extends javax.swing.JFrame {
     private void zButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('z');
+        zButton.setVisible(false);
     }//GEN-LAST:event_zButtonActionPerformed
 
     private void yButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('y');
+        yButton.setVisible(false);
     }//GEN-LAST:event_yButtonActionPerformed
 
     private void xButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('x');
+        xButton.setVisible(false);
     }//GEN-LAST:event_xButtonActionPerformed
 
     private void wButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('w');
+        wButton.setVisible(false);
     }//GEN-LAST:event_wButtonActionPerformed
 
     private void vButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('v');
+        vButton.setVisible(false);
     }//GEN-LAST:event_vButtonActionPerformed
 
     private void uButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('u');
+        uButton.setVisible(false);
     }//GEN-LAST:event_uButtonActionPerformed
 
     private void tButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('t');
+        tButton.setVisible(false);
     }//GEN-LAST:event_tButtonActionPerformed
 
     private void sButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('s');
+        sButton.setVisible(false);
     }//GEN-LAST:event_sButtonActionPerformed
 
     private void rButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('r');
+        rButton.setVisible(false);
     }//GEN-LAST:event_rButtonActionPerformed
 
     private void qButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('q');
+        qButton.setVisible(false);
     }//GEN-LAST:event_qButtonActionPerformed
 
     private void pButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('p');
+        pButton.setVisible(false);
     }//GEN-LAST:event_pButtonActionPerformed
 
     private void oButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('o');
+        oButton.setVisible(false);
     }//GEN-LAST:event_oButtonActionPerformed
 
     private void nButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('n');
+        nButton.setVisible(false);
     }//GEN-LAST:event_nButtonActionPerformed
 
     private void mButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('m');
+        mButton.setVisible(false);
     }//GEN-LAST:event_mButtonActionPerformed
 
     private void lButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('l');
+        lButton.setVisible(false);
     }//GEN-LAST:event_lButtonActionPerformed
 
     private void kButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('k');
+        kButton.setVisible(false);
     }//GEN-LAST:event_kButtonActionPerformed
 
     private void jButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('j');
+        jButton.setVisible(false);
     }//GEN-LAST:event_jButtonActionPerformed
 
     private void iButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('i');
+        iButton.setVisible(false);
     }//GEN-LAST:event_iButtonActionPerformed
 
     private void hButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('h');
+        hButton.setVisible(false);
     }//GEN-LAST:event_hButtonActionPerformed
 
     private void gButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('g');
+        gButton.setVisible(false);
     }//GEN-LAST:event_gButtonActionPerformed
 
     private void fButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('f');
+        fButton.setVisible(false);
     }//GEN-LAST:event_fButtonActionPerformed
 
     private void eButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('e');
+        eButton.setVisible(false);
     }//GEN-LAST:event_eButtonActionPerformed
 
     private void dButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('d');
+        dButton.setVisible(false);
     }//GEN-LAST:event_dButtonActionPerformed
 
     private void cButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('c');
+        cButton.setVisible(false);
     }//GEN-LAST:event_cButtonActionPerformed
 
     private void bButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('b');
+        bButton.setVisible(false);
     }//GEN-LAST:event_bButtonActionPerformed
 
     private void aButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('a');
+        aButton.setVisible(false);
     }//GEN-LAST:event_aButtonActionPerformed
 
     /**
@@ -832,6 +880,7 @@ public class GameFrame extends javax.swing.JFrame {
     private javax.swing.JLabel letter7;
     private javax.swing.JLabel letter8;
     private javax.swing.JButton mButton;
+    private javax.swing.JLabel mistakePrompt;
     private javax.swing.JButton nButton;
     private javax.swing.JButton oButton;
     private javax.swing.JButton pButton;
