@@ -3,10 +3,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
-/**
- *
- * @author Sudis
- */
+/***************************************************************  
+*  file: EndHighScores.java  
+*  author: Timmy Lin, Owen Lovett, Kristine Trevino Kinoshita, Scott Lee 
+*  class: CS 2450 – User Interface Design and Programming 
+*  
+*  assignment: Swing Project 1  
+*  date last modified: 9/18/2021  
+*  
+*  purpose: This program accepts creates a hangman game in a separate window that has a title screen, main menu,
+*           game screen, high score screen, and credits.
+*  
+****************************************************************/
 public class EndHighScores extends javax.swing.JFrame {
 
     /**
@@ -14,6 +22,10 @@ public class EndHighScores extends javax.swing.JFrame {
      */
     public EndHighScores() {
         initComponents();
+    }
+    
+    public void setFinalScore(int score) {
+        finalScoreLabel.setText(finalScoreLabel.getText() + " " + score);
     }
 
     /**
@@ -26,30 +38,18 @@ public class EndHighScores extends javax.swing.JFrame {
     private void initComponents() {
 
         highscoreTitle = new javax.swing.JLabel();
-        nameScore1 = new javax.swing.JLabel();
-        nameScore2 = new javax.swing.JLabel();
-        nameScore3 = new javax.swing.JLabel();
-        nameScore4 = new javax.swing.JLabel();
+        finalScoreLabel = new javax.swing.JLabel();
         endButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setForeground(java.awt.Color.white);
 
-        highscoreTitle.setBackground(new java.awt.Color(0, 0, 0));
+        highscoreTitle.setBackground(new java.awt.Color(255, 255, 255));
         highscoreTitle.setFont(new java.awt.Font("Times New Roman", 3, 36)); // NOI18N
-        highscoreTitle.setForeground(new java.awt.Color(51, 204, 0));
-        highscoreTitle.setText("Highscores");
+        highscoreTitle.setText("Game Over");
 
-        nameScore1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        nameScore1.setText("ABC.....  0000");
-
-        nameScore2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        nameScore2.setText("ABC.....  0000");
-
-        nameScore3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        nameScore3.setText("ABC.....  0000");
-
-        nameScore4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        nameScore4.setText("ABC.....  0000");
+        finalScoreLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        finalScoreLabel.setText("ABC... ");
 
         endButton.setBackground(new java.awt.Color(242, 242, 242));
         endButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -67,14 +67,11 @@ public class EndHighScores extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(212, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nameScore4, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nameScore3, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nameScore2, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nameScore1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(finalScoreLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(highscoreTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(204, 204, 204))
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(24, 24, 24)
                 .addComponent(endButton, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -83,17 +80,11 @@ public class EndHighScores extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(75, 75, 75)
                 .addComponent(highscoreTitle)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nameScore1)
                 .addGap(18, 18, 18)
-                .addComponent(nameScore2)
-                .addGap(18, 18, 18)
-                .addComponent(nameScore3)
-                .addGap(18, 18, 18)
-                .addComponent(nameScore4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addComponent(finalScoreLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 175, Short.MAX_VALUE)
                 .addComponent(endButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21))
+                .addGap(20, 20, 20))
         );
 
         pack();
@@ -103,8 +94,7 @@ public class EndHighScores extends javax.swing.JFrame {
     private void endButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_endButtonActionPerformed
         // TODO add your handling code here:
         NewJFrame1 jf1 = new NewJFrame1();
-        jf1.show();
-
+        jf1.setVisible(true);
         dispose();
     }//GEN-LAST:event_endButtonActionPerformed
 
@@ -145,10 +135,7 @@ public class EndHighScores extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton endButton;
+    private javax.swing.JLabel finalScoreLabel;
     private javax.swing.JLabel highscoreTitle;
-    private javax.swing.JLabel nameScore1;
-    private javax.swing.JLabel nameScore2;
-    private javax.swing.JLabel nameScore3;
-    private javax.swing.JLabel nameScore4;
     // End of variables declaration//GEN-END:variables
 }
