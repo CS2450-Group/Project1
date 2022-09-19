@@ -53,10 +53,10 @@
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                           <Component id="currentScore" min="-2" pref="96" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="327" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="date" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Component id="date" min="-2" pref="124" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="time" min="-2" pref="76" max="-2" attributes="0"/>
                               </Group>
@@ -201,9 +201,9 @@
                           <EmptySpace pref="164" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="date" alignment="1" max="32767" attributes="0"/>
-                              <Component id="time" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="time" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="date" alignment="3" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="skipButton" min="-2" max="-2" attributes="0"/>
@@ -231,20 +231,22 @@
                                       <Component id="jSeparator1" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="aButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="bButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="cButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="dButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="eButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="fButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="gButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="hButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="iButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="kButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="mButton" alignment="0" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="aButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="bButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="dButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="eButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="fButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="gButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="hButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="iButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="kButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
