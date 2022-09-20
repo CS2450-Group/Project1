@@ -17,12 +17,15 @@ import javax.swing.Timer;
 *  class: CS 2450 – User Interface Design and Programming 
 *  
 *  assignment: Swing Project 1  
-*  date last modified: 9/18/2021  
+*  date last modified: 9/19/2021  
 *  
 *  purpose: This program accepts creates a hangman game in a separate window that has a title screen, main menu,
 *           game screen, high score screen, and credits.
 *  
 ****************************************************************/
+
+import javax.swing.Timer;
+
 public class GameFrame extends javax.swing.JFrame {
 
     // word list
@@ -48,11 +51,11 @@ public class GameFrame extends javax.swing.JFrame {
         curDate();
         curTime();
         setWords();
-        selectedWord = getRandomWord();
+        generateRandomWord();
         makeLetterSpaceInvisible();
         setLines();
         makeBodyPartsInvisible();
-        makeMistakePromptInvisible();
+        makeMistakePromptVisible(false);
     }
     //current date
     private void curDate(){
@@ -87,13 +90,13 @@ public class GameFrame extends javax.swing.JFrame {
     }
     
     // get a random word from word list
-    private String getRandomWord() {
+    public void generateRandomWord() {
         Random rand = new Random();
         int index = rand.nextInt(wordlist.size());
-        return wordlist.get(index);
+        selectedWord = wordlist.get(index);
     }
     
-    // highlist a different number of lines
+    // set lines for a different length words
     private void setLines() {
         int length = selectedWord.length();
         if (length == 5)
@@ -128,14 +131,11 @@ public class GameFrame extends javax.swing.JFrame {
         letter8.setVisible(false);
     }
     
-    //set mistake prompt invisible
-    private void makeMistakePromptInvisible() {
-        mistakePrompt.setVisible(false);
+    //set mistake prompt (in)visible
+    private void makeMistakePromptVisible(boolean state) {
+        mistakePrompt.setVisible(state);
     }
-    //set mistake prompt visible
-    private void makeMistakePromptVisible(){
-        mistakePrompt.setVisible(true);
-    }
+    
     // check to see if letter is in selected word, if so, add it
     private void isLetterInWord(char letter) {
         boolean notFound = true;
@@ -155,7 +155,7 @@ public class GameFrame extends javax.swing.JFrame {
     
     // add accepted letter in space on game screen
     private void addLetter(char letter, int index) {
-        makeMistakePromptInvisible();
+        makeMistakePromptVisible(false);
         letterCorrect++;
         switch (index) {
             case 0:
@@ -192,17 +192,12 @@ public class GameFrame extends javax.swing.JFrame {
                 break;
         }
         if (letterCorrect == selectedWord.length())
-        {
-            EndHighScores finish = new EndHighScores();
-            finish.setVisible(true);
-            finish.setFinalScore(score);
-            dispose();
-        }
+            delayNextFrame();
     }
     
     // marks a mistake when the user picks a wrong letter
     private void addMistake() {
-        makeMistakePromptVisible();
+        makeMistakePromptVisible(true);
         mistakes++;
         switch (mistakes) {
             case 1:
@@ -222,10 +217,7 @@ public class GameFrame extends javax.swing.JFrame {
                 break;
             case 6:
                 leftLeg.setVisible(true);
-                EndHighScores finish = new EndHighScores();
-                finish.setVisible(true);
-                finish.setFinalScore(score);
-                dispose();
+                delayNextFrame();
                 break;
         }
     }
@@ -234,6 +226,23 @@ public class GameFrame extends javax.swing.JFrame {
     private void updateScore() {
         String pointName = currentScore.getText().substring(0, currentScore.getText().indexOf(" "));
         currentScore.setText(pointName + "  " + score);
+    }
+    
+    // delay ending frame
+    private void delayNextFrame() {
+        Timer delay;
+        EndHighScores finish = new EndHighScores();
+        finish.setFinalScore(score);
+        ActionListener wait = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                finish.setVisible(true);
+                dispose();
+            }
+        };
+        delay = new Timer(900, wait);
+        delay.setRepeats(false);
+        delay.start();
     }
     
     /**
@@ -306,7 +315,6 @@ public class GameFrame extends javax.swing.JFrame {
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(600, 400));
 
         jPanel1.setMinimumSize(new java.awt.Dimension(600, 400));
         jPanel1.setPreferredSize(new java.awt.Dimension(600, 400));
@@ -611,7 +619,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(rightArm, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, 40, 170));
 
         leftArm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/leftArm.png"))); // NOI18N
-        jPanel1.add(leftArm, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, 390, -1));
+        jPanel1.add(leftArm, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, 80, -1));
 
         rightLeg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rightLeg.png"))); // NOI18N
         jPanel1.add(rightLeg, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, -1, -1));
@@ -621,7 +629,7 @@ public class GameFrame extends javax.swing.JFrame {
 
         mistakePrompt.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         mistakePrompt.setForeground(new java.awt.Color(255, 0, 51));
-        mistakePrompt.setText("Wrong letter! Try another");
+        mistakePrompt.setText("Wrong letter! Try another...");
         jPanel1.add(mistakePrompt, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 210, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

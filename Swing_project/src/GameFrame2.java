@@ -16,16 +16,17 @@ import javax.swing.Timer;
 *  class: CS 2450 – User Interface Design and Programming 
 *  
 *  assignment: Swing Project 1  
-*  date last modified: 9/18/2021  
+*  date last modified: 9/19/2021  
 *  
 *  purpose: This program accepts creates a hangman game in a separate window that has a title screen, main menu,
 *           game screen, high score screen, and credits.
 *  
 ****************************************************************/
+
+import javax.swing.Timer;
+
 public class GameFrame2 extends javax.swing.JFrame {
 
-    // word list
-    private ArrayList<String> wordlist = new ArrayList<String>();
     // word to guess
     private String selectedWord = "nurse";
     // number of letters guessed correctly
@@ -46,6 +47,8 @@ public class GameFrame2 extends javax.swing.JFrame {
         curDate();
         curTime();
         makeLetterSpaceInvisible();
+        makeBodyPartsInvisible();
+        makeMistakePromptVisible(false);
     }
     //current date
     private void curDate(){
@@ -69,16 +72,29 @@ public class GameFrame2 extends javax.swing.JFrame {
         });
         t.start();
     }
-
-  
+    
+    // set body parts invisible
+    private void makeBodyPartsInvisible() {
+        head1.setVisible(false);
+        body1.setVisible(false);
+        rightArm1.setVisible(false);
+        rightLeg1.setVisible(false);
+        leftArm1.setVisible(false);
+        leftLeg1.setVisible(false);
+    }
     
     // set letter labels invisible
     private void makeLetterSpaceInvisible() {
+        letter1.setVisible(false);
         letter2.setVisible(false);
         letter3.setVisible(false);
         letter4.setVisible(false);
         letter5.setVisible(false);
-        letter6.setVisible(false);
+    }
+    
+    //set mistake prompt (in)visible
+    private void makeMistakePromptVisible(boolean state) {
+        mistakePrompt1.setVisible(state);
     }
     
     // check to see if letter is in selected word, if so, add it
@@ -103,60 +119,53 @@ public class GameFrame2 extends javax.swing.JFrame {
         letterCorrect++;
         switch (index) {
             case 0:
+                letter1.setText(Character.toString(letter));
+                letter1.setVisible(true);
+                break;
+            case 1:
                 letter2.setText(Character.toString(letter));
                 letter2.setVisible(true);
                 break;
-            case 1:
+            case 2:
                 letter3.setText(Character.toString(letter));
                 letter3.setVisible(true);
                 break;
-            case 2:
+            case 3:
                 letter4.setText(Character.toString(letter));
                 letter4.setVisible(true);
                 break;
-            case 3:
+            case 4:
                 letter5.setText(Character.toString(letter));
                 letter5.setVisible(true);
                 break;
-            case 4:
-                letter6.setText(Character.toString(letter));
-                letter6.setVisible(true);
-                break;
         }
         if (letterCorrect == selectedWord.length())
-        {
-            EndHighScores finish = new EndHighScores();
-            finish.setVisible(true);
-            finish.setFinalScore(score);
-            dispose();
-        }
+            delayNextFrame();
     }
     
     // marks a mistake when the user picks a wrong letter
     private void addMistake() {
+        makeMistakePromptVisible(true);
         mistakes++;
         switch (mistakes) {
             case 1:
-                // draw head
+                head1.setVisible(true);
                 break;
             case 2:
-                // draw body
+                body1.setVisible(true);
                 break;
             case 3:
-                // draw arm
+                rightArm1.setVisible(true);
                 break;
             case 4:
-                // draw arm
+                leftArm1.setVisible(true);
                 break;
             case 5:
-                // draw leg
+                rightLeg1.setVisible(true);
                 break;
             case 6:
-                // draw leg and end
-                EndHighScores finish = new EndHighScores();
-                finish.setVisible(true);
-                finish.setFinalScore(score);
-                dispose();
+                leftLeg1.setVisible(true);
+                delayNextFrame();
                 break;
         }
     }
@@ -165,6 +174,23 @@ public class GameFrame2 extends javax.swing.JFrame {
     private void updateScore() {
         String pointName = currentScore.getText().substring(0, currentScore.getText().indexOf(" "));
         currentScore.setText(pointName + "  " + score);
+    }
+    
+    // delay ending frame
+    private void delayNextFrame() {
+        Timer delay;
+        EndHighScores finish = new EndHighScores();
+        finish.setFinalScore(score);
+        ActionListener wait = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                finish.setVisible(true);
+                dispose();
+            }
+        };
+        delay = new Timer(900, wait);
+        delay.setRepeats(false);
+        delay.start();
     }
     
     /**
@@ -178,7 +204,7 @@ public class GameFrame2 extends javax.swing.JFrame {
 
         jSeparator2 = new javax.swing.JSeparator();
         jPanel1 = new javax.swing.JPanel();
-        hangmanPole = new javax.swing.JLabel();
+        hangmanPole1 = new javax.swing.JLabel();
         aButton = new javax.swing.JButton();
         bButton = new javax.swing.JButton();
         cButton = new javax.swing.JButton();
@@ -213,21 +239,30 @@ public class GameFrame2 extends javax.swing.JFrame {
         jSeparator5 = new javax.swing.JSeparator();
         jSeparator6 = new javax.swing.JSeparator();
         jSeparator7 = new javax.swing.JSeparator();
+        letter1 = new javax.swing.JLabel();
         letter2 = new javax.swing.JLabel();
         letter3 = new javax.swing.JLabel();
         letter4 = new javax.swing.JLabel();
         letter5 = new javax.swing.JLabel();
-        letter6 = new javax.swing.JLabel();
         currentScore = new javax.swing.JLabel();
         gameTitle = new javax.swing.JLabel();
+        mistakePrompt1 = new javax.swing.JLabel();
+        head1 = new javax.swing.JLabel();
+        body1 = new javax.swing.JLabel();
+        leftArm1 = new javax.swing.JLabel();
+        rightArm1 = new javax.swing.JLabel();
+        leftLeg1 = new javax.swing.JLabel();
+        rightLeg1 = new javax.swing.JLabel();
 
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setPreferredSize(new java.awt.Dimension(600, 400));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        hangmanPole.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hanger(1).png"))); // NOI18N
+        hangmanPole1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hanger(1).png"))); // NOI18N
+        jPanel1.add(hangmanPole1, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 6, -1, -1));
 
         aButton.setText("A");
         aButton.addActionListener(new java.awt.event.ActionListener() {
@@ -235,6 +270,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 aButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(aButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 304, 38, -1));
 
         bButton.setText("B");
         bButton.addActionListener(new java.awt.event.ActionListener() {
@@ -242,6 +278,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 bButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(bButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(57, 304, 38, -1));
 
         cButton.setText("C");
         cButton.addActionListener(new java.awt.event.ActionListener() {
@@ -249,6 +286,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 cButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(cButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(101, 304, 38, -1));
 
         dButton.setText("D");
         dButton.addActionListener(new java.awt.event.ActionListener() {
@@ -256,6 +294,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 dButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(dButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 304, 38, -1));
 
         eButton.setText("E");
         eButton.addActionListener(new java.awt.event.ActionListener() {
@@ -263,6 +302,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 eButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(eButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(189, 304, 38, -1));
 
         fButton.setText("F");
         fButton.addActionListener(new java.awt.event.ActionListener() {
@@ -270,6 +310,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 fButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(fButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(233, 304, 38, -1));
 
         gButton.setText("G");
         gButton.addActionListener(new java.awt.event.ActionListener() {
@@ -277,6 +318,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 gButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(gButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(277, 304, 38, -1));
 
         hButton.setText("H");
         hButton.addActionListener(new java.awt.event.ActionListener() {
@@ -284,6 +326,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 hButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(hButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(321, 304, 38, -1));
 
         iButton.setText("I");
         iButton.addActionListener(new java.awt.event.ActionListener() {
@@ -291,6 +334,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 iButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(iButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(365, 304, 38, -1));
 
         jButton.setText("J");
         jButton.addActionListener(new java.awt.event.ActionListener() {
@@ -298,6 +342,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 jButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(409, 304, 38, -1));
 
         kButton.setText("K");
         kButton.addActionListener(new java.awt.event.ActionListener() {
@@ -305,6 +350,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 kButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(kButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(453, 304, 38, -1));
 
         lButton.setText("L");
         lButton.addActionListener(new java.awt.event.ActionListener() {
@@ -312,6 +358,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 lButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(lButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(497, 304, 38, -1));
 
         mButton.setText("M");
         mButton.addActionListener(new java.awt.event.ActionListener() {
@@ -319,6 +366,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 mButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(mButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(541, 304, 38, -1));
 
         nButton.setText("N");
         nButton.addActionListener(new java.awt.event.ActionListener() {
@@ -326,6 +374,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 nButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(nButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 332, 38, -1));
 
         oButton.setText("O");
         oButton.addActionListener(new java.awt.event.ActionListener() {
@@ -333,6 +382,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 oButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(oButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(57, 332, 38, -1));
 
         pButton.setText("P");
         pButton.addActionListener(new java.awt.event.ActionListener() {
@@ -340,6 +390,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 pButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(pButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(101, 332, 38, -1));
 
         qButton.setText("Q");
         qButton.addActionListener(new java.awt.event.ActionListener() {
@@ -347,6 +398,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 qButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(qButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 332, 38, -1));
 
         rButton.setText("R");
         rButton.addActionListener(new java.awt.event.ActionListener() {
@@ -354,6 +406,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 rButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(rButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(189, 332, 38, -1));
 
         sButton.setText("S");
         sButton.addActionListener(new java.awt.event.ActionListener() {
@@ -361,6 +414,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 sButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(sButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(233, 332, 38, -1));
 
         tButton.setText("T");
         tButton.addActionListener(new java.awt.event.ActionListener() {
@@ -368,6 +422,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 tButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(tButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(277, 332, 38, -1));
 
         uButton.setText("U");
         uButton.addActionListener(new java.awt.event.ActionListener() {
@@ -375,6 +430,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 uButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(uButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(321, 332, 38, -1));
 
         vButton.setText("V");
         vButton.addActionListener(new java.awt.event.ActionListener() {
@@ -382,6 +438,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 vButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(vButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(365, 332, 38, -1));
 
         wButton.setText("W");
         wButton.addActionListener(new java.awt.event.ActionListener() {
@@ -389,6 +446,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 wButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(wButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(409, 332, 40, -1));
 
         xButton.setText("X");
         xButton.addActionListener(new java.awt.event.ActionListener() {
@@ -396,6 +454,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 xButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(xButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 332, 38, -1));
 
         yButton.setText("Y");
         yButton.addActionListener(new java.awt.event.ActionListener() {
@@ -403,6 +462,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 yButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(yButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(499, 332, 38, -1));
 
         zButton.setText("Z");
         zButton.addActionListener(new java.awt.event.ActionListener() {
@@ -410,10 +470,13 @@ public class GameFrame2 extends javax.swing.JFrame {
                 zButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(zButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(543, 332, 38, -1));
 
         date.setText("date");
+        jPanel1.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(382, 6, 124, -1));
 
         time.setText("time");
+        jPanel1.add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(512, 6, 76, -1));
 
         skipButton.setText("Skip");
         skipButton.addActionListener(new java.awt.event.ActionListener() {
@@ -421,211 +484,74 @@ public class GameFrame2 extends javax.swing.JFrame {
                 skipButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(skipButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(472, 34, 81, -1));
 
         jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 278, 50, 20));
 
         jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(163, 278, 50, 20));
 
         jSeparator5.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(231, 278, 50, 20));
 
         jSeparator6.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 278, 50, 20));
 
         jSeparator7.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(367, 278, 50, 20));
+
+        letter1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        letter1.setText("letter2");
+        jPanel1.add(letter1, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 247, 30, -1));
 
         letter2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        letter2.setText("letter2");
+        letter2.setText("letter3");
+        jPanel1.add(letter2, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 247, 30, -1));
 
         letter3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        letter3.setText("letter3");
+        letter3.setText("letter4");
+        jPanel1.add(letter3, new org.netbeans.lib.awtextra.AbsoluteConstraints(251, 247, 30, -1));
 
         letter4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        letter4.setText("letter4");
+        letter4.setText("letter5");
+        jPanel1.add(letter4, new org.netbeans.lib.awtextra.AbsoluteConstraints(319, 247, 30, -1));
 
         letter5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        letter5.setText("letter5");
-
-        letter6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        letter6.setText("letter6");
+        letter5.setText("letter6");
+        jPanel1.add(letter5, new org.netbeans.lib.awtextra.AbsoluteConstraints(387, 247, 30, -1));
 
         currentScore.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         currentScore.setText("Points:  100");
+        jPanel1.add(currentScore, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 66, 96, 30));
 
         gameTitle.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         gameTitle.setText("Hangman");
+        jPanel1.add(gameTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 21, 124, 39));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 13, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(aButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(bButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(dButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(eButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(fButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(gButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(hButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(iButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(kButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(mButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(oButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(pButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(qButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(rButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(sButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(uButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(vButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(wButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(xButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(yButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(zButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(19, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(letter2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(letter3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(letter4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(letter5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(letter6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(136, 136, 136))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(gameTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(currentScore, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(hangmanPole)
-                                        .addGap(214, 214, 214))
-                                    .addComponent(skipButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(time, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12))))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(time)
-                            .addComponent(date, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(skipButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(15, 15, 15)
-                                .addComponent(gameTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(currentScore, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(hangmanPole))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(letter2)
-                    .addComponent(letter3)
-                    .addComponent(letter4)
-                    .addComponent(letter5)
-                    .addComponent(letter6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(aButton)
-                            .addComponent(bButton)
-                            .addComponent(cButton)
-                            .addComponent(dButton)
-                            .addComponent(eButton)
-                            .addComponent(fButton)
-                            .addComponent(gButton)
-                            .addComponent(hButton)
-                            .addComponent(iButton)
-                            .addComponent(jButton)
-                            .addComponent(kButton)
-                            .addComponent(lButton)
-                            .addComponent(mButton))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(xButton)
-                            .addComponent(wButton)
-                            .addComponent(vButton)
-                            .addComponent(uButton)
-                            .addComponent(tButton)
-                            .addComponent(sButton)
-                            .addComponent(rButton)
-                            .addComponent(qButton)
-                            .addComponent(pButton)
-                            .addComponent(oButton)
-                            .addComponent(nButton)
-                            .addComponent(yButton)
-                            .addComponent(zButton)))
-                    .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46))
-        );
+        mistakePrompt1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        mistakePrompt1.setForeground(new java.awt.Color(255, 0, 51));
+        mistakePrompt1.setText("Wrong letter! Try another...");
+        jPanel1.add(mistakePrompt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 210, -1, -1));
+
+        head1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/head.png"))); // NOI18N
+        head1.setDoubleBuffered(true);
+        jPanel1.add(head1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, -1, -1));
+
+        body1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/body.png"))); // NOI18N
+        jPanel1.add(body1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, 150, -1));
+
+        leftArm1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/leftArm.png"))); // NOI18N
+        jPanel1.add(leftArm1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, 80, -1));
+
+        rightArm1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rightArm.png"))); // NOI18N
+        jPanel1.add(rightArm1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, 40, 170));
+
+        leftLeg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/leftLeg.png"))); // NOI18N
+        jPanel1.add(leftLeg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, -1, -1));
+
+        rightLeg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rightLeg.png"))); // NOI18N
+        jPanel1.add(rightLeg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, 140, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -820,6 +746,7 @@ public class GameFrame2 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton aButton;
     private javax.swing.JButton bButton;
+    private javax.swing.JLabel body1;
     private javax.swing.JButton cButton;
     private javax.swing.JLabel currentScore;
     private javax.swing.JButton dButton;
@@ -829,7 +756,8 @@ public class GameFrame2 extends javax.swing.JFrame {
     private javax.swing.JButton gButton;
     private javax.swing.JLabel gameTitle;
     private javax.swing.JButton hButton;
-    private javax.swing.JLabel hangmanPole;
+    private javax.swing.JLabel hangmanPole1;
+    private javax.swing.JLabel head1;
     private javax.swing.JButton iButton;
     private javax.swing.JButton jButton;
     private javax.swing.JPanel jPanel1;
@@ -841,17 +769,22 @@ public class GameFrame2 extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JButton kButton;
     private javax.swing.JButton lButton;
+    private javax.swing.JLabel leftArm1;
+    private javax.swing.JLabel leftLeg1;
+    private javax.swing.JLabel letter1;
     private javax.swing.JLabel letter2;
     private javax.swing.JLabel letter3;
     private javax.swing.JLabel letter4;
     private javax.swing.JLabel letter5;
-    private javax.swing.JLabel letter6;
     private javax.swing.JButton mButton;
+    private javax.swing.JLabel mistakePrompt1;
     private javax.swing.JButton nButton;
     private javax.swing.JButton oButton;
     private javax.swing.JButton pButton;
     private javax.swing.JButton qButton;
     private javax.swing.JButton rButton;
+    private javax.swing.JLabel rightArm1;
+    private javax.swing.JLabel rightLeg1;
     private javax.swing.JButton sButton;
     private javax.swing.JButton skipButton;
     private javax.swing.JButton tButton;

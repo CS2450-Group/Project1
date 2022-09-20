@@ -9,7 +9,7 @@
 *  class: CS 2450 – User Interface Design and Programming 
 *  
 *  assignment: Swing Project 1  
-*  date last modified: 9/18/2021  
+*  date last modified: 9/19/2021  
 *  
 *  purpose: This program accepts creates a hangman game in a separate window that has a title screen, main menu,
 *           game screen, high score screen, and credits.
@@ -131,21 +131,22 @@ public class MenuScreen extends javax.swing.JFrame {
     private void highscoreButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_highscoreButtonActionPerformed
         // TODO add your handling code here:
         HighScores jf2 = new HighScores();
-        jf2.show();
+        jf2.setVisible(true);
         dispose();
     }//GEN-LAST:event_highscoreButtonActionPerformed
 
     private void creditsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_creditsButtonActionPerformed
         // TODO add your handling code here:
         CreditFrame1 cf1 = new CreditFrame1();
-        cf1.show();
+        cf1.setVisible(true);
         dispose();
     }//GEN-LAST:event_creditsButtonActionPerformed
 
     private void playButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playButtonActionPerformed
         // TODO add your handling code here:
         GameFrame gf = new GameFrame();
-        gf.show();
+        gf.generateRandomWord();
+        gf.setVisible(true);
         dispose();
     }//GEN-LAST:event_playButtonActionPerformed
 
