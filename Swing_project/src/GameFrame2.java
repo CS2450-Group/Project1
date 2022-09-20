@@ -98,7 +98,7 @@ public class GameFrame2 extends javax.swing.JFrame {
         }
     }
     
-    // add accepted letter in space on game screen
+    // add accepted letter in space on game screen and remove if chosen
     private void addLetter(char letter, int index) {
         letterCorrect++;
         switch (index) {
