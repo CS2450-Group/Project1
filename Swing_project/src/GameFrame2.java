@@ -579,131 +579,157 @@ public class GameFrame2 extends javax.swing.JFrame {
     private void zButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('z');
+        zButton.setVisible(false);
     }//GEN-LAST:event_zButtonActionPerformed
 
     private void yButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('y');
+        yButton.setVisible(false);
     }//GEN-LAST:event_yButtonActionPerformed
 
     private void xButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('x');
+        xButton.setVisible(false);
     }//GEN-LAST:event_xButtonActionPerformed
 
     private void wButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('w');
+        wButton.setVisible(false);
     }//GEN-LAST:event_wButtonActionPerformed
 
     private void vButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('v');
+        vButton.setVisible(false);
     }//GEN-LAST:event_vButtonActionPerformed
 
     private void uButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('u');
+        uButton.setVisible(false);
     }//GEN-LAST:event_uButtonActionPerformed
 
     private void tButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('t');
+        tButton.setVisible(false);
     }//GEN-LAST:event_tButtonActionPerformed
 
     private void sButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('s');
+        sButton.setVisible(false);
     }//GEN-LAST:event_sButtonActionPerformed
 
     private void rButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('r');
+        rButton.setVisible(false);
     }//GEN-LAST:event_rButtonActionPerformed
 
     private void qButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('q');
+        qButton.setVisible(false);
     }//GEN-LAST:event_qButtonActionPerformed
 
     private void pButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('p');
+        pButton.setVisible(false);
     }//GEN-LAST:event_pButtonActionPerformed
 
     private void oButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('o');
+        oButton.setVisible(false);
     }//GEN-LAST:event_oButtonActionPerformed
 
     private void nButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('n');
+        nButton.setVisible(false);
     }//GEN-LAST:event_nButtonActionPerformed
 
     private void mButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('m');
+        mButton.setVisible(false);
     }//GEN-LAST:event_mButtonActionPerformed
 
     private void lButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('l');
+        lButton.setVisible(false);
     }//GEN-LAST:event_lButtonActionPerformed
 
     private void kButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('k');
+        kButton.setVisible(false);
     }//GEN-LAST:event_kButtonActionPerformed
 
     private void jButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('j');
+        jButton.setVisible(false);
     }//GEN-LAST:event_jButtonActionPerformed
 
     private void iButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('i');
+        iButton.setVisible(false);
     }//GEN-LAST:event_iButtonActionPerformed
 
     private void hButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('h');
+        hButton.setVisible(false);
     }//GEN-LAST:event_hButtonActionPerformed
 
     private void gButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('g');
+        gButton.setVisible(false);
     }//GEN-LAST:event_gButtonActionPerformed
 
     private void fButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('f');
+        fButton.setVisible(false);
     }//GEN-LAST:event_fButtonActionPerformed
 
     private void eButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('e');
+        eButton.setVisible(false);
     }//GEN-LAST:event_eButtonActionPerformed
 
     private void dButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('d');
+        dButton.setVisible(false);
     }//GEN-LAST:event_dButtonActionPerformed
 
     private void cButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('c');
+        cButton.setVisible(false);
     }//GEN-LAST:event_cButtonActionPerformed
 
     private void bButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('b');
+        bButton.setVisible(false);
     }//GEN-LAST:event_bButtonActionPerformed
 
     private void aButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aButtonActionPerformed
         // TODO add your handling code here:
         isLetterInWord('a');
+        aButton.setVisible(false);
     }//GEN-LAST:event_aButtonActionPerformed
 
     /**
