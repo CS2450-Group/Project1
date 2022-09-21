@@ -541,7 +541,7 @@ public class GameFrame extends javax.swing.JFrame {
                 skipButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(skipButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(472, 34, 81, -1));
+        jPanel1.add(skipButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 30, 81, -1));
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 276, 50, 20));
@@ -603,9 +603,9 @@ public class GameFrame extends javax.swing.JFrame {
         currentScore.setText("Points:  100");
         jPanel1.add(currentScore, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 66, 96, 30));
 
-        gameTitle.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        gameTitle.setFont(new java.awt.Font("Segoe UI", 0, 30)); // NOI18N
         gameTitle.setText("Hangman");
-        jPanel1.add(gameTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 21, 124, 39));
+        jPanel1.add(gameTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 21, 140, 39));
 
         hangmanPole.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hanger(1).png"))); // NOI18N
         jPanel1.add(hangmanPole, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 6, -1, -1));

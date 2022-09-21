@@ -484,7 +484,7 @@ public class GameFrame2 extends javax.swing.JFrame {
                 skipButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(skipButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(472, 34, 81, -1));
+        jPanel1.add(skipButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 30, 81, -1));
 
         jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 278, 50, 20));

@@ -9,7 +9,7 @@
 *  class: CS 2450 – User Interface Design and Programming 
 *  
 *  assignment: Swing Project 1  
-*  date last modified: 9/18/2021  
+*  date last modified: 9/21/2021  
 *  
 *  purpose: This program accepts creates a hangman game in a separate window that has a title screen, main menu,
 *           game screen, high score screen, and credits.
@@ -130,9 +130,8 @@ public class CreditFrame1 extends javax.swing.JFrame {
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         // TODO add your handling code here:
-        NewJFrame1 jf1 = new NewJFrame1();
-        jf1.show();
-        
+        MenuScreen jf1 = new MenuScreen();
+        jf1.setVisible(true);
         dispose();
     }//GEN-LAST:event_backButtonActionPerformed
 
