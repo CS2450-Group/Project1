@@ -16,7 +16,7 @@ import javax.swing.Timer;
 *  class: CS 2450 – User Interface Design and Programming 
 *  
 *  assignment: Swing Project 1  
-*  date last modified: 9/19/2021  
+*  date last modified: 9/21/2021  
 *  
 *  purpose: This program accepts creates a hangman game in a separate window that has a title screen, main menu,
 *           game screen, high score screen, and credits.
