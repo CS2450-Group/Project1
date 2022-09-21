@@ -11,7 +11,7 @@ import javax.swing.Timer;
  */
 
 /***************************************************************  
-*  file: GameFrame.java  
+*  file: GameFrame2.java  
 *  author: Timmy Lin, Owen Lovett, Kristine Trevino Kinoshita, Scott Lee 
 *  class: CS 2450 – User Interface Design and Programming 
 *  
