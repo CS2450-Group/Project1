@@ -41,7 +41,6 @@ public class GameFrame extends javax.swing.JFrame {
     //current time
     private Timer t;
     private SimpleDateFormat st;
-    private Object org;
     
     /**
      * Creates new form GameFrame
@@ -90,7 +89,7 @@ public class GameFrame extends javax.swing.JFrame {
     }
     
     // get a random word from word list
-    public void generateRandomWord() {
+    private void generateRandomWord() {
         Random rand = new Random();
         int index = rand.nextInt(wordlist.size());
         selectedWord = wordlist.get(index);
@@ -98,8 +97,7 @@ public class GameFrame extends javax.swing.JFrame {
     
     // set lines for a different length words
     private void setLines() {
-        int length = selectedWord.length();
-        if (length == 5)
+        if (selectedWord.equals("nurse"))
         {
             java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

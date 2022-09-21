@@ -145,7 +145,6 @@ public class MenuScreen extends javax.swing.JFrame {
     private void playButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playButtonActionPerformed
         // TODO add your handling code here:
         GameFrame gf = new GameFrame();
-        gf.generateRandomWord();
         gf.setVisible(true);
         dispose();
     }//GEN-LAST:event_playButtonActionPerformed
