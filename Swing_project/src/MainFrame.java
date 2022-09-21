@@ -81,7 +81,7 @@ public class MainFrame extends JFrame {
 
         titleLabel.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
         titleLabel.setForeground(new java.awt.Color(255, 255, 255));
-        titleLabel.setText("   CS 2450 Quarter Project");
+        titleLabel.setText("   CS 2450 Semester Project");
 
         teamNameLabel.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         teamNameLabel.setForeground(new java.awt.Color(255, 255, 255));
