@@ -190,10 +190,7 @@ public class GameFrame extends javax.swing.JFrame {
                 break;
         }
         if (letterCorrect == selectedWord.length())
-        {
-            skipButton.setEnabled(false);
             delayNextFrame();
-        }
     }
     
     // marks a mistake when the user picks a wrong letter
@@ -231,6 +228,7 @@ public class GameFrame extends javax.swing.JFrame {
     
     // delay ending frame
     private void delayNextFrame() {
+        skipButton.setEnabled(false);
         Timer delay;
         EndHighScores finish = new EndHighScores();
         finish.setFinalScore(score);

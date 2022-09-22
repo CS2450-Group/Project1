@@ -117,6 +117,7 @@ public class GameFrame2 extends javax.swing.JFrame {
     // add accepted letter in space on game screen and remove if chosen
     private void addLetter(char letter, int index) {
         letterCorrect++;
+        mistakePrompt1.setVisible(false);
         switch (index) {
             case 0:
                 letter1.setText(Character.toString(letter));
@@ -178,6 +179,7 @@ public class GameFrame2 extends javax.swing.JFrame {
     
     // delay ending frame
     private void delayNextFrame() {
+        skipButton.setEnabled(false);
         Timer delay;
         EndHighScores finish = new EndHighScores();
         finish.setFinalScore(score);
