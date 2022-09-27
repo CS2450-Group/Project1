@@ -17,10 +17,11 @@ import javax.swing.Timer;
 *  class: CS 2450 – User Interface Design and Programming 
 *  
 *  assignment: Swing Project 1  
-*  date last modified: 9/21/2021  
+*  date last modified: 9/26/2021  
 *  
-*  purpose: This program accepts creates a hangman game in a separate window that has a title screen, main menu,
-*           game screen, high score screen, and credits.
+*  purpose: This program accepts creates a hangman game and a color button game 
+*           in a separate window that has a title screen, main menu, game 
+*           screen, high score screen, and credits.
 *  
 ****************************************************************/
 
@@ -65,6 +66,7 @@ public class GameFrame extends javax.swing.JFrame {
         date.setText(dd);
     }
     
+    // current time
     private void curTime(){
         t = new Timer(0, new ActionListener() {
             @Override
@@ -230,12 +232,11 @@ public class GameFrame extends javax.swing.JFrame {
     private void delayNextFrame() {
         skipButton.setEnabled(false);
         Timer delay;
-        EndHighScores finish = new EndHighScores();
-        finish.setFinalScore(score);
+        ButtonGame next = new ButtonGame();
         ActionListener wait = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                finish.setVisible(true);
+                next.setVisible(true);
                 dispose();
             }
         };
