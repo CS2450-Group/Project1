@@ -58,10 +58,6 @@
           <Dimension value="[600, 400]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jPanel1MouseClicked"/>
-        <EventHandler event="componentHidden" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanel1ComponentHidden"/>
-      </Events>
 
       <Layout>
         <DimensionLayout dim="0">

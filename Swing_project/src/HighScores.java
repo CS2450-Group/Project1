@@ -23,7 +23,16 @@ public class HighScores extends javax.swing.JFrame {
      */
     public HighScores() {
         initComponents();
+        //readScores();
+    }
+    
+    public void readScores(){
+        readFile r = new readFile();
 
+        r.openFile();
+        String[] scores = r.readScore();
+        nameScore1.setText(scores[0]);
+        r.closeFile();
     }
 
     /**
