@@ -17,7 +17,7 @@ import javax.swing.Timer;
 *  class: CS 2450 – User Interface Design and Programming 
 *  
 *  assignment: Swing Project 1  
-*  date last modified: 9/26/2021  
+*  date last modified: 9/27/2021  
 *  
 *  purpose: This program accepts creates a hangman game and a color button game 
 *           in a separate window that has a title screen, main menu, game 
@@ -237,6 +237,7 @@ public class GameFrame extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 next.setVisible(true);
+                next.getScore(score);
                 dispose();
             }
         };
@@ -649,9 +650,9 @@ public class GameFrame extends javax.swing.JFrame {
 
     private void skipButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_skipButtonActionPerformed
         // TODO add your handling code here:
-        EndHighScores ehs = new EndHighScores();
-        ehs.setVisible(true);
-        ehs.setFinalScore(0);
+        ButtonGame next = new ButtonGame();
+        next.setVisible(true);
+        score = 0;
         dispose();
     }//GEN-LAST:event_skipButtonActionPerformed
 
