@@ -23,7 +23,7 @@ public class HighScores extends javax.swing.JFrame {
      */
     public HighScores() {
         initComponents();
-        //readScores();
+        readScores();
     }
     
     public void readScores(){
@@ -31,7 +31,10 @@ public class HighScores extends javax.swing.JFrame {
 
         r.openFile();
         String[] scores = r.readScore();
-        nameScore1.setText(scores[0]);
+        nameScore1.setText(scores[0] + "     " + scores[1]);
+        nameScore2.setText(scores[2] + "     " + scores[3]);
+        nameScore3.setText(scores[4] + "     " + scores[5]);
+        nameScore4.setText(scores[6] + "     " + scores[7]);
         r.closeFile();
     }
 
@@ -95,8 +98,8 @@ public class HighScores extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(nameScore2, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(nameScore1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(nameScore4, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(nameScore3, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(nameScore3, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(nameScore4, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(highscoreTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(14, 14, 14)
@@ -113,9 +116,9 @@ public class HighScores extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(nameScore2)
                 .addGap(18, 18, 18)
-                .addComponent(nameScore4)
-                .addGap(18, 18, 18)
                 .addComponent(nameScore3)
+                .addGap(18, 18, 18)
+                .addComponent(nameScore4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
                 .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17))

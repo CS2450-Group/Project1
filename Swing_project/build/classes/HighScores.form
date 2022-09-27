@@ -54,8 +54,8 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="nameScore2" min="-2" pref="171" max="-2" attributes="0"/>
                                   <Component id="nameScore1" min="-2" pref="171" max="-2" attributes="0"/>
-                                  <Component id="nameScore4" alignment="0" min="-2" pref="171" max="-2" attributes="0"/>
                                   <Component id="nameScore3" alignment="0" min="-2" pref="171" max="-2" attributes="0"/>
+                                  <Component id="nameScore4" alignment="0" min="-2" pref="171" max="-2" attributes="0"/>
                               </Group>
                               <Component id="highscoreTitle" min="-2" pref="184" max="-2" attributes="0"/>
                           </Group>
@@ -79,9 +79,9 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="nameScore2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="nameScore4" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="nameScore3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="nameScore4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="66" max="32767" attributes="0"/>
                   <Component id="backButton" min="-2" pref="44" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
