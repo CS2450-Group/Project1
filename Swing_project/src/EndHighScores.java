@@ -177,6 +177,46 @@ public class EndHighScores extends javax.swing.JFrame {
 
     private void textFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldActionPerformed
         text = textField.getText();
+        
+        readFile r = new readFile();
+
+        r.openFile();
+        String[] scores = r.readScore();
+        r.closeFile();
+        
+        int scoreA = Integer.parseInt(scores[1]);
+        int scoreB = Integer.parseInt(scores[3]);
+        int scoreC = Integer.parseInt(scores[5]);
+        int scoreD = Integer.parseInt(scores[7]);
+        
+        if (fScore > scoreD && fScore <= scoreC){
+            scores[7] = Integer.toString(fScore);
+            scores[6] = text;
+        }
+        else if (fScore > scoreC && fScore <= scoreB){
+            scores[7] = scores[5];
+            scores[6] = scores[4];
+            scores[5] = Integer.toString(fScore);
+            scores[4] = text;
+        }
+        else if (fScore > scoreB && fScore <= scoreA){
+            scores[7] = scores[5];
+            scores[6] = scores[4];
+            scores[5] = scores[3];
+            scores[4] = scores[2];
+            scores[3] = Integer.toString(fScore);
+            scores[2] = text;
+        }
+        else{
+            scores[7] = scores[5];
+            scores[6] = scores[4];
+            scores[5] = scores[3];
+            scores[4] = scores[2];
+            scores[3] = scores[1];
+            scores[2] = scores[0];
+            scores[1] = Integer.toString(fScore);
+            scores[0] = text;
+        }
     }//GEN-LAST:event_textFieldActionPerformed
 
     /**
