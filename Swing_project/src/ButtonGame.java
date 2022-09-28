@@ -136,6 +136,7 @@ public class ButtonGame extends javax.swing.JFrame {
         int temp = 0;
         for(int i = 0; i < selectedButtons.length; i++) {
             temp = buttonSelector.nextInt(10)+1;
+            //check if random number is already in the array
             for(int j = 0; j < selectedButtons.length; j++){
                 while(temp == selectedButtons[j]){
                     temp = buttonSelector.nextInt(10)+1;
