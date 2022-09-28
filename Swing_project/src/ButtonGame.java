@@ -191,8 +191,6 @@ public class ButtonGame extends javax.swing.JFrame {
         colorButton8.setVisible(false);
         colorButton9.setVisible(false);
         colorButton10.setVisible(false);
-        
-        
     }
     
     // check if button color matches text color
