@@ -23,10 +23,18 @@ public class EndHighScores extends javax.swing.JFrame {
      */
     public EndHighScores() {
         initComponents();
+        makeNewScoreInvisible();
     }
     
     public void setFinalScore(int score) {
         finalScoreLabel.setText(finalScoreLabel.getText() + "               " + score);
+    }
+    
+    private void makeNewScoreInvisible() {
+        newHighScore.setVisible(false);
+        promptSave.setVisible(false);
+        noB.setVisible(false);
+        yesB.setVisible(false);
     }
 
     /**
@@ -38,19 +46,54 @@ public class EndHighScores extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         highscoreTitle = new javax.swing.JLabel();
         finalScoreLabel = new javax.swing.JLabel();
+        newHighScore = new javax.swing.JLabel();
+        promptSave = new javax.swing.JLabel();
+        yesB = new javax.swing.JButton();
+        noB = new javax.swing.JButton();
         endButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setForeground(java.awt.Color.white);
 
+        jPanel1.setMaximumSize(new java.awt.Dimension(600, 400));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         highscoreTitle.setBackground(new java.awt.Color(255, 255, 255));
         highscoreTitle.setFont(new java.awt.Font("Times New Roman", 3, 36)); // NOI18N
         highscoreTitle.setText("Game Over");
+        jPanel1.add(highscoreTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(209, 39, 184, -1));
 
         finalScoreLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         finalScoreLabel.setText("Player 1");
+        jPanel1.add(finalScoreLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(209, 88, 210, 78));
+
+        newHighScore.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        newHighScore.setForeground(new java.awt.Color(51, 204, 0));
+        newHighScore.setText("New High Score!");
+        jPanel1.add(newHighScore, new org.netbeans.lib.awtextra.AbsoluteConstraints(241, 172, -1, -1));
+
+        promptSave.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        promptSave.setText("Would you like to save your score?");
+        jPanel1.add(promptSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(127, 209, -1, -1));
+
+        yesB.setText("Yes");
+        yesB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                yesBActionPerformed(evt);
+            }
+        });
+        jPanel1.add(yesB, new org.netbeans.lib.awtextra.AbsoluteConstraints(367, 207, 60, -1));
+
+        noB.setText("No");
+        noB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                noBActionPerformed(evt);
+            }
+        });
+        jPanel1.add(noB, new org.netbeans.lib.awtextra.AbsoluteConstraints(433, 207, 60, -1));
 
         endButton.setBackground(new java.awt.Color(242, 242, 242));
         endButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -60,32 +103,17 @@ public class EndHighScores extends javax.swing.JFrame {
                 endButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(endButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 302, 95, 44));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(endButton, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(212, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(finalScoreLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(highscoreTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(178, 178, 178))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(75, 75, 75)
-                .addComponent(highscoreTitle)
-                .addGap(18, 18, 18)
-                .addComponent(finalScoreLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
-                .addComponent(endButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
         );
 
         pack();
@@ -98,6 +126,17 @@ public class EndHighScores extends javax.swing.JFrame {
         ms.setVisible(true);
         dispose();
     }//GEN-LAST:event_endButtonActionPerformed
+
+    private void yesBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yesBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_yesBActionPerformed
+
+    private void noBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noBActionPerformed
+        newHighScore.setVisible(false);
+        promptSave.setVisible(false);
+        noB.setVisible(false);
+        yesB.setVisible(false);
+    }//GEN-LAST:event_noBActionPerformed
 
     /**
      * @param args the command line arguments
@@ -138,5 +177,10 @@ public class EndHighScores extends javax.swing.JFrame {
     private javax.swing.JButton endButton;
     private javax.swing.JLabel finalScoreLabel;
     private javax.swing.JLabel highscoreTitle;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel newHighScore;
+    private javax.swing.JButton noB;
+    private javax.swing.JLabel promptSave;
+    private javax.swing.JButton yesB;
     // End of variables declaration//GEN-END:variables
 }
