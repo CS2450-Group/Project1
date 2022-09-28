@@ -179,7 +179,7 @@ public class ButtonGame extends javax.swing.JFrame {
         }
     }
 
-        
+    //set all color buttons invisible
     private void makeButtonsInvisible(){
         colorButton1.setVisible(false);
         colorButton2.setVisible(false);
