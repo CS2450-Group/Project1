@@ -26,6 +26,7 @@ public class HighScores extends javax.swing.JFrame {
         readScores();
     }
     
+    //gets scores from scores.txt using readFile.java
     public void readScores(){
         readFile r = new readFile();
 
