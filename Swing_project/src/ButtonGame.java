@@ -90,6 +90,7 @@ public class ButtonGame extends javax.swing.JFrame {
             EndHighScores ehs = new EndHighScores();
             ehs.setVisible(true);
             ehs.setFinalScore(score);
+            ehs.checkHighScore(score);
             dispose();
         }
         setColorLabel();

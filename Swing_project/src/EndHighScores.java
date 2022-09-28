@@ -17,7 +17,9 @@
 *  
 ****************************************************************/
 public class EndHighScores extends javax.swing.JFrame {
-
+    
+    private int fScore;
+    
     /**
      * Creates new form EndHighScores
      */
@@ -28,6 +30,7 @@ public class EndHighScores extends javax.swing.JFrame {
     
     public void setFinalScore(int score) {
         finalScoreLabel.setText(finalScoreLabel.getText() + "               " + score);
+        fScore = score;
     }
     
     private void makeNewScoreInvisible() {
@@ -35,6 +38,21 @@ public class EndHighScores extends javax.swing.JFrame {
         promptSave.setVisible(false);
         noB.setVisible(false);
         yesB.setVisible(false);
+    }
+    
+    public final void checkHighScore(int fScore){
+        readFile r = new readFile();
+        r.openFile();
+        String[] scores = r.readScore();
+        String scoreStr = scores[7];
+        int scoreInt = Integer.parseInt(scoreStr);
+        if (fScore > scoreInt) {
+            newHighScore.setVisible(true);
+            promptSave.setVisible(true);
+            noB.setVisible(true);
+            yesB.setVisible(true);
+        }
+        r.closeFile();
     }
 
     /**
