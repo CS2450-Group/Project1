@@ -137,8 +137,10 @@ public class ButtonGame extends javax.swing.JFrame {
         for(int i = 0; i < selectedButtons.length; i++) {
             int checker = temp;
             temp = buttonSelector.nextInt(10)+1;
-            while(checker == temp){
-                temp = buttonSelector.nextInt(10) + 1;
+            for(int j = 0; j < selectedButtons.length; j++){
+                while(temp == selectedButtons[j]){
+                    temp = buttonSelector.nextInt(10)+1;
+                }
             }
             selectedButtons[i] = temp; 
         }
