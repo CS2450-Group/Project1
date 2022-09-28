@@ -19,6 +19,7 @@
 public class EndHighScores extends javax.swing.JFrame {
     
     private int fScore;
+    private String text;
     
     /**
      * Creates new form EndHighScores
@@ -38,6 +39,8 @@ public class EndHighScores extends javax.swing.JFrame {
         promptSave.setVisible(false);
         noB.setVisible(false);
         yesB.setVisible(false);
+        textField.setVisible(false);
+        promptInitial.setVisible(false);
     }
     
     public final void checkHighScore(int fScore){
@@ -72,6 +75,8 @@ public class EndHighScores extends javax.swing.JFrame {
         yesB = new javax.swing.JButton();
         noB = new javax.swing.JButton();
         endButton = new javax.swing.JButton();
+        textField = new javax.swing.JTextField();
+        promptInitial = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setForeground(java.awt.Color.white);
@@ -121,7 +126,17 @@ public class EndHighScores extends javax.swing.JFrame {
                 endButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(endButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 302, 95, 44));
+        jPanel1.add(endButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 95, 44));
+
+        textField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textFieldActionPerformed(evt);
+            }
+        });
+        jPanel1.add(textField, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, 160, 30));
+
+        promptInitial.setText("Please enter 3 letter initials. Press Enter key when done");
+        jPanel1.add(promptInitial, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 330, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -146,7 +161,11 @@ public class EndHighScores extends javax.swing.JFrame {
     }//GEN-LAST:event_endButtonActionPerformed
 
     private void yesBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yesBActionPerformed
-        // TODO add your handling code here:
+       textField.setVisible(true);
+       promptInitial.setVisible(true);
+       promptSave.setVisible(false);
+       noB.setVisible(false);
+       yesB.setVisible(false);
     }//GEN-LAST:event_yesBActionPerformed
 
     private void noBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noBActionPerformed
@@ -155,6 +174,10 @@ public class EndHighScores extends javax.swing.JFrame {
         noB.setVisible(false);
         yesB.setVisible(false);
     }//GEN-LAST:event_noBActionPerformed
+
+    private void textFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldActionPerformed
+        text = textField.getText();
+    }//GEN-LAST:event_textFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -198,7 +221,9 @@ public class EndHighScores extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel newHighScore;
     private javax.swing.JButton noB;
+    private javax.swing.JLabel promptInitial;
     private javax.swing.JLabel promptSave;
+    private javax.swing.JTextField textField;
     private javax.swing.JButton yesB;
     // End of variables declaration//GEN-END:variables
 }
