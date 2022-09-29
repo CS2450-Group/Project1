@@ -22,15 +22,11 @@
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
 import javax.swing.JButton;
 import javax.swing.Timer;
-import java.util.Arrays;
-import javax.swing.UIManager;
 
 
 public class ButtonGame extends javax.swing.JFrame {
@@ -56,7 +52,6 @@ public class ButtonGame extends javax.swing.JFrame {
         curTime();
         makeButtonsInvisible();
         startGame();
-        //DetectMouseMove();
     }
     
     //current date
@@ -88,6 +83,7 @@ public class ButtonGame extends javax.swing.JFrame {
         score = points;
     }
     
+    //create variables to hold color values
     Color color1;
     Color color2;
     Color color3;
@@ -148,20 +144,6 @@ public class ButtonGame extends javax.swing.JFrame {
         colorLabel.setForeground(textColor);
         colorLabel.setText(colorArray[colorText]);
     }
-    
-    
-    /*private void DetectMouseMove() {
-      colorButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseEntered(java.awt.event.MouseEvent evt)   {
-            colorButton1.setBackground(Color.GRAY);
-        }
-
-    public void mouseExited(java.awt.event.MouseEvent evt) {
-        colorButton1.setBackground(UIManager.getColor("control"));
-    }
-});
-   }*/
-    
     
     // open random buttons on screen
     private void setButtons() {
