@@ -42,6 +42,18 @@ public class ButtonGame extends javax.swing.JFrame {
     //current time
     private Timer t;
     private SimpleDateFormat st;
+    //create variables to hold color values
+    Color color1;
+    Color color2;
+    Color color3;
+    Color color4;
+    Color color5;
+    Color color6;
+    Color color7;
+    Color color8;
+    Color color9;
+    Color color10;
+    Color colorHold;
     
     /**
      * Creates new form ButtonGame
@@ -82,18 +94,6 @@ public class ButtonGame extends javax.swing.JFrame {
     public void getScore(int points) {
         score = points;
     }
-    
-    //create variables to hold color values
-    Color color1;
-    Color color2;
-    Color color3;
-    Color color4;
-    Color color5;
-    Color color6;
-    Color color7;
-    Color color8;
-    Color color9;
-    Color color10;
     
     // create round 
     private void startGame() {
@@ -263,12 +263,12 @@ public class ButtonGame extends javax.swing.JFrame {
     // check if button color matches text color
     private void checkColor(JButton button) {
         rounds++;
-        if (button.getBackground().equals(textColor)) {
+        if (colorHold == textColor) {
             score = score + 100;
         }
         startGame();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -583,6 +583,7 @@ public class ButtonGame extends javax.swing.JFrame {
 
     private void colorButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton1MouseEntered
         // TODO add your handling code here:
+        colorHold = color1;
         colorButton1.setBackground(Color.GRAY);
     }//GEN-LAST:event_colorButton1MouseEntered
 
@@ -593,6 +594,7 @@ public class ButtonGame extends javax.swing.JFrame {
 
     private void colorButton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton2MouseEntered
         // TODO add your handling code here:
+        colorHold = color2;
         colorButton2.setBackground(Color.GRAY);
     }//GEN-LAST:event_colorButton2MouseEntered
 
@@ -602,6 +604,7 @@ public class ButtonGame extends javax.swing.JFrame {
     }//GEN-LAST:event_colorButton2MouseExited
 
     private void colorButton3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton3MouseEntered
+        colorHold = color3;
         colorButton3.setBackground(Color.GRAY);
     }//GEN-LAST:event_colorButton3MouseEntered
 
@@ -610,6 +613,7 @@ public class ButtonGame extends javax.swing.JFrame {
     }//GEN-LAST:event_colorButton3MouseExited
 
     private void colorButton4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton4MouseEntered
+        colorHold = color4;
         colorButton4.setBackground(Color.GRAY);
     }//GEN-LAST:event_colorButton4MouseEntered
 
@@ -618,6 +622,7 @@ public class ButtonGame extends javax.swing.JFrame {
     }//GEN-LAST:event_colorButton4MouseExited
 
     private void colorButton5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton5MouseEntered
+        colorHold = color5;
         colorButton5.setBackground(Color.GRAY);
     }//GEN-LAST:event_colorButton5MouseEntered
 
@@ -626,6 +631,7 @@ public class ButtonGame extends javax.swing.JFrame {
     }//GEN-LAST:event_colorButton5MouseExited
 
     private void colorButton6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton6MouseEntered
+        colorHold = color6;
         colorButton6.setBackground(Color.GRAY);
     }//GEN-LAST:event_colorButton6MouseEntered
 
@@ -634,6 +640,7 @@ public class ButtonGame extends javax.swing.JFrame {
     }//GEN-LAST:event_colorButton6MouseExited
 
     private void colorButton7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton7MouseEntered
+        colorHold = color7;
         colorButton7.setBackground(Color.GRAY);
     }//GEN-LAST:event_colorButton7MouseEntered
 
@@ -642,6 +649,7 @@ public class ButtonGame extends javax.swing.JFrame {
     }//GEN-LAST:event_colorButton7MouseExited
 
     private void colorButton8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton8MouseEntered
+        colorHold = color8;
         colorButton8.setBackground(Color.GRAY);
     }//GEN-LAST:event_colorButton8MouseEntered
 
@@ -650,6 +658,7 @@ public class ButtonGame extends javax.swing.JFrame {
     }//GEN-LAST:event_colorButton8MouseExited
 
     private void colorButton9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton9MouseEntered
+        colorHold = color9;
         colorButton9.setBackground(Color.GRAY);
     }//GEN-LAST:event_colorButton9MouseEntered
 
@@ -658,6 +667,7 @@ public class ButtonGame extends javax.swing.JFrame {
     }//GEN-LAST:event_colorButton9MouseExited
 
     private void colorButton10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton10MouseEntered
+        colorHold = color10;
         colorButton10.setBackground(Color.GRAY);
     }//GEN-LAST:event_colorButton10MouseEntered
 
@@ -720,7 +730,4 @@ public class ButtonGame extends javax.swing.JFrame {
     private javax.swing.JLabel time;
     // End of variables declaration//GEN-END:variables
 
-    private void setButtonsInvisibl() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }
