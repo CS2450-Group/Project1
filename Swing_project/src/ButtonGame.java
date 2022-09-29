@@ -22,12 +22,15 @@
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
 import javax.swing.JButton;
 import javax.swing.Timer;
 import java.util.Arrays;
+import javax.swing.UIManager;
 
 
 public class ButtonGame extends javax.swing.JFrame {
@@ -53,6 +56,7 @@ public class ButtonGame extends javax.swing.JFrame {
         curTime();
         makeButtonsInvisible();
         startGame();
+        //DetectMouseMove();
     }
     
     //current date
@@ -83,6 +87,17 @@ public class ButtonGame extends javax.swing.JFrame {
     public void getScore(int points) {
         score = points;
     }
+    
+    Color color1;
+    Color color2;
+    Color color3;
+    Color color4;
+    Color color5;
+    Color color6;
+    Color color7;
+    Color color8;
+    Color color9;
+    Color color10;
     
     // create round 
     private void startGame() {
@@ -135,6 +150,19 @@ public class ButtonGame extends javax.swing.JFrame {
     }
     
     
+    /*private void DetectMouseMove() {
+      colorButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        public void mouseEntered(java.awt.event.MouseEvent evt)   {
+            colorButton1.setBackground(Color.GRAY);
+        }
+
+    public void mouseExited(java.awt.event.MouseEvent evt) {
+        colorButton1.setBackground(UIManager.getColor("control"));
+    }
+});
+   }*/
+    
+    
     // open random buttons on screen
     private void setButtons() {
         int colorIndex = 0;
@@ -157,60 +185,70 @@ public class ButtonGame extends javax.swing.JFrame {
                     colorButton1.setVisible(true);
                     colorButton1.setText("");
                     colorButton1.setBackground(selectColor(colorArray[colorIndex]));
+                    color1 = selectColor(colorArray[colorIndex]);
                     colorIndex++;
                     break;
                 case 2:
                     colorButton2.setVisible(true);
                     colorButton2.setText("");
                     colorButton2.setBackground(selectColor(colorArray[colorIndex]));
+                    color2 = selectColor((colorArray[colorIndex]));
                     colorIndex++;
                     break;
                 case 3:
                     colorButton3.setVisible(true);
                     colorButton3.setText("");
                     colorButton3.setBackground(selectColor(colorArray[colorIndex]));
+                    color3 = selectColor((colorArray[colorIndex]));
                     colorIndex++;
                     break;
                 case 4:
                     colorButton4.setVisible(true);
                     colorButton4.setText("");
                     colorButton4.setBackground(selectColor(colorArray[colorIndex]));
+                    color4 = selectColor((colorArray[colorIndex]));
                     colorIndex++;
                     break;
                 case 5:
                     colorButton5.setVisible(true);
                     colorButton5.setText("");
                     colorButton5.setBackground(selectColor(colorArray[colorIndex]));
+                    color5 = selectColor((colorArray[colorIndex]));
                     colorIndex++;
                     break;
                 case 6:
                     colorButton6.setVisible(true);
                     colorButton6.setText("");
                     colorButton6.setBackground(selectColor(colorArray[colorIndex]));
+                    color6 = selectColor((colorArray[colorIndex]));
                     colorIndex++;
                     break;
                 case 7:
                     colorButton7.setVisible(true);
                     colorButton7.setText("");
                     colorButton7.setBackground(selectColor(colorArray[colorIndex]));
+                    color7 = selectColor((colorArray[colorIndex]));
                     colorIndex++;
                     break;
                 case 8:
                     colorButton8.setVisible(true);
                     colorButton8.setText("");
                     colorButton8.setBackground(selectColor(colorArray[colorIndex]));
+                    color8 = selectColor((colorArray[colorIndex]));
                     colorIndex++;
                     break;
                 case 9:
                     colorButton9.setVisible(true);
                     colorButton9.setText("");
                     colorButton9.setBackground(selectColor(colorArray[colorIndex]));
+                    color9 = selectColor((colorArray[colorIndex]));
                     colorIndex++;
                     break;
                 case 10:
                     colorButton10.setVisible(true);
                     colorButton10.setText("");
                     colorButton10.setBackground(selectColor(colorArray[colorIndex]));
+                    color10 = selectColor((colorArray[colorIndex]));
                     colorIndex++;
                     break;
             }
@@ -310,6 +348,14 @@ public class ButtonGame extends javax.swing.JFrame {
 
         colorButton1.setText("jButton1");
         colorButton1.setDoubleBuffered(true);
+        colorButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                colorButton1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                colorButton1MouseExited(evt);
+            }
+        });
         colorButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 colorButton1ActionPerformed(evt);
@@ -318,6 +364,14 @@ public class ButtonGame extends javax.swing.JFrame {
         jPanel1.add(colorButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 23, 97, 72));
 
         colorButton2.setText("jButton2");
+        colorButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                colorButton2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                colorButton2MouseExited(evt);
+            }
+        });
         colorButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 colorButton2ActionPerformed(evt);
@@ -326,6 +380,14 @@ public class ButtonGame extends javax.swing.JFrame {
         jPanel1.add(colorButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 306, 97, 72));
 
         colorButton3.setText("jButton3");
+        colorButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                colorButton3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                colorButton3MouseExited(evt);
+            }
+        });
         colorButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 colorButton3ActionPerformed(evt);
@@ -334,6 +396,14 @@ public class ButtonGame extends javax.swing.JFrame {
         jPanel1.add(colorButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(242, 317, 97, 72));
 
         colorButton4.setText("jButton4");
+        colorButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                colorButton4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                colorButton4MouseExited(evt);
+            }
+        });
         colorButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 colorButton4ActionPerformed(evt);
@@ -342,6 +412,14 @@ public class ButtonGame extends javax.swing.JFrame {
         jPanel1.add(colorButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(422, 77, 97, 72));
 
         colorButton5.setText("jButton5");
+        colorButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                colorButton5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                colorButton5MouseExited(evt);
+            }
+        });
         colorButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 colorButton5ActionPerformed(evt);
@@ -350,6 +428,14 @@ public class ButtonGame extends javax.swing.JFrame {
         jPanel1.add(colorButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(487, 167, 97, 72));
 
         colorButton6.setText("jButton6");
+        colorButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                colorButton6MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                colorButton6MouseExited(evt);
+            }
+        });
         colorButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 colorButton6ActionPerformed(evt);
@@ -358,6 +444,14 @@ public class ButtonGame extends javax.swing.JFrame {
         jPanel1.add(colorButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 126, 97, 72));
 
         colorButton7.setText("jButton7");
+        colorButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                colorButton7MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                colorButton7MouseExited(evt);
+            }
+        });
         colorButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 colorButton7ActionPerformed(evt);
@@ -366,6 +460,14 @@ public class ButtonGame extends javax.swing.JFrame {
         jPanel1.add(colorButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 167, 97, 72));
 
         colorButton8.setText("jButton8");
+        colorButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                colorButton8MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                colorButton8MouseExited(evt);
+            }
+        });
         colorButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 colorButton8ActionPerformed(evt);
@@ -374,6 +476,14 @@ public class ButtonGame extends javax.swing.JFrame {
         jPanel1.add(colorButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 309, 97, 72));
 
         colorButton9.setText("jButton9");
+        colorButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                colorButton9MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                colorButton9MouseExited(evt);
+            }
+        });
         colorButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 colorButton9ActionPerformed(evt);
@@ -405,6 +515,14 @@ public class ButtonGame extends javax.swing.JFrame {
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 40, -1, -1));
 
         colorButton10.setText("jButton10");
+        colorButton10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                colorButton10MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                colorButton10MouseExited(evt);
+            }
+        });
         colorButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 colorButton10ActionPerformed(evt);
@@ -481,6 +599,90 @@ public class ButtonGame extends javax.swing.JFrame {
         checkColor(colorButton10);
     }//GEN-LAST:event_colorButton10ActionPerformed
 
+    private void colorButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton1MouseEntered
+        // TODO add your handling code here:
+        colorButton1.setBackground(Color.GRAY);
+    }//GEN-LAST:event_colorButton1MouseEntered
+
+    private void colorButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton1MouseExited
+        // TODO add your handling code here:
+        colorButton1.setBackground(color1);
+    }//GEN-LAST:event_colorButton1MouseExited
+
+    private void colorButton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton2MouseEntered
+        // TODO add your handling code here:
+        colorButton2.setBackground(Color.GRAY);
+    }//GEN-LAST:event_colorButton2MouseEntered
+
+    private void colorButton2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton2MouseExited
+        // TODO add your handling code here:
+        colorButton2.setBackground(color2);
+    }//GEN-LAST:event_colorButton2MouseExited
+
+    private void colorButton3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton3MouseEntered
+        colorButton3.setBackground(Color.GRAY);
+    }//GEN-LAST:event_colorButton3MouseEntered
+
+    private void colorButton3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton3MouseExited
+        colorButton3.setBackground(color3);
+    }//GEN-LAST:event_colorButton3MouseExited
+
+    private void colorButton4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton4MouseEntered
+        colorButton4.setBackground(Color.GRAY);
+    }//GEN-LAST:event_colorButton4MouseEntered
+
+    private void colorButton4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton4MouseExited
+        colorButton4.setBackground(color4);
+    }//GEN-LAST:event_colorButton4MouseExited
+
+    private void colorButton5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton5MouseEntered
+        colorButton5.setBackground(Color.GRAY);
+    }//GEN-LAST:event_colorButton5MouseEntered
+
+    private void colorButton5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton5MouseExited
+        colorButton5.setBackground(color5);
+    }//GEN-LAST:event_colorButton5MouseExited
+
+    private void colorButton6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton6MouseEntered
+        colorButton6.setBackground(Color.GRAY);
+    }//GEN-LAST:event_colorButton6MouseEntered
+
+    private void colorButton6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton6MouseExited
+        colorButton6.setBackground(color6);
+    }//GEN-LAST:event_colorButton6MouseExited
+
+    private void colorButton7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton7MouseEntered
+        colorButton7.setBackground(Color.GRAY);
+    }//GEN-LAST:event_colorButton7MouseEntered
+
+    private void colorButton7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton7MouseExited
+        colorButton7.setBackground(color7);
+    }//GEN-LAST:event_colorButton7MouseExited
+
+    private void colorButton8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton8MouseEntered
+        colorButton8.setBackground(Color.GRAY);
+    }//GEN-LAST:event_colorButton8MouseEntered
+
+    private void colorButton8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton8MouseExited
+        colorButton8.setBackground(color8);
+    }//GEN-LAST:event_colorButton8MouseExited
+
+    private void colorButton9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton9MouseEntered
+        colorButton9.setBackground(Color.GRAY);
+    }//GEN-LAST:event_colorButton9MouseEntered
+
+    private void colorButton9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton9MouseExited
+        colorButton9.setBackground(color9);
+    }//GEN-LAST:event_colorButton9MouseExited
+
+    private void colorButton10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton10MouseEntered
+        colorButton10.setBackground(Color.GRAY);
+    }//GEN-LAST:event_colorButton10MouseEntered
+
+    private void colorButton10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_colorButton10MouseExited
+        colorButton10.setBackground(color10);
+    }//GEN-LAST:event_colorButton10MouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -512,6 +714,7 @@ public class ButtonGame extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ButtonGame().setVisible(true);
+                
             }
         });
     }
