@@ -1,3 +1,7 @@
+
+import java.io.FileWriter;
+import java.io.IOException;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -41,6 +45,7 @@ public class EndHighScores extends javax.swing.JFrame {
         yesB.setVisible(false);
         textField.setVisible(false);
         promptInitial.setVisible(false);
+        saved.setVisible(false);
     }
     
     public final void checkHighScore(int fScore){
@@ -56,6 +61,20 @@ public class EndHighScores extends javax.swing.JFrame {
             yesB.setVisible(true);
         }
         r.closeFile();
+    }
+    
+    public void writeScores(String[] scores){
+        try{
+            FileWriter writer = new FileWriter("scores.txt");
+            writer.write(scores[0] + " " + scores[1] + "\n");
+            writer.write(scores[2] + " " + scores[3] + "\n");
+            writer.write(scores[4] + " " + scores[5] + "\n");
+            writer.write(scores[6] + " " + scores[7] + "\n");
+            writer.close();
+        }
+        catch (IOException e){
+            System.out.println("Can't write file");
+        }
     }
 
     /**
@@ -77,6 +96,7 @@ public class EndHighScores extends javax.swing.JFrame {
         endButton = new javax.swing.JButton();
         textField = new javax.swing.JTextField();
         promptInitial = new javax.swing.JLabel();
+        saved = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setForeground(java.awt.Color.white);
@@ -126,7 +146,7 @@ public class EndHighScores extends javax.swing.JFrame {
                 endButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(endButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 95, 44));
+        jPanel1.add(endButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 330, 95, 44));
 
         textField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,6 +157,9 @@ public class EndHighScores extends javax.swing.JFrame {
 
         promptInitial.setText("Please enter 3 letter initials. Press Enter key when done");
         jPanel1.add(promptInitial, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 330, -1));
+
+        saved.setText("Saved!");
+        jPanel1.add(saved, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 300, 70, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -217,6 +240,10 @@ public class EndHighScores extends javax.swing.JFrame {
             scores[1] = Integer.toString(fScore);
             scores[0] = text;
         }
+        writeScores(scores);
+        textField.setVisible(false);
+        promptInitial.setVisible(false);
+        saved.setVisible(true);
     }//GEN-LAST:event_textFieldActionPerformed
 
     /**
@@ -263,6 +290,7 @@ public class EndHighScores extends javax.swing.JFrame {
     private javax.swing.JButton noB;
     private javax.swing.JLabel promptInitial;
     private javax.swing.JLabel promptSave;
+    private javax.swing.JLabel saved;
     private javax.swing.JTextField textField;
     private javax.swing.JButton yesB;
     // End of variables declaration//GEN-END:variables
