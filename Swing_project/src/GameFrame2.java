@@ -23,6 +23,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.AbstractAction;
 import javax.swing.Action;
+import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
 import javax.swing.Timer;
 
@@ -60,6 +61,20 @@ public class GameFrame2 extends javax.swing.JFrame {
         
         jPanel1.getInputMap().put(KeyStroke.getKeyStroke("ESCAPE"), "escapeExit");
         jPanel1.getActionMap().put("escapeExit", escapeExit);
+        
+        Action popUp = new AbstractAction(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                JOptionPane.showMessageDialog(null, "Fall 2022 Semester Project 1.2 by:\n\n"
+                        + "Timmy Lin, 015073799\n"
+                        + "Owen Lovett, 014846715\n"
+                        + "Kristine Trevino Kinoshita, 014679639\n"
+                        + "Scott Lee, 013762138");
+            }
+        };
+        
+        jPanel1.getInputMap().put(KeyStroke.getKeyStroke("F1"), "popUp");
+        jPanel1.getActionMap().put("popUp", popUp);
     }
     //current date
     private void curDate(){
