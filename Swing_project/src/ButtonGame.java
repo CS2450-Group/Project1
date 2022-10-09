@@ -1,6 +1,3 @@
-
-
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -12,7 +9,7 @@
 *  class: CS 2450 – User Interface Design and Programming 
 *  
 *  assignment: Swing Project 1  
-*  date last modified: 9/28/2021  
+*  date last modified: 10/8/2021  
 *  
 *  purpose: This program accepts creates a hangman game and a color button game 
 *           in a separate window that has a title screen, main menu, game 
@@ -32,7 +29,7 @@ import javax.swing.Timer;
 public class ButtonGame extends javax.swing.JFrame {
 
     // color array
-    String colorArray[] = {"RED", "YELLOW", "GREEN", "BLUE", "PURPLE"};
+    String colorArray[] = {"Red", "Yellow", "Green", "Blue", "Purple"};
     // text color
     Color textColor;
     // number of rounds played
@@ -113,19 +110,19 @@ public class ButtonGame extends javax.swing.JFrame {
     private Color selectColor(String c) {
         Color colorName;
         switch (c) {
-            case "RED":
+            case "Red":
                 colorName = Color.RED;
                 break;
-            case "YELLOW":
+            case "Yellow":
                 colorName = Color.YELLOW;
                 break;
-            case "GREEN":
+            case "Green":
                 colorName = Color.GREEN;
                 break;
-            case "BLUE":
+            case "Blue":
                 colorName = Color.BLUE;
                 break;
-            case "PURPLE":
+            case "Purple":
                 colorName = Color.MAGENTA;
                 break;
             default:
@@ -168,6 +165,7 @@ public class ButtonGame extends javax.swing.JFrame {
                     colorButton1.setText("");
                     colorButton1.setBackground(selectColor(colorArray[colorIndex]));
                     color1 = selectColor(colorArray[colorIndex]);
+                    colorButton1.setToolTipText(colorArray[colorIndex] + " button to press");
                     colorIndex++;
                     break;
                 case 2:
@@ -175,6 +173,7 @@ public class ButtonGame extends javax.swing.JFrame {
                     colorButton2.setText("");
                     colorButton2.setBackground(selectColor(colorArray[colorIndex]));
                     color2 = selectColor((colorArray[colorIndex]));
+                    colorButton2.setToolTipText(colorArray[colorIndex] + " button to press");
                     colorIndex++;
                     break;
                 case 3:
@@ -182,6 +181,7 @@ public class ButtonGame extends javax.swing.JFrame {
                     colorButton3.setText("");
                     colorButton3.setBackground(selectColor(colorArray[colorIndex]));
                     color3 = selectColor((colorArray[colorIndex]));
+                    colorButton3.setToolTipText(colorArray[colorIndex] + " button to press");
                     colorIndex++;
                     break;
                 case 4:
@@ -189,6 +189,7 @@ public class ButtonGame extends javax.swing.JFrame {
                     colorButton4.setText("");
                     colorButton4.setBackground(selectColor(colorArray[colorIndex]));
                     color4 = selectColor((colorArray[colorIndex]));
+                    colorButton4.setToolTipText(colorArray[colorIndex] + " button to press");
                     colorIndex++;
                     break;
                 case 5:
@@ -196,6 +197,7 @@ public class ButtonGame extends javax.swing.JFrame {
                     colorButton5.setText("");
                     colorButton5.setBackground(selectColor(colorArray[colorIndex]));
                     color5 = selectColor((colorArray[colorIndex]));
+                    colorButton5.setToolTipText(colorArray[colorIndex] + " button to press");
                     colorIndex++;
                     break;
                 case 6:
@@ -203,6 +205,7 @@ public class ButtonGame extends javax.swing.JFrame {
                     colorButton6.setText("");
                     colorButton6.setBackground(selectColor(colorArray[colorIndex]));
                     color6 = selectColor((colorArray[colorIndex]));
+                    colorButton6.setToolTipText(colorArray[colorIndex] + " button to press");
                     colorIndex++;
                     break;
                 case 7:
@@ -210,6 +213,7 @@ public class ButtonGame extends javax.swing.JFrame {
                     colorButton7.setText("");
                     colorButton7.setBackground(selectColor(colorArray[colorIndex]));
                     color7 = selectColor((colorArray[colorIndex]));
+                    colorButton7.setToolTipText(colorArray[colorIndex] + " button to press");
                     colorIndex++;
                     break;
                 case 8:
@@ -217,6 +221,7 @@ public class ButtonGame extends javax.swing.JFrame {
                     colorButton8.setText("");
                     colorButton8.setBackground(selectColor(colorArray[colorIndex]));
                     color8 = selectColor((colorArray[colorIndex]));
+                    colorButton8.setToolTipText(colorArray[colorIndex] + " button to press");
                     colorIndex++;
                     break;
                 case 9:
@@ -224,6 +229,7 @@ public class ButtonGame extends javax.swing.JFrame {
                     colorButton9.setText("");
                     colorButton9.setBackground(selectColor(colorArray[colorIndex]));
                     color9 = selectColor((colorArray[colorIndex]));
+                    colorButton9.setToolTipText(colorArray[colorIndex] + " button to press");
                     colorIndex++;
                     break;
                 case 10:
@@ -231,6 +237,7 @@ public class ButtonGame extends javax.swing.JFrame {
                     colorButton10.setText("");
                     colorButton10.setBackground(selectColor(colorArray[colorIndex]));
                     color10 = selectColor((colorArray[colorIndex]));
+                    colorButton10.setToolTipText(colorArray[colorIndex] + " button to press");
                     colorIndex++;
                     break;
             }
@@ -279,9 +286,6 @@ public class ButtonGame extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        dateTimePanel = new javax.swing.JPanel();
-        date = new javax.swing.JLabel();
-        time = new javax.swing.JLabel();
         colorButton1 = new javax.swing.JButton();
         colorButton2 = new javax.swing.JButton();
         colorButton3 = new javax.swing.JButton();
@@ -294,6 +298,8 @@ public class ButtonGame extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         colorLabel = new javax.swing.JLabel();
         colorButton10 = new javax.swing.JButton();
+        date = new javax.swing.JLabel();
+        time = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -301,34 +307,8 @@ public class ButtonGame extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(600, 400));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        date.setText("date");
-
-        time.setText("time");
-
-        javax.swing.GroupLayout dateTimePanelLayout = new javax.swing.GroupLayout(dateTimePanel);
-        dateTimePanel.setLayout(dateTimePanelLayout);
-        dateTimePanelLayout.setHorizontalGroup(
-            dateTimePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dateTimePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(time, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        dateTimePanelLayout.setVerticalGroup(
-            dateTimePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dateTimePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(dateTimePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(date)
-                    .addComponent(time))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel1.add(dateTimePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(386, 6, -1, -1));
-
         colorButton1.setText("jButton1");
+        colorButton1.setToolTipText("");
         colorButton1.setDoubleBuffered(true);
         colorButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -410,6 +390,7 @@ public class ButtonGame extends javax.swing.JFrame {
         jPanel1.add(colorButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(487, 167, 97, 72));
 
         colorButton6.setText("jButton6");
+        colorButton6.setToolTipText("");
         colorButton6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 colorButton6MouseEntered(evt);
@@ -442,6 +423,7 @@ public class ButtonGame extends javax.swing.JFrame {
         jPanel1.add(colorButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 167, 97, 72));
 
         colorButton8.setText("jButton8");
+        colorButton8.setToolTipText("");
         colorButton8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 colorButton8MouseEntered(evt);
@@ -497,6 +479,7 @@ public class ButtonGame extends javax.swing.JFrame {
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 40, -1, -1));
 
         colorButton10.setText("jButton10");
+        colorButton10.setToolTipText("");
         colorButton10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 colorButton10MouseEntered(evt);
@@ -511,6 +494,14 @@ public class ButtonGame extends javax.swing.JFrame {
             }
         });
         jPanel1.add(colorButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(94, 219, 97, 72));
+
+        date.setText("date");
+        date.setToolTipText("Current date");
+        jPanel1.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, 124, -1));
+
+        time.setText("time");
+        time.setToolTipText("Current time");
+        jPanel1.add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 10, 76, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -724,7 +715,6 @@ public class ButtonGame extends javax.swing.JFrame {
     private javax.swing.JButton colorButton9;
     private javax.swing.JLabel colorLabel;
     private javax.swing.JLabel date;
-    private javax.swing.JPanel dateTimePanel;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel time;

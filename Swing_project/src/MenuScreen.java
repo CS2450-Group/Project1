@@ -9,7 +9,7 @@
 *  class: CS 2450 – User Interface Design and Programming 
 *  
 *  assignment: Swing Project 1  
-*  date last modified: 9/26/2021  
+*  date last modified: 10/8/2021  
 *  
 *  purpose: This program accepts creates a hangman game and a color button game 
 *           in a separate window that has a title screen, main menu, game 
@@ -51,6 +51,7 @@ public class MenuScreen extends javax.swing.JFrame {
         playButton.setFont(new java.awt.Font("Times New Roman", 3, 28)); // NOI18N
         playButton.setForeground(new java.awt.Color(255, 255, 255));
         playButton.setText("Play");
+        playButton.setToolTipText("Start games");
         playButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 playButtonActionPerformed(evt);
@@ -61,6 +62,7 @@ public class MenuScreen extends javax.swing.JFrame {
         creditsButton.setFont(new java.awt.Font("Times New Roman", 3, 28)); // NOI18N
         creditsButton.setForeground(new java.awt.Color(255, 255, 255));
         creditsButton.setText("Credits");
+        creditsButton.setToolTipText("Go to credits");
         creditsButton.setPreferredSize(new java.awt.Dimension(75, 34));
         creditsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,6 +74,7 @@ public class MenuScreen extends javax.swing.JFrame {
         highscoreButton.setFont(new java.awt.Font("Times New Roman", 3, 28)); // NOI18N
         highscoreButton.setForeground(new java.awt.Color(255, 255, 255));
         highscoreButton.setText("Highscores");
+        highscoreButton.setToolTipText("View highscores");
         highscoreButton.setPreferredSize(new java.awt.Dimension(75, 34));
         highscoreButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -1,11 +1,3 @@
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Random;
-import javax.swing.Timer;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -17,7 +9,7 @@ import javax.swing.Timer;
 *  class: CS 2450 – User Interface Design and Programming 
 *  
 *  assignment: Swing Project 1  
-*  date last modified: 9/27/2021  
+*  date last modified: 10/8/2021  
 *  
 *  purpose: This program accepts creates a hangman game and a color button game 
 *           in a separate window that has a title screen, main menu, game 
@@ -25,6 +17,12 @@ import javax.swing.Timer;
 *  
 ****************************************************************/
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Random;
 import javax.swing.Timer;
 
 public class GameFrame extends javax.swing.JFrame {
@@ -322,6 +320,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         aButton.setText("A");
+        aButton.setToolTipText("Select letter");
         aButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 aButtonActionPerformed(evt);
@@ -330,6 +329,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(aButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 302, 38, -1));
 
         bButton.setText("B");
+        bButton.setToolTipText("Select letter");
         bButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bButtonActionPerformed(evt);
@@ -338,6 +338,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(bButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(57, 302, 38, -1));
 
         cButton.setText("C");
+        cButton.setToolTipText("Select letter");
         cButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cButtonActionPerformed(evt);
@@ -346,6 +347,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(cButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(101, 302, 38, -1));
 
         dButton.setText("D");
+        dButton.setToolTipText("Select letter");
         dButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dButtonActionPerformed(evt);
@@ -354,6 +356,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(dButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 302, 38, -1));
 
         eButton.setText("E");
+        eButton.setToolTipText("Select letter");
         eButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 eButtonActionPerformed(evt);
@@ -362,6 +365,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(eButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(189, 302, 38, -1));
 
         fButton.setText("F");
+        fButton.setToolTipText("Select letter");
         fButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fButtonActionPerformed(evt);
@@ -370,6 +374,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(fButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(233, 302, 38, -1));
 
         gButton.setText("G");
+        gButton.setToolTipText("Select letter");
         gButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 gButtonActionPerformed(evt);
@@ -378,6 +383,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(gButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(277, 302, 38, -1));
 
         hButton.setText("H");
+        hButton.setToolTipText("Select letter");
         hButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 hButtonActionPerformed(evt);
@@ -386,6 +392,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(hButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(321, 302, 38, -1));
 
         iButton.setText("I");
+        iButton.setToolTipText("Select letter");
         iButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 iButtonActionPerformed(evt);
@@ -394,6 +401,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(iButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(365, 302, 38, -1));
 
         jButton.setText("J");
+        jButton.setToolTipText("Select letter");
         jButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonActionPerformed(evt);
@@ -402,6 +410,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(jButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(409, 302, 38, -1));
 
         kButton.setText("K");
+        kButton.setToolTipText("Select letter");
         kButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 kButtonActionPerformed(evt);
@@ -410,6 +419,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(kButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(453, 302, 38, -1));
 
         lButton.setText("L");
+        lButton.setToolTipText("Select letter");
         lButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lButtonActionPerformed(evt);
@@ -418,6 +428,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(lButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(497, 302, 38, -1));
 
         mButton.setText("M");
+        mButton.setToolTipText("Select letter");
         mButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mButtonActionPerformed(evt);
@@ -426,6 +437,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(mButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(541, 302, 38, -1));
 
         nButton.setText("N");
+        nButton.setToolTipText("Select letter");
         nButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nButtonActionPerformed(evt);
@@ -434,6 +446,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(nButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 331, 38, -1));
 
         oButton.setText("O");
+        oButton.setToolTipText("Select letter");
         oButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 oButtonActionPerformed(evt);
@@ -442,6 +455,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(oButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(57, 331, 38, -1));
 
         pButton.setText("P");
+        pButton.setToolTipText("Select letter");
         pButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pButtonActionPerformed(evt);
@@ -450,6 +464,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(pButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(101, 331, 38, -1));
 
         qButton.setText("Q");
+        qButton.setToolTipText("Select letter");
         qButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 qButtonActionPerformed(evt);
@@ -458,6 +473,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(qButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 331, 38, -1));
 
         rButton.setText("R");
+        rButton.setToolTipText("Select letter");
         rButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rButtonActionPerformed(evt);
@@ -466,6 +482,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(rButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(189, 331, 38, -1));
 
         sButton.setText("S");
+        sButton.setToolTipText("Select letter");
         sButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sButtonActionPerformed(evt);
@@ -474,6 +491,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(sButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(233, 331, 38, -1));
 
         tButton.setText("T");
+        tButton.setToolTipText("Select letter");
         tButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tButtonActionPerformed(evt);
@@ -482,6 +500,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(tButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(277, 331, 38, -1));
 
         uButton.setText("U");
+        uButton.setToolTipText("Select letter");
         uButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 uButtonActionPerformed(evt);
@@ -490,6 +509,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(uButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(321, 331, 38, -1));
 
         vButton.setText("V");
+        vButton.setToolTipText("Select letter");
         vButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 vButtonActionPerformed(evt);
@@ -498,6 +518,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(vButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(365, 331, 38, -1));
 
         wButton.setText("W");
+        wButton.setToolTipText("Select letter");
         wButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 wButtonActionPerformed(evt);
@@ -506,6 +527,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(wButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(409, 331, 40, -1));
 
         xButton.setText("X");
+        xButton.setToolTipText("Select letter");
         xButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 xButtonActionPerformed(evt);
@@ -514,6 +536,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(xButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 331, 38, -1));
 
         yButton.setText("Y");
+        yButton.setToolTipText("Select letter");
         yButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 yButtonActionPerformed(evt);
@@ -522,6 +545,7 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(yButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(499, 331, 38, -1));
 
         zButton.setText("Z");
+        zButton.setToolTipText("Select letter");
         zButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 zButtonActionPerformed(evt);
@@ -530,12 +554,15 @@ public class GameFrame extends javax.swing.JFrame {
         jPanel1.add(zButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(543, 331, 38, -1));
 
         date.setText("date");
+        date.setToolTipText("Current date");
         jPanel1.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(382, 6, 124, -1));
 
         time.setText("time");
+        time.setToolTipText("Current time");
         jPanel1.add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(512, 6, 76, -1));
 
         skipButton.setText("Skip");
+        skipButton.setToolTipText("Skip to next game");
         skipButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 skipButtonActionPerformed(evt);

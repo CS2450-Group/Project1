@@ -108,6 +108,7 @@
         <Component class="javax.swing.JButton" name="yesB">
           <Properties>
             <Property name="text" type="java.lang.String" value="Yes"/>
+            <Property name="toolTipText" type="java.lang.String" value="Save Score"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="yesBActionPerformed"/>
@@ -121,6 +122,7 @@
         <Component class="javax.swing.JButton" name="noB">
           <Properties>
             <Property name="text" type="java.lang.String" value="No"/>
+            <Property name="toolTipText" type="java.lang.String" value="Cancel save"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="noBActionPerformed"/>
@@ -140,6 +142,7 @@
               <Font name="Segoe UI" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="End"/>
+            <Property name="toolTipText" type="java.lang.String" value="Go to Main Menu"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="endButtonActionPerformed"/>

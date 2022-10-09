@@ -1,7 +1,3 @@
-
-import java.io.FileWriter;
-import java.io.IOException;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -13,13 +9,17 @@ import java.io.IOException;
 *  class: CS 2450 – User Interface Design and Programming 
 *  
 *  assignment: Swing Project 1  
-*  date last modified: 9/26/2021  
+*  date last modified: 10/8/2021  
 *  
 *  purpose: This program accepts creates a hangman game and a color button game 
 *           in a separate window that has a title screen, main menu, game 
 *           screen, high score screen, and credits.
 *  
 ****************************************************************/
+
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class EndHighScores extends javax.swing.JFrame {
     
     private int fScore;
@@ -123,6 +123,7 @@ public class EndHighScores extends javax.swing.JFrame {
         jPanel1.add(promptSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(127, 209, -1, -1));
 
         yesB.setText("Yes");
+        yesB.setToolTipText("Save Score");
         yesB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 yesBActionPerformed(evt);
@@ -131,6 +132,7 @@ public class EndHighScores extends javax.swing.JFrame {
         jPanel1.add(yesB, new org.netbeans.lib.awtextra.AbsoluteConstraints(367, 207, 60, -1));
 
         noB.setText("No");
+        noB.setToolTipText("Cancel save");
         noB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 noBActionPerformed(evt);
@@ -141,6 +143,7 @@ public class EndHighScores extends javax.swing.JFrame {
         endButton.setBackground(new java.awt.Color(242, 242, 242));
         endButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         endButton.setText("End");
+        endButton.setToolTipText("Go to Main Menu");
         endButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 endButtonActionPerformed(evt);
