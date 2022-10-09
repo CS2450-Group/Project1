@@ -130,6 +130,7 @@ public class GameFrame extends javax.swing.JFrame {
             java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new GameFrame2().setVisible(true);
+                dispose();
             }
         });
         }
