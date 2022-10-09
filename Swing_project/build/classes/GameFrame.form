@@ -59,6 +59,7 @@
         <Component class="javax.swing.JButton" name="aButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="A"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="aButtonActionPerformed"/>
@@ -72,6 +73,7 @@
         <Component class="javax.swing.JButton" name="bButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="B"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bButtonActionPerformed"/>
@@ -85,6 +87,7 @@
         <Component class="javax.swing.JButton" name="cButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="C"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cButtonActionPerformed"/>
@@ -98,6 +101,7 @@
         <Component class="javax.swing.JButton" name="dButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="D"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dButtonActionPerformed"/>
@@ -111,6 +115,7 @@
         <Component class="javax.swing.JButton" name="eButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="E"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eButtonActionPerformed"/>
@@ -124,6 +129,7 @@
         <Component class="javax.swing.JButton" name="fButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="F"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fButtonActionPerformed"/>
@@ -137,6 +143,7 @@
         <Component class="javax.swing.JButton" name="gButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="G"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="gButtonActionPerformed"/>
@@ -150,6 +157,7 @@
         <Component class="javax.swing.JButton" name="hButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="H"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="hButtonActionPerformed"/>
@@ -163,6 +171,7 @@
         <Component class="javax.swing.JButton" name="iButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="I"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="iButtonActionPerformed"/>
@@ -176,6 +185,7 @@
         <Component class="javax.swing.JButton" name="jButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="J"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonActionPerformed"/>
@@ -189,6 +199,7 @@
         <Component class="javax.swing.JButton" name="kButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="K"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="kButtonActionPerformed"/>
@@ -202,6 +213,7 @@
         <Component class="javax.swing.JButton" name="lButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="L"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lButtonActionPerformed"/>
@@ -215,6 +227,7 @@
         <Component class="javax.swing.JButton" name="mButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="M"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mButtonActionPerformed"/>
@@ -228,6 +241,7 @@
         <Component class="javax.swing.JButton" name="nButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="N"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nButtonActionPerformed"/>
@@ -241,6 +255,7 @@
         <Component class="javax.swing.JButton" name="oButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="O"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="oButtonActionPerformed"/>
@@ -254,6 +269,7 @@
         <Component class="javax.swing.JButton" name="pButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="P"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pButtonActionPerformed"/>
@@ -267,6 +283,7 @@
         <Component class="javax.swing.JButton" name="qButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="Q"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="qButtonActionPerformed"/>
@@ -280,6 +297,7 @@
         <Component class="javax.swing.JButton" name="rButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="R"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rButtonActionPerformed"/>
@@ -293,6 +311,7 @@
         <Component class="javax.swing.JButton" name="sButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="S"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sButtonActionPerformed"/>
@@ -306,6 +325,7 @@
         <Component class="javax.swing.JButton" name="tButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="T"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tButtonActionPerformed"/>
@@ -319,6 +339,7 @@
         <Component class="javax.swing.JButton" name="uButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="U"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="uButtonActionPerformed"/>
@@ -332,6 +353,7 @@
         <Component class="javax.swing.JButton" name="vButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="V"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="vButtonActionPerformed"/>
@@ -345,6 +367,7 @@
         <Component class="javax.swing.JButton" name="wButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="W"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wButtonActionPerformed"/>
@@ -358,6 +381,7 @@
         <Component class="javax.swing.JButton" name="xButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="X"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="xButtonActionPerformed"/>
@@ -371,6 +395,7 @@
         <Component class="javax.swing.JButton" name="yButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="Y"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="yButtonActionPerformed"/>
@@ -384,6 +409,7 @@
         <Component class="javax.swing.JButton" name="zButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="Z"/>
+            <Property name="toolTipText" type="java.lang.String" value="Select letter"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="zButtonActionPerformed"/>
@@ -397,6 +423,7 @@
         <Component class="javax.swing.JLabel" name="date">
           <Properties>
             <Property name="text" type="java.lang.String" value="date"/>
+            <Property name="toolTipText" type="java.lang.String" value="Current date"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -407,6 +434,7 @@
         <Component class="javax.swing.JLabel" name="time">
           <Properties>
             <Property name="text" type="java.lang.String" value="time"/>
+            <Property name="toolTipText" type="java.lang.String" value="Current time"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -417,6 +445,7 @@
         <Component class="javax.swing.JButton" name="skipButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="Skip"/>
+            <Property name="toolTipText" type="java.lang.String" value="Skip to next game"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="skipButtonActionPerformed"/>

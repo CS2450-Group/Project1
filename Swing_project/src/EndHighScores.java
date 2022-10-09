@@ -17,8 +17,12 @@
 *  
 ****************************************************************/
 
+import java.awt.event.ActionEvent;
 import java.io.FileWriter;
 import java.io.IOException;
+import javax.swing.AbstractAction;
+import javax.swing.Action;
+import javax.swing.KeyStroke;
 
 public class EndHighScores extends javax.swing.JFrame {
     
@@ -31,6 +35,16 @@ public class EndHighScores extends javax.swing.JFrame {
     public EndHighScores() {
         initComponents();
         makeNewScoreInvisible();
+        
+        Action escapeExit = new AbstractAction(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                dispose();
+            }
+        };
+        
+        jPanel1.getInputMap().put(KeyStroke.getKeyStroke("ESCAPE"), "escapeExit");
+        jPanel1.getActionMap().put("escapeExit", escapeExit);
     }
     
     public void setFinalScore(int score) {

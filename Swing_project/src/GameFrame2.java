@@ -21,6 +21,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.AbstractAction;
+import javax.swing.Action;
+import javax.swing.KeyStroke;
 import javax.swing.Timer;
 
 public class GameFrame2 extends javax.swing.JFrame {
@@ -47,6 +50,16 @@ public class GameFrame2 extends javax.swing.JFrame {
         makeLetterSpaceInvisible();
         makeBodyPartsInvisible();
         makeMistakePromptVisible(false);
+        
+        Action escapeExit = new AbstractAction(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                System.exit(0);
+            }
+        };
+        
+        jPanel1.getInputMap().put(KeyStroke.getKeyStroke("ESCAPE"), "escapeExit");
+        jPanel1.getActionMap().put("escapeExit", escapeExit);
     }
     //current date
     private void curDate(){

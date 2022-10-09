@@ -1,3 +1,9 @@
+
+import java.awt.event.ActionEvent;
+import javax.swing.AbstractAction;
+import javax.swing.Action;
+import javax.swing.KeyStroke;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -24,6 +30,15 @@ public class CreditFrame1 extends javax.swing.JFrame {
     public CreditFrame1() {
         initComponents();
         
+        Action escapeExit = new AbstractAction(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                dispose();
+            }
+        };
+        
+        jPanel1.getInputMap().put(KeyStroke.getKeyStroke("ESCAPE"), "escapeExit");
+        jPanel1.getActionMap().put("escapeExit", escapeExit);
     }
 
     /**

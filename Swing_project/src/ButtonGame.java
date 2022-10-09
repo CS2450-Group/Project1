@@ -22,7 +22,10 @@ import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
+import javax.swing.AbstractAction;
+import javax.swing.Action;
 import javax.swing.JButton;
+import javax.swing.KeyStroke;
 import javax.swing.Timer;
 
 
@@ -61,6 +64,16 @@ public class ButtonGame extends javax.swing.JFrame {
         curTime();
         makeButtonsInvisible();
         startGame();
+        
+        Action escapeExit = new AbstractAction(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                System.exit(0);
+            }
+        };
+        
+        jPanel1.getInputMap().put(KeyStroke.getKeyStroke("ESCAPE"), "escapeExit");
+        jPanel1.getActionMap().put("escapeExit", escapeExit);
     }
     
     //current date

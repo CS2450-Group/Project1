@@ -17,8 +17,11 @@
 ****************************************************************/
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.AbstractAction;
+import javax.swing.Action;
 import javax.swing.Timer;
 import javax.swing.JFrame;
+import javax.swing.KeyStroke;
 
 
 public class MainFrame extends JFrame {
@@ -32,6 +35,16 @@ public class MainFrame extends JFrame {
     
         initComponents(); 
         startTimer();
+        
+        Action escapeExit = new AbstractAction(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                System.exit(0);
+            }
+        };
+        
+        jPanel1.getInputMap().put(KeyStroke.getKeyStroke("ESCAPE"), "escapeExit");
+        jPanel1.getActionMap().put("escapeExit", escapeExit);
     }
     
     private void startTimer() {
