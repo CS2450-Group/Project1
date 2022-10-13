@@ -9,7 +9,7 @@
 *  class: CS 2450 – User Interface Design and Programming 
 *  
 *  assignment: Swing Project 1  
-*  date last modified: 10/8/2021  
+*  date last modified: 10/13/2021  
 *  
 *  purpose: This program accepts creates a hangman game and a color button game 
 *           in a separate window that has a title screen, main menu, game 
@@ -527,11 +527,11 @@ public class GameFrame2 extends javax.swing.JFrame {
         jPanel1.add(zButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(543, 332, 38, -1));
 
         date.setText("date");
-        date.setToolTipText("Current date");
+        date.setToolTipText("");
         jPanel1.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(382, 6, 124, -1));
 
         time.setText("time");
-        time.setToolTipText("Current time");
+        time.setToolTipText("");
         jPanel1.add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(512, 6, 76, -1));
 
         skipButton.setText("Skip");

@@ -9,12 +9,12 @@
 *  class: CS 2450 – User Interface Design and Programming 
 *  
 *  assignment: Swing Project 1  
-*  date last modified: 10/10/2021  
+*  date last modified: 10/13/2021  
 *  
 *  purpose: This program accepts creates a hangman game and a color button game 
 *           in a separate window that has a title screen, main menu, game 
 *           screen, high score screen, and credits.
-*  
+* 
 ****************************************************************/
 
 import java.awt.event.ActionEvent;
@@ -225,6 +225,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box11.setBackground(new java.awt.Color(242, 242, 242));
         box11.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box11.setToolTipText("Enter a digit between 1-9");
         box11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -235,6 +236,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box13.setBackground(new java.awt.Color(242, 242, 242));
         box13.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box13.setToolTipText("Enter a digit between 1-9");
         box13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -245,6 +247,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box12.setBackground(new java.awt.Color(242, 242, 242));
         box12.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box12.setToolTipText("Enter a digit between 1-9");
         box12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -255,6 +258,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box14.setBackground(new java.awt.Color(242, 242, 242));
         box14.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box14.setToolTipText("Enter a digit between 1-9");
         box14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -265,6 +269,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box15.setBackground(new java.awt.Color(242, 242, 242));
         box15.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box15.setToolTipText("Enter a digit between 1-9");
         box15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -275,6 +280,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box16.setBackground(new java.awt.Color(242, 242, 242));
         box16.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box16.setToolTipText("Enter a digit between 1-9");
         box16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -292,6 +298,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box17.setBackground(new java.awt.Color(242, 242, 242));
         box17.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box17.setToolTipText("Enter a digit between 1-9");
         box17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -314,6 +321,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box21.setBackground(new java.awt.Color(242, 242, 242));
         box21.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box21.setToolTipText("Enter a digit between 1-9");
         box21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -331,6 +339,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box22.setBackground(new java.awt.Color(242, 242, 242));
         box22.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box22.setToolTipText("Enter a digit between 1-9");
         box22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -341,6 +350,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box23.setBackground(new java.awt.Color(242, 242, 242));
         box23.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box23.setToolTipText("Enter a digit between 1-9");
         box23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -351,6 +361,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box24.setBackground(new java.awt.Color(242, 242, 242));
         box24.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box24.setToolTipText("Enter a digit between 1-9");
         box24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -361,6 +372,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box25.setBackground(new java.awt.Color(242, 242, 242));
         box25.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box25.setToolTipText("Enter a digit between 1-9");
         box25.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -371,6 +383,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box26.setBackground(new java.awt.Color(242, 242, 242));
         box26.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box26.setToolTipText("Enter a digit between 1-9");
         box26.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -381,6 +394,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box27.setBackground(new java.awt.Color(242, 242, 242));
         box27.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box27.setToolTipText("Enter a digit between 1-9");
         box27.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -396,6 +410,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box31.setBackground(new java.awt.Color(242, 242, 242));
         box31.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box31.setToolTipText("Enter a digit between 1-9");
         box31.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -406,6 +421,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box32.setBackground(new java.awt.Color(242, 242, 242));
         box32.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box32.setToolTipText("Enter a digit between 1-9");
         box32.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box32.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -430,6 +446,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box33.setBackground(new java.awt.Color(242, 242, 242));
         box33.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box33.setToolTipText("Enter a digit between 1-9");
         box33.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box33.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -440,6 +457,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box34.setBackground(new java.awt.Color(242, 242, 242));
         box34.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box34.setToolTipText("Enter a digit between 1-9");
         box34.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box34.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -464,6 +482,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box35.setBackground(new java.awt.Color(242, 242, 242));
         box35.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box35.setToolTipText("Enter a digit between 1-9");
         box35.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box35.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -486,6 +505,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box41.setBackground(new java.awt.Color(242, 242, 242));
         box41.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box41.setToolTipText("Enter a digit between 1-9");
         box41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box41.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -503,6 +523,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box42.setBackground(new java.awt.Color(242, 242, 242));
         box42.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box42.setToolTipText("Enter a digit between 1-9");
         box42.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box42.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -513,6 +534,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box43.setBackground(new java.awt.Color(242, 242, 242));
         box43.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box43.setToolTipText("Enter a digit between 1-9");
         box43.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box43.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -523,6 +545,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box44.setBackground(new java.awt.Color(242, 242, 242));
         box44.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box44.setToolTipText("Enter a digit between 1-9");
         box44.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box44.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -533,6 +556,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box45.setBackground(new java.awt.Color(242, 242, 242));
         box45.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box45.setToolTipText("Enter a digit between 1-9");
         box45.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box45.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -562,6 +586,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box51.setBackground(new java.awt.Color(242, 242, 242));
         box51.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box51.setToolTipText("Enter a digit between 1-9");
         box51.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box51.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -579,6 +604,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box52.setBackground(new java.awt.Color(242, 242, 242));
         box52.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box52.setToolTipText("Enter a digit between 1-9");
         box52.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box52.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -589,6 +615,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box53.setBackground(new java.awt.Color(242, 242, 242));
         box53.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box53.setToolTipText("Enter a digit between 1-9");
         box53.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box53.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -606,6 +633,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box54.setBackground(new java.awt.Color(242, 242, 242));
         box54.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box54.setToolTipText("Enter a digit between 1-9");
         box54.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box54.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -616,6 +644,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box55.setBackground(new java.awt.Color(242, 242, 242));
         box55.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box55.setToolTipText("Enter a digit between 1-9");
         box55.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -633,6 +662,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box56.setBackground(new java.awt.Color(242, 242, 242));
         box56.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box56.setToolTipText("Enter a digit between 1-9");
         box56.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box56.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -662,6 +692,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box61.setBackground(new java.awt.Color(242, 242, 242));
         box61.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box61.setToolTipText("Enter a digit between 1-9");
         box61.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box61.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -672,6 +703,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box62.setBackground(new java.awt.Color(242, 242, 242));
         box62.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box62.setToolTipText("Enter a digit between 1-9");
         box62.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box62.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -682,6 +714,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box63.setBackground(new java.awt.Color(242, 242, 242));
         box63.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box63.setToolTipText("Enter a digit between 1-9");
         box63.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box63.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -692,6 +725,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box64.setBackground(new java.awt.Color(242, 242, 242));
         box64.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box64.setToolTipText("Enter a digit between 1-9");
         box64.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box64.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -709,6 +743,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box65.setBackground(new java.awt.Color(242, 242, 242));
         box65.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box65.setToolTipText("Enter a digit between 1-9");
         box65.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box65.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -731,6 +766,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box71.setBackground(new java.awt.Color(242, 242, 242));
         box71.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box71.setToolTipText("Enter a digit between 1-9");
         box71.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box71.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -755,6 +791,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box72.setBackground(new java.awt.Color(242, 242, 242));
         box72.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box72.setToolTipText("Enter a digit between 1-9");
         box72.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box72.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -765,6 +802,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box73.setBackground(new java.awt.Color(242, 242, 242));
         box73.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box73.setToolTipText("Enter a digit between 1-9");
         box73.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box73.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -789,6 +827,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box74.setBackground(new java.awt.Color(242, 242, 242));
         box74.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box74.setToolTipText("Enter a digit between 1-9");
         box74.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box74.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -799,6 +838,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box75.setBackground(new java.awt.Color(242, 242, 242));
         box75.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box75.setToolTipText("Enter a digit between 1-9");
         box75.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box75.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -814,6 +854,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box81.setBackground(new java.awt.Color(242, 242, 242));
         box81.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box81.setToolTipText("Enter a digit between 1-9");
         box81.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box81.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -824,6 +865,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box82.setBackground(new java.awt.Color(242, 242, 242));
         box82.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box82.setToolTipText("Enter a digit between 1-9");
         box82.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box82.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -834,6 +876,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box83.setBackground(new java.awt.Color(242, 242, 242));
         box83.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box83.setToolTipText("Enter a digit between 1-9");
         box83.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box83.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -844,6 +887,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box84.setBackground(new java.awt.Color(242, 242, 242));
         box84.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box84.setToolTipText("Enter a digit between 1-9");
         box84.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box84.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -854,6 +898,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box85.setBackground(new java.awt.Color(242, 242, 242));
         box85.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box85.setToolTipText("Enter a digit between 1-9");
         box85.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box85.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -864,6 +909,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box86.setBackground(new java.awt.Color(242, 242, 242));
         box86.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box86.setToolTipText("Enter a digit between 1-9");
         box86.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box86.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -881,6 +927,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box87.setBackground(new java.awt.Color(242, 242, 242));
         box87.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box87.setToolTipText("Enter a digit between 1-9");
         box87.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box87.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -903,6 +950,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box91.setBackground(new java.awt.Color(242, 242, 242));
         box91.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box91.setToolTipText("Enter a digit between 1-9");
         box91.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box91.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -920,6 +968,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box92.setBackground(new java.awt.Color(242, 242, 242));
         box92.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box92.setToolTipText("Enter a digit between 1-9");
         box92.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box92.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -930,6 +979,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box93.setBackground(new java.awt.Color(242, 242, 242));
         box93.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box93.setToolTipText("Enter a digit between 1-9");
         box93.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box93.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -940,6 +990,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box94.setBackground(new java.awt.Color(242, 242, 242));
         box94.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box94.setToolTipText("Enter a digit between 1-9");
         box94.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box94.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -950,6 +1001,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box95.setBackground(new java.awt.Color(242, 242, 242));
         box95.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box95.setToolTipText("Enter a digit between 1-9");
         box95.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box95.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -970,6 +1022,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         box97.setBackground(new java.awt.Color(242, 242, 242));
         box97.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        box97.setToolTipText("Enter a digit between 1-9");
         box97.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         box97.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -994,11 +1047,11 @@ public class Sudoku extends javax.swing.JFrame {
         jPanel1.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 110, 40));
 
         date.setText("date");
-        date.setToolTipText("Current date");
+        date.setToolTipText("");
         jPanel1.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(382, 6, 124, -1));
 
         time.setText("time");
-        time.setToolTipText("Current time");
+        time.setToolTipText("");
         jPanel1.add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(512, 6, 76, -1));
 
         submitButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N

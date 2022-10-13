@@ -432,7 +432,7 @@
         <Component class="javax.swing.JLabel" name="date">
           <Properties>
             <Property name="text" type="java.lang.String" value="date"/>
-            <Property name="toolTipText" type="java.lang.String" value="Current date"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -443,7 +443,7 @@
         <Component class="javax.swing.JLabel" name="time">
           <Properties>
             <Property name="text" type="java.lang.String" value="time"/>
-            <Property name="toolTipText" type="java.lang.String" value="Current time"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
