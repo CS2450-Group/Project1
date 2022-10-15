@@ -43,11 +43,15 @@ public class Sudoku extends javax.swing.JFrame {
     private Timer t;
     private SimpleDateFormat st;
     
+    int score = 0;
+    
     /**
      * Creates new form Sudoku
      */
     public Sudoku() {
         initComponents();
+        curDate();
+        curTime();
         Action escapeExit = new AbstractAction(){
             @Override
             public void actionPerformed(ActionEvent e){
@@ -95,6 +99,10 @@ public class Sudoku extends javax.swing.JFrame {
             }
         });
         t.start();
+    }
+    
+    public void getScore(int points) {
+        score = points;
     }
 
     /**
@@ -1067,6 +1075,11 @@ public class Sudoku extends javax.swing.JFrame {
         quitButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         quitButton.setText("Quit");
         quitButton.setToolTipText("Quit game");
+        quitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                quitButtonActionPerformed(evt);
+            }
+        });
         jPanel1.add(quitButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 320, -1, -1));
 
         getContentPane().add(jPanel1);
@@ -1295,6 +1308,12 @@ public class Sudoku extends javax.swing.JFrame {
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_submitButtonActionPerformed
+
+    private void quitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitButtonActionPerformed
+        EndHighScores ehs = new EndHighScores();
+        ehs.setVisible(true);
+        
+    }//GEN-LAST:event_quitButtonActionPerformed
 
     /**
      * @param args the command line arguments
