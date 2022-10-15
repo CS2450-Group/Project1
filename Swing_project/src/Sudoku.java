@@ -56,7 +56,7 @@ public class Sudoku extends javax.swing.JFrame {
         Action escapeExit = new AbstractAction(){
             @Override
             public void actionPerformed(ActionEvent e){
-                dispose();
+                System.exit(0);
             }
         };
         
@@ -1534,7 +1534,7 @@ public class Sudoku extends javax.swing.JFrame {
     private void quitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitButtonActionPerformed
         EndHighScores ehs = new EndHighScores();
         ehs.setVisible(true);
-        
+        dispose();
     }//GEN-LAST:event_quitButtonActionPerformed
 
     /**
