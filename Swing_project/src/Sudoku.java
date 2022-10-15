@@ -17,6 +17,7 @@
 * 
 ****************************************************************/
 
+import java.awt.TextArea;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
@@ -104,7 +105,67 @@ public class Sudoku extends javax.swing.JFrame {
     public void getScore(int points) {
         score = points;
     }
+    
+    int sudokuScore = 540;
+    
+    private final static String newline = "\n";
 
+    String text11;
+    String text12;
+    String text13;
+    String text14;
+    String text15;
+    String text16;
+    String text17;
+    String text21;
+    String text22;
+    String text23;
+    String text24;
+    String text25;
+    String text26;
+    String text27;
+    String text31;
+    String text32;
+    String text33;
+    String text34;
+    String text35;
+    String text41;
+    String text42;
+    String text43;
+    String text44;
+    String text45;
+    String text51;
+    String text52;
+    String text53;
+    String text54;
+    String text55;
+    String text56;
+    String text61;
+    String text62;
+    String text63;
+    String text64;
+    String text65;
+    String text71;
+    String text72;
+    String text73;
+    String text74;
+    String text75;
+    String text81;
+    String text82;
+    String text83;
+    String text84;
+    String text85;
+    String text86;
+    String text87;
+    String text91;
+    String text92;
+    String text93;
+    String text94;
+    String text95;
+    String text96;
+    String text97;
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -1090,223 +1151,384 @@ public class Sudoku extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void box11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box11ActionPerformed
-        // TODO add your handling code here:
+        text11 = box11.getText();
     }//GEN-LAST:event_box11ActionPerformed
 
     private void box12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box12ActionPerformed
-        // TODO add your handling code here:
+        text12 = box12.getText();
     }//GEN-LAST:event_box12ActionPerformed
 
     private void box13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box13ActionPerformed
-        // TODO add your handling code here:
+        text13 = box13.getText();
     }//GEN-LAST:event_box13ActionPerformed
 
     private void box14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box14ActionPerformed
-        // TODO add your handling code here:
+        text14 = box14.getText();
     }//GEN-LAST:event_box14ActionPerformed
 
     private void box15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box15ActionPerformed
-        // TODO add your handling code here:
+        text15 = box15.getText();
     }//GEN-LAST:event_box15ActionPerformed
 
     private void box16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box16ActionPerformed
-        // TODO add your handling code here:
+        text16 = box16.getText();
     }//GEN-LAST:event_box16ActionPerformed
 
     private void box17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box17ActionPerformed
-        // TODO add your handling code here:
+        text17 = box17.getText();
     }//GEN-LAST:event_box17ActionPerformed
 
     private void box21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box21ActionPerformed
-        // TODO add your handling code here:
+        text21 = box21.getText();
     }//GEN-LAST:event_box21ActionPerformed
 
     private void box22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box22ActionPerformed
-        // TODO add your handling code here:
+        text22 = box22.getText();
     }//GEN-LAST:event_box22ActionPerformed
 
     private void box23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box23ActionPerformed
-        // TODO add your handling code here:
+        text23 = box23.getText();
     }//GEN-LAST:event_box23ActionPerformed
 
     private void box24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box24ActionPerformed
-        // TODO add your handling code here:
+        text24 = box24.getText();
     }//GEN-LAST:event_box24ActionPerformed
 
     private void box25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box25ActionPerformed
-        // TODO add your handling code here:
+        text25 = box25.getText();
     }//GEN-LAST:event_box25ActionPerformed
 
     private void box26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box26ActionPerformed
-        // TODO add your handling code here:
+        text26 = box26.getText();
     }//GEN-LAST:event_box26ActionPerformed
 
     private void box27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box27ActionPerformed
-        // TODO add your handling code here:
+        text27 = box27.getText();
     }//GEN-LAST:event_box27ActionPerformed
 
     private void box31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box31ActionPerformed
-        // TODO add your handling code here:
+        text31 = box31.getText();
     }//GEN-LAST:event_box31ActionPerformed
 
     private void box32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box32ActionPerformed
-        // TODO add your handling code here:
+        text32 = box32.getText();
     }//GEN-LAST:event_box32ActionPerformed
 
     private void box33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box33ActionPerformed
-        // TODO add your handling code here:
+        text33 = box33.getText();
     }//GEN-LAST:event_box33ActionPerformed
 
     private void box34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box34ActionPerformed
-        // TODO add your handling code here:
+        text34 = box34.getText();
     }//GEN-LAST:event_box34ActionPerformed
 
     private void box35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box35ActionPerformed
-        // TODO add your handling code here:
+        text35 = box35.getText();
     }//GEN-LAST:event_box35ActionPerformed
 
     private void box45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box45ActionPerformed
-        // TODO add your handling code here:
+        text45 = box45.getText();
     }//GEN-LAST:event_box45ActionPerformed
 
     private void box41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box41ActionPerformed
-        // TODO add your handling code here:
+        text41 = box41.getText();
     }//GEN-LAST:event_box41ActionPerformed
 
     private void box42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box42ActionPerformed
-        // TODO add your handling code here:
+        text42 = box42.getText();
     }//GEN-LAST:event_box42ActionPerformed
 
     private void box43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box43ActionPerformed
-        // TODO add your handling code here:
+        text43 = box43.getText();
     }//GEN-LAST:event_box43ActionPerformed
 
     private void box44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box44ActionPerformed
-        // TODO add your handling code here:
+        text44 = box44.getText();
     }//GEN-LAST:event_box44ActionPerformed
 
     private void box55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box55ActionPerformed
-        // TODO add your handling code here:
+        text55 = box55.getText();
     }//GEN-LAST:event_box55ActionPerformed
 
     private void box51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box51ActionPerformed
-        // TODO add your handling code here:
+        text51 = box51.getText();
     }//GEN-LAST:event_box51ActionPerformed
 
     private void box52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box52ActionPerformed
-        // TODO add your handling code here:
+        text52 = box52.getText();
     }//GEN-LAST:event_box52ActionPerformed
 
     private void box53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box53ActionPerformed
-        // TODO add your handling code here:
+        text53 = box53.getText();
     }//GEN-LAST:event_box53ActionPerformed
 
     private void box54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box54ActionPerformed
-        // TODO add your handling code here:
+        text54 = box54.getText();
     }//GEN-LAST:event_box54ActionPerformed
 
     private void box65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box65ActionPerformed
-        // TODO add your handling code here:
+        text65 = box65.getText();
     }//GEN-LAST:event_box65ActionPerformed
 
     private void box61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box61ActionPerformed
-        // TODO add your handling code here:
+        text61 = box61.getText();
     }//GEN-LAST:event_box61ActionPerformed
 
     private void box62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box62ActionPerformed
-        // TODO add your handling code here:
+        text62 = box62.getText();
     }//GEN-LAST:event_box62ActionPerformed
 
     private void box63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box63ActionPerformed
-        // TODO add your handling code here:
+        text63 = box63.getText();
     }//GEN-LAST:event_box63ActionPerformed
 
     private void box64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box64ActionPerformed
-        // TODO add your handling code here:
+        text64 = box64.getText();
     }//GEN-LAST:event_box64ActionPerformed
 
     private void box75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box75ActionPerformed
-        // TODO add your handling code here:
+        text75 = box75.getText();
     }//GEN-LAST:event_box75ActionPerformed
 
     private void box71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box71ActionPerformed
-        // TODO add your handling code here:
+        text71 = box71.getText();
     }//GEN-LAST:event_box71ActionPerformed
 
     private void box72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box72ActionPerformed
-        // TODO add your handling code here:
+        text72 = box72.getText();
     }//GEN-LAST:event_box72ActionPerformed
 
     private void box73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box73ActionPerformed
-        // TODO add your handling code here:
+        text73 = box73.getText();
     }//GEN-LAST:event_box73ActionPerformed
 
     private void box74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box74ActionPerformed
-        // TODO add your handling code here:
+        text74 = box74.getText();
     }//GEN-LAST:event_box74ActionPerformed
 
     private void box85ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box85ActionPerformed
-        // TODO add your handling code here:
+        text85 = box85.getText();
     }//GEN-LAST:event_box85ActionPerformed
 
     private void box86ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box86ActionPerformed
-        // TODO add your handling code here:
+        text86 = box86.getText();
     }//GEN-LAST:event_box86ActionPerformed
 
     private void box87ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box87ActionPerformed
-        // TODO add your handling code here:
+        text87 = box87.getText();
     }//GEN-LAST:event_box87ActionPerformed
 
     private void box81ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box81ActionPerformed
-        // TODO add your handling code here:
+        text81 = box81.getText();
     }//GEN-LAST:event_box81ActionPerformed
 
     private void box82ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box82ActionPerformed
-        // TODO add your handling code here:
+        text82 = box82.getText();
     }//GEN-LAST:event_box82ActionPerformed
 
     private void box83ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box83ActionPerformed
-        // TODO add your handling code here:
+        text83 = box83.getText();
     }//GEN-LAST:event_box83ActionPerformed
 
     private void box84ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box84ActionPerformed
-        // TODO add your handling code here:
+        text84 = box84.getText();
     }//GEN-LAST:event_box84ActionPerformed
 
     private void box92ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box92ActionPerformed
-        // TODO add your handling code here:
+        text92 = box92.getText();
     }//GEN-LAST:event_box92ActionPerformed
 
     private void box93ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box93ActionPerformed
-        // TODO add your handling code here:
+        text93 = box93.getText();
     }//GEN-LAST:event_box93ActionPerformed
 
     private void box94ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box94ActionPerformed
-        // TODO add your handling code here:
+        text94 = box94.getText();
     }//GEN-LAST:event_box94ActionPerformed
 
     private void box95ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box95ActionPerformed
-        // TODO add your handling code here:
+        text95 = box95.getText();
     }//GEN-LAST:event_box95ActionPerformed
 
     private void box96ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box96ActionPerformed
-        // TODO add your handling code here:
+        text96 = box96.getText();
     }//GEN-LAST:event_box96ActionPerformed
 
     private void box97ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box97ActionPerformed
-        // TODO add your handling code here:
+        text97 = box97.getText();
     }//GEN-LAST:event_box97ActionPerformed
 
     private void box91ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box91ActionPerformed
-        // TODO add your handling code here:
+        text91 = box91.getText();
     }//GEN-LAST:event_box91ActionPerformed
 
     private void box56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box56ActionPerformed
-        // TODO add your handling code here:
+        text56 = box56.getText();
     }//GEN-LAST:event_box56ActionPerformed
 
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
-        // TODO add your handling code here:
+        if(!text11.equals("3")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text13.equals("5")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text12.equals("2")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text14.equals("9")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text15.equals("6")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text16.equals("4")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text17.equals("7")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text21.equals("1")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text22.equals("8")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text23.equals("5")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text24.equals("7")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text25.equals("2")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text26.equals("9")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text27.equals("3")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text31.equals("9")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text32.equals("2")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text33.equals("3")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text34.equals("1")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text35.equals("8")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text41.equals("6")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text42.equals("1")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text43.equals("2")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text44.equals("3")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text45.equals("7")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text51.equals("1")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text52.equals("4")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text53.equals("6")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text54.equals("7")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text55.equals("5")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text56.equals("9")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text61.equals("2")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text62.equals("5")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text63.equals("4")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text64.equals("9")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text65.equals("6")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text71.equals("6")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text72.equals("9")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text73.equals("8")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text74.equals("7")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text75.equals("4")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text81.equals("7")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text82.equals("8")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text83.equals("1")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text84.equals("3")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text85.equals("4")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text86.equals("5")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text87.equals("6")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text91.equals("3")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text92.equals("4")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text93.equals("2")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text94.equals("7")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text95.equals("6")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text96.equals("8")){
+            sudokuScore = sudokuScore - 10;
+        }
+        if(!text97.equals("1")){
+            sudokuScore = sudokuScore - 10;
+        }
     }//GEN-LAST:event_submitButtonActionPerformed
 
     private void quitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitButtonActionPerformed
