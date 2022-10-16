@@ -1151,219 +1151,219 @@ public class Sudoku extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void box11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box11ActionPerformed
-        text11 = box11.getText();
+        text11 = box11.getText().trim();
     }//GEN-LAST:event_box11ActionPerformed
 
     private void box12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box12ActionPerformed
-        text12 = box12.getText();
+        text12 = box12.getText().trim();
     }//GEN-LAST:event_box12ActionPerformed
 
     private void box13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box13ActionPerformed
-        text13 = box13.getText();
+        text13 = box13.getText().trim();
     }//GEN-LAST:event_box13ActionPerformed
 
     private void box14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box14ActionPerformed
-        text14 = box14.getText();
+        text14 = box14.getText().trim();
     }//GEN-LAST:event_box14ActionPerformed
 
     private void box15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box15ActionPerformed
-        text15 = box15.getText();
+        text15 = box15.getText().trim();
     }//GEN-LAST:event_box15ActionPerformed
 
     private void box16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box16ActionPerformed
-        text16 = box16.getText();
+        text16 = box16.getText().trim();
     }//GEN-LAST:event_box16ActionPerformed
 
     private void box17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box17ActionPerformed
-        text17 = box17.getText();
+        text17 = box17.getText().trim();
     }//GEN-LAST:event_box17ActionPerformed
 
     private void box21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box21ActionPerformed
-        text21 = box21.getText();
+        text21 = box21.getText().trim();
     }//GEN-LAST:event_box21ActionPerformed
 
     private void box22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box22ActionPerformed
-        text22 = box22.getText();
+        text22 = box22.getText().trim();
     }//GEN-LAST:event_box22ActionPerformed
 
     private void box23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box23ActionPerformed
-        text23 = box23.getText();
+        text23 = box23.getText().trim();
     }//GEN-LAST:event_box23ActionPerformed
 
     private void box24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box24ActionPerformed
-        text24 = box24.getText();
+        text24 = box24.getText().trim();
     }//GEN-LAST:event_box24ActionPerformed
 
     private void box25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box25ActionPerformed
-        text25 = box25.getText();
+        text25 = box25.getText().trim();
     }//GEN-LAST:event_box25ActionPerformed
 
     private void box26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box26ActionPerformed
-        text26 = box26.getText();
+        text26 = box26.getText().trim();
     }//GEN-LAST:event_box26ActionPerformed
 
     private void box27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box27ActionPerformed
-        text27 = box27.getText();
+        text27 = box27.getText().trim();
     }//GEN-LAST:event_box27ActionPerformed
 
     private void box31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box31ActionPerformed
-        text31 = box31.getText();
+        text31 = box31.getText().trim();
     }//GEN-LAST:event_box31ActionPerformed
 
     private void box32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box32ActionPerformed
-        text32 = box32.getText();
+        text32 = box32.getText().trim();
     }//GEN-LAST:event_box32ActionPerformed
 
     private void box33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box33ActionPerformed
-        text33 = box33.getText();
+        text33 = box33.getText().trim();
     }//GEN-LAST:event_box33ActionPerformed
 
     private void box34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box34ActionPerformed
-        text34 = box34.getText();
+        text34 = box34.getText().trim();
     }//GEN-LAST:event_box34ActionPerformed
 
     private void box35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box35ActionPerformed
-        text35 = box35.getText();
+        text35 = box35.getText().trim();
     }//GEN-LAST:event_box35ActionPerformed
 
     private void box45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box45ActionPerformed
-        text45 = box45.getText();
+        text45 = box45.getText().trim();
     }//GEN-LAST:event_box45ActionPerformed
 
     private void box41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box41ActionPerformed
-        text41 = box41.getText();
+        text41 = box41.getText().trim();
     }//GEN-LAST:event_box41ActionPerformed
 
     private void box42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box42ActionPerformed
-        text42 = box42.getText();
+        text42 = box42.getText().trim();
     }//GEN-LAST:event_box42ActionPerformed
 
     private void box43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box43ActionPerformed
-        text43 = box43.getText();
+        text43 = box43.getText().trim();
     }//GEN-LAST:event_box43ActionPerformed
 
     private void box44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box44ActionPerformed
-        text44 = box44.getText();
+        text44 = box44.getText().trim();
     }//GEN-LAST:event_box44ActionPerformed
 
     private void box55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box55ActionPerformed
-        text55 = box55.getText();
+        text55 = box55.getText().trim();
     }//GEN-LAST:event_box55ActionPerformed
 
     private void box51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box51ActionPerformed
-        text51 = box51.getText();
+        text51 = box51.getText().trim();
     }//GEN-LAST:event_box51ActionPerformed
 
     private void box52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box52ActionPerformed
-        text52 = box52.getText();
+        text52 = box52.getText().trim();
     }//GEN-LAST:event_box52ActionPerformed
 
     private void box53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box53ActionPerformed
-        text53 = box53.getText();
+        text53 = box53.getText().trim();
     }//GEN-LAST:event_box53ActionPerformed
 
     private void box54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box54ActionPerformed
-        text54 = box54.getText();
+        text54 = box54.getText().trim();
     }//GEN-LAST:event_box54ActionPerformed
 
     private void box65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box65ActionPerformed
-        text65 = box65.getText();
+        text65 = box65.getText().trim();
     }//GEN-LAST:event_box65ActionPerformed
 
     private void box61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box61ActionPerformed
-        text61 = box61.getText();
+        text61 = box61.getText().trim();
     }//GEN-LAST:event_box61ActionPerformed
 
     private void box62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box62ActionPerformed
-        text62 = box62.getText();
+        text62 = box62.getText().trim();
     }//GEN-LAST:event_box62ActionPerformed
 
     private void box63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box63ActionPerformed
-        text63 = box63.getText();
+        text63 = box63.getText().trim();
     }//GEN-LAST:event_box63ActionPerformed
 
     private void box64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box64ActionPerformed
-        text64 = box64.getText();
+        text64 = box64.getText().trim();
     }//GEN-LAST:event_box64ActionPerformed
 
     private void box75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box75ActionPerformed
-        text75 = box75.getText();
+        text75 = box75.getText().trim();
     }//GEN-LAST:event_box75ActionPerformed
 
     private void box71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box71ActionPerformed
-        text71 = box71.getText();
+        text71 = box71.getText().trim();
     }//GEN-LAST:event_box71ActionPerformed
 
     private void box72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box72ActionPerformed
-        text72 = box72.getText();
+        text72 = box72.getText().trim();
     }//GEN-LAST:event_box72ActionPerformed
 
     private void box73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box73ActionPerformed
-        text73 = box73.getText();
+        text73 = box73.getText().trim();
     }//GEN-LAST:event_box73ActionPerformed
 
     private void box74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box74ActionPerformed
-        text74 = box74.getText();
+        text74 = box74.getText().trim();
     }//GEN-LAST:event_box74ActionPerformed
 
     private void box85ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box85ActionPerformed
-        text85 = box85.getText();
+        text85 = box85.getText().trim();
     }//GEN-LAST:event_box85ActionPerformed
 
     private void box86ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box86ActionPerformed
-        text86 = box86.getText();
+        text86 = box86.getText().trim();
     }//GEN-LAST:event_box86ActionPerformed
 
     private void box87ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box87ActionPerformed
-        text87 = box87.getText();
+        text87 = box87.getText().trim();
     }//GEN-LAST:event_box87ActionPerformed
 
     private void box81ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box81ActionPerformed
-        text81 = box81.getText();
+        text81 = box81.getText().trim();
     }//GEN-LAST:event_box81ActionPerformed
 
     private void box82ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box82ActionPerformed
-        text82 = box82.getText();
+        text82 = box82.getText().trim();
     }//GEN-LAST:event_box82ActionPerformed
 
     private void box83ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box83ActionPerformed
-        text83 = box83.getText();
+        text83 = box83.getText().trim();
     }//GEN-LAST:event_box83ActionPerformed
 
     private void box84ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box84ActionPerformed
-        text84 = box84.getText();
+        text84 = box84.getText().trim();
     }//GEN-LAST:event_box84ActionPerformed
 
     private void box92ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box92ActionPerformed
-        text92 = box92.getText();
+        text92 = box92.getText().trim();
     }//GEN-LAST:event_box92ActionPerformed
 
     private void box93ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box93ActionPerformed
-        text93 = box93.getText();
+        text93 = box93.getText().trim();
     }//GEN-LAST:event_box93ActionPerformed
 
     private void box94ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box94ActionPerformed
-        text94 = box94.getText();
+        text94 = box94.getText().trim();
     }//GEN-LAST:event_box94ActionPerformed
 
     private void box95ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box95ActionPerformed
-        text95 = box95.getText();
+        text95 = box95.getText().trim();
     }//GEN-LAST:event_box95ActionPerformed
 
     private void box96ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box96ActionPerformed
-        text96 = box96.getText();
+        text96 = box96.getText().trim();
     }//GEN-LAST:event_box96ActionPerformed
 
     private void box97ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box97ActionPerformed
-        text97 = box97.getText();
+        text97 = box97.getText().trim();
     }//GEN-LAST:event_box97ActionPerformed
 
     private void box91ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box91ActionPerformed
-        text91 = box91.getText();
+        text91 = box91.getText().trim();
     }//GEN-LAST:event_box91ActionPerformed
 
     private void box56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box56ActionPerformed
-        text56 = box56.getText();
+        text56 = box56.getText().trim();
     }//GEN-LAST:event_box56ActionPerformed
 
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
