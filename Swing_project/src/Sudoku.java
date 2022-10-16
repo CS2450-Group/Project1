@@ -9,7 +9,7 @@
 *  class: CS 2450 – User Interface Design and Programming 
 *  
 *  assignment: Swing Project 1  
-*  date last modified: 10/13/2021  
+*  date last modified: 10/16/2021  
 *  
 *  purpose: This program accepts creates a hangman game and a color button game 
 *           in a separate window that has a title screen, main menu, game 
@@ -45,65 +45,17 @@ public class Sudoku extends javax.swing.JFrame {
     private SimpleDateFormat st;
     // current score
     int score = 0;
-    int sudokuScore = 540;
-    
-    private final static String newline = "\n";
-    
+    int sudokuScore = 540;    
     // inputted answers
-    String text11;
-    String text12;
-    String text13;
-    String text14;
-    String text15;
-    String text16;
-    String text17;
-    String text21;
-    String text22;
-    String text23;
-    String text24;
-    String text25;
-    String text26;
-    String text27;
-    String text31;
-    String text32;
-    String text33;
-    String text34;
-    String text35;
-    String text41;
-    String text42;
-    String text43;
-    String text44;
-    String text45;
-    String text51;
-    String text52;
-    String text53;
-    String text54;
-    String text55;
-    String text56;
-    String text61;
-    String text62;
-    String text63;
-    String text64;
-    String text65;
-    String text71;
-    String text72;
-    String text73;
-    String text74;
-    String text75;
-    String text81;
-    String text82;
-    String text83;
-    String text84;
-    String text85;
-    String text86;
-    String text87;
-    String text91;
-    String text92;
-    String text93;
-    String text94;
-    String text95;
-    String text96;
-    String text97;
+    String[] grid1 = new String[grid1Solution.length];
+    String[] grid2 = new String[grid2Solution.length];
+    String[] grid3 = new String[grid3Solution.length];
+    String[] grid4 = new String[grid4Solution.length];
+    String[] grid5 = new String[grid5Solution.length];
+    String[] grid6 = new String[grid6Solution.length];
+    String[] grid7 = new String[grid7Solution.length];
+    String[] grid8 = new String[grid8Solution.length];
+    String[] grid9 = new String[grid9Solution.length];
     
     /**
      * Creates new form Sudoku
@@ -112,7 +64,7 @@ public class Sudoku extends javax.swing.JFrame {
         initComponents();
         curDate();
         curTime();
-        errorPromptVisible(false);
+        error.setVisible(false);
         Action escapeExit = new AbstractAction(){
             @Override
             public void actionPerformed(ActionEvent e){
@@ -162,24 +114,25 @@ public class Sudoku extends javax.swing.JFrame {
         t.start();
     }
     
+    // check input
     public void checkInt(String checkBox){
-        int checker = Integer.parseInt(checkBox);
-        if(checker < 1 || checker > 9){
-            errorPromptVisible(true);
-        }
-        if(checker > 0 && checker < 10){
-            errorPromptVisible(false);
+        try {
+            int checker = Integer.parseInt(checkBox);
+            if(checker < 1 || checker > 9){
+                error.setVisible(true);
+            }
+            if(checker > 0 && checker < 10){
+                error.setVisible(false);
+            }
+        } catch (NumberFormatException e) {
+            error.setVisible(true);
         }
     }
     
+    // get score from previous games
     public void getScore(int points) {
         score = points;
     }
-    
-    private void errorPromptVisible(boolean state) {
-        error.setVisible(state);
-    }
-     
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -1129,7 +1082,7 @@ public class Sudoku extends javax.swing.JFrame {
 
         title.setFont(new java.awt.Font("Segoe UI", 0, 30)); // NOI18N
         title.setText("Sudoku");
-        jPanel1.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 110, 40));
+        jPanel1.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 60, 110, 40));
 
         date.setText("date");
         date.setToolTipText("");
@@ -1172,437 +1125,311 @@ public class Sudoku extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void box11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box11ActionPerformed
-        text11 = box11.getText().trim();
-        checkInt(text11);
+        grid1[0] = box11.getText().trim();
+        checkInt(grid1[0]);
     }//GEN-LAST:event_box11ActionPerformed
 
     private void box12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box12ActionPerformed
-        text12 = box12.getText().trim();
-        checkInt(text12);
+        grid1[1] = box12.getText().trim();
+        checkInt(grid1[1]);
     }//GEN-LAST:event_box12ActionPerformed
 
     private void box13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box13ActionPerformed
-        text13 = box13.getText().trim();
-        checkInt(text13);
+        grid1[2] = box13.getText().trim();
+        checkInt(grid1[2]);
     }//GEN-LAST:event_box13ActionPerformed
 
     private void box14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box14ActionPerformed
-        text14 = box14.getText().trim();
-        checkInt(text14);
+        grid1[3] = box14.getText().trim();
+        checkInt(grid1[3]);
     }//GEN-LAST:event_box14ActionPerformed
 
     private void box15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box15ActionPerformed
-        text15 = box15.getText().trim();
-        checkInt(text15);
+        grid1[4] = box15.getText().trim();
+        checkInt(grid1[4]);
     }//GEN-LAST:event_box15ActionPerformed
 
     private void box16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box16ActionPerformed
-        text16 = box16.getText().trim();
-        checkInt(text16);
+        grid1[5] = box16.getText().trim();
+        checkInt(grid1[5]);
     }//GEN-LAST:event_box16ActionPerformed
 
     private void box17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box17ActionPerformed
-        text17 = box17.getText().trim();
-        checkInt(text17);
+        grid1[6] = box17.getText().trim();
+        checkInt(grid1[7]);
     }//GEN-LAST:event_box17ActionPerformed
 
     private void box21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box21ActionPerformed
-        text21 = box21.getText().trim();
-        checkInt(text21);
+        grid2[0] = box21.getText().trim();
+        checkInt(grid2[0]);
     }//GEN-LAST:event_box21ActionPerformed
 
     private void box22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box22ActionPerformed
-        text22 = box22.getText().trim();
-        checkInt(text22);
+        grid2[1] = box22.getText().trim();
+        checkInt(grid2[1]);
     }//GEN-LAST:event_box22ActionPerformed
 
     private void box23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box23ActionPerformed
-        text23 = box23.getText().trim();
-        checkInt(text23);
+        grid2[2] = box23.getText().trim();
+        checkInt(grid2[2]);
     }//GEN-LAST:event_box23ActionPerformed
 
     private void box24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box24ActionPerformed
-        text24 = box24.getText().trim();
-        checkInt(text24);
+        grid2[3] = box24.getText().trim();
+        checkInt(grid2[3]);
     }//GEN-LAST:event_box24ActionPerformed
 
     private void box25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box25ActionPerformed
-        text25 = box25.getText().trim();
-        checkInt(text25);
+        grid2[4] = box25.getText().trim();
+        checkInt(grid2[4]);
     }//GEN-LAST:event_box25ActionPerformed
 
     private void box26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box26ActionPerformed
-        text26 = box26.getText().trim();
-        checkInt(text26);
+        grid2[5] = box26.getText().trim();
+        checkInt(grid2[5]);
     }//GEN-LAST:event_box26ActionPerformed
 
     private void box27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box27ActionPerformed
-        text27 = box27.getText().trim();
-        checkInt(text27);
+        grid2[6] = box27.getText().trim();
+        checkInt(grid2[6]);
     }//GEN-LAST:event_box27ActionPerformed
 
     private void box31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box31ActionPerformed
-        text31 = box31.getText().trim();
-        checkInt(text31);
+        grid3[0] = box31.getText().trim();
+        checkInt(grid3[0]);
     }//GEN-LAST:event_box31ActionPerformed
 
     private void box32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box32ActionPerformed
-        text32 = box32.getText().trim();
-        checkInt(text32);
+        grid3[1] = box32.getText().trim();
+        checkInt(grid3[1]);
     }//GEN-LAST:event_box32ActionPerformed
 
     private void box33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box33ActionPerformed
-        text33 = box33.getText().trim();
-        checkInt(text33);
+        grid3[2] = box33.getText().trim();
+        checkInt(grid3[2]);
     }//GEN-LAST:event_box33ActionPerformed
 
     private void box34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box34ActionPerformed
-        text34 = box34.getText().trim();
-        checkInt(text34);
+        grid3[3] = box34.getText().trim();
+        checkInt(grid3[3]);
     }//GEN-LAST:event_box34ActionPerformed
 
     private void box35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box35ActionPerformed
-        text35 = box35.getText().trim();
-        checkInt(text35);
+        grid3[4] = box35.getText().trim();
+        checkInt(grid3[4]);
     }//GEN-LAST:event_box35ActionPerformed
 
     private void box45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box45ActionPerformed
-        text45 = box45.getText().trim();
-        checkInt(text45);
+        grid4[4] = box45.getText().trim();
+        checkInt(grid4[4]);
     }//GEN-LAST:event_box45ActionPerformed
 
     private void box41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box41ActionPerformed
-        text41 = box41.getText().trim();
-        checkInt(text41);
+        grid4[0] = box41.getText().trim();
+        checkInt(grid4[0]);
     }//GEN-LAST:event_box41ActionPerformed
 
     private void box42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box42ActionPerformed
-        text42 = box42.getText().trim();
-        checkInt(text42);
+        grid4[1] = box42.getText().trim();
+        checkInt(grid4[1]);
     }//GEN-LAST:event_box42ActionPerformed
 
     private void box43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box43ActionPerformed
-        text43 = box43.getText().trim();
-        checkInt(text43);
+        grid4[2] = box43.getText().trim();
+        checkInt(grid4[2]);
     }//GEN-LAST:event_box43ActionPerformed
 
     private void box44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box44ActionPerformed
-        text44 = box44.getText().trim();
-        checkInt(text44);
+        grid4[3] = box44.getText().trim();
+        checkInt(grid4[3]);
     }//GEN-LAST:event_box44ActionPerformed
 
     private void box55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box55ActionPerformed
-        text55 = box55.getText().trim();
-        checkInt(text55);
+        grid5[4] = box55.getText().trim();
+        checkInt(grid5[4]);
     }//GEN-LAST:event_box55ActionPerformed
 
     private void box51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box51ActionPerformed
-        text51 = box51.getText().trim();
-        checkInt(text51);
+        grid5[0] = box51.getText().trim();
+        checkInt(grid5[0]);
     }//GEN-LAST:event_box51ActionPerformed
 
     private void box52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box52ActionPerformed
-        text52 = box52.getText().trim();
-        checkInt(text52);
+        grid5[1] = box52.getText().trim();
+        checkInt(grid5[1]);
     }//GEN-LAST:event_box52ActionPerformed
 
     private void box53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box53ActionPerformed
-        text53 = box53.getText().trim();
-        checkInt(text53);
+        grid5[2] = box53.getText().trim();
+        checkInt(grid5[2]);
     }//GEN-LAST:event_box53ActionPerformed
 
     private void box54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box54ActionPerformed
-        text54 = box54.getText().trim();
-        checkInt(text54);
+        grid5[3] = box54.getText().trim();
+        checkInt(grid5[3]);
     }//GEN-LAST:event_box54ActionPerformed
 
     private void box65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box65ActionPerformed
-        text65 = box65.getText().trim();
-        checkInt(text65);
+        grid6[4] = box65.getText().trim();
+        checkInt(grid6[4]);
     }//GEN-LAST:event_box65ActionPerformed
 
     private void box61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box61ActionPerformed
-        text61 = box61.getText().trim();
-        checkInt(text61);
+        grid6[0] = box61.getText().trim();
+        checkInt(grid6[0]);
     }//GEN-LAST:event_box61ActionPerformed
 
     private void box62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box62ActionPerformed
-        text62 = box62.getText().trim();
-        checkInt(text62);
+        grid6[1] = box62.getText().trim();
+        checkInt(grid6[1]);
     }//GEN-LAST:event_box62ActionPerformed
 
     private void box63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box63ActionPerformed
-        text63 = box63.getText().trim();
-        checkInt(text63);
+        grid6[2] = box63.getText().trim();
+        checkInt(grid6[2]);
     }//GEN-LAST:event_box63ActionPerformed
 
     private void box64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box64ActionPerformed
-        text64 = box64.getText().trim();
-        checkInt(text64);
+        grid6[3] = box64.getText().trim();
+        checkInt(grid6[3]);
     }//GEN-LAST:event_box64ActionPerformed
 
     private void box75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box75ActionPerformed
-        text75 = box75.getText().trim();
-        checkInt(text75);
+        grid7[4] = box75.getText().trim();
+        checkInt(grid7[4]);
     }//GEN-LAST:event_box75ActionPerformed
 
     private void box71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box71ActionPerformed
-        text71 = box71.getText().trim();
-        checkInt(text71);
+        grid7[0] = box71.getText().trim();
+        checkInt(grid7[0]);
     }//GEN-LAST:event_box71ActionPerformed
 
     private void box72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box72ActionPerformed
-        text72 = box72.getText().trim();
-        checkInt(text72);
+        grid7[1] = box72.getText().trim();
+        checkInt(grid7[1]);
     }//GEN-LAST:event_box72ActionPerformed
 
     private void box73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box73ActionPerformed
-        text73 = box73.getText().trim();
-        checkInt(text73);
+        grid7[2] = box73.getText().trim();
+        checkInt(grid7[2]);
     }//GEN-LAST:event_box73ActionPerformed
 
     private void box74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box74ActionPerformed
-        text74 = box74.getText().trim();
-        checkInt(text74);
+        grid7[3] = box74.getText().trim();
+        checkInt(grid7[3]);
     }//GEN-LAST:event_box74ActionPerformed
 
     private void box85ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box85ActionPerformed
-        text85 = box85.getText().trim();
-        checkInt(text85);
+        grid8[4] = box85.getText().trim();
+        checkInt(grid8[4]);
     }//GEN-LAST:event_box85ActionPerformed
 
     private void box86ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box86ActionPerformed
-        text86 = box86.getText().trim();
-        checkInt(text86);
+        grid8[5] = box86.getText().trim();
+        checkInt(grid8[5]);
     }//GEN-LAST:event_box86ActionPerformed
 
     private void box87ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box87ActionPerformed
-        text87 = box87.getText().trim();
-        checkInt(text87);
+        grid8[6] = box87.getText().trim();
+        checkInt(grid8[6]);
     }//GEN-LAST:event_box87ActionPerformed
 
     private void box81ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box81ActionPerformed
-        text81 = box81.getText().trim();
-        checkInt(text81);
+        grid8[0] = box81.getText().trim();
+        checkInt(grid8[0]);
     }//GEN-LAST:event_box81ActionPerformed
 
     private void box82ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box82ActionPerformed
-        text82 = box82.getText().trim();
-        checkInt(text82);
+        grid8[1] = box82.getText().trim();
+        checkInt(grid8[1]);
     }//GEN-LAST:event_box82ActionPerformed
 
     private void box83ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box83ActionPerformed
-        text83 = box83.getText().trim();
-        checkInt(text83);
+        grid8[2] = box83.getText().trim();
+        checkInt(grid8[2]);
     }//GEN-LAST:event_box83ActionPerformed
 
     private void box84ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box84ActionPerformed
-        text84 = box84.getText().trim();
-        checkInt(text84);
+        grid8[3] = box84.getText().trim();
+        checkInt(grid8[3]);
     }//GEN-LAST:event_box84ActionPerformed
 
     private void box92ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box92ActionPerformed
-        text92 = box92.getText().trim();
-        checkInt(text92);
+        grid9[1] = box92.getText().trim();
+        checkInt(grid9[1]);
     }//GEN-LAST:event_box92ActionPerformed
 
     private void box93ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box93ActionPerformed
-        text93 = box93.getText().trim();
-        checkInt(text93);
+        grid9[2] = box93.getText().trim();
+        checkInt(grid9[2]);
     }//GEN-LAST:event_box93ActionPerformed
 
     private void box94ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box94ActionPerformed
-        text94 = box94.getText().trim();
-        checkInt(text94);
+        grid9[3] = box94.getText().trim();
+        checkInt(grid9[3]);
     }//GEN-LAST:event_box94ActionPerformed
 
     private void box95ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box95ActionPerformed
-        text95 = box95.getText().trim();
-        checkInt(text95);
+        grid9[4] = box95.getText().trim();
+        checkInt(grid9[4]);
     }//GEN-LAST:event_box95ActionPerformed
 
     private void box96ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box96ActionPerformed
-        text96 = box96.getText().trim();
-        checkInt(text96);
+        grid9[5] = box96.getText().trim();
+        checkInt(grid9[5]);
     }//GEN-LAST:event_box96ActionPerformed
 
     private void box97ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box97ActionPerformed
-        text97 = box97.getText().trim();
-        checkInt(text97);
+        grid9[6] = box97.getText().trim();
+        checkInt(grid9[6]);
     }//GEN-LAST:event_box97ActionPerformed
 
     private void box91ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box91ActionPerformed
-        text91 = box91.getText().trim();
-        checkInt(text91);
+        grid9[0] = box91.getText().trim();
+        checkInt(grid9[0]);
     }//GEN-LAST:event_box91ActionPerformed
 
     private void box56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box56ActionPerformed
-        text56 = box56.getText().trim();
-        checkInt(text56);
+        grid5[5] = box56.getText().trim();
+        checkInt(grid5[5]);
     }//GEN-LAST:event_box56ActionPerformed
 
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
-        if(!text11.equals("3")){
-            sudokuScore = sudokuScore - 10;
+        for (int a = 0; a < grid1Solution.length; a++) {
+            if (!grid1[a].equals(grid1Solution[a]))
+                sudokuScore = sudokuScore - 10;
         }
-        if(!text13.equals("5")){
-            sudokuScore = sudokuScore - 10;
+        for (int b = 0; b < grid2Solution.length; b++) {
+            if (!grid2[b].equals(grid2Solution[b]))
+                sudokuScore = sudokuScore - 10;
         }
-        if(!text12.equals("2")){
-            sudokuScore = sudokuScore - 10;
+        for (int c = 0; c < grid3Solution.length; c++) {
+            if (!grid3[c].equals(grid3Solution[c]))
+                sudokuScore = sudokuScore - 10;
         }
-        if(!text14.equals("9")){
-            sudokuScore = sudokuScore - 10;
+        for (int d = 0; d < grid4Solution.length; d++) {
+            if (!grid4[d].equals(grid4Solution[d]))
+                sudokuScore = sudokuScore - 10;
         }
-        if(!text15.equals("6")){
-            sudokuScore = sudokuScore - 10;
+        for (int e = 0; e < grid5Solution.length; e++) {
+            if (!grid5[e].equals(grid5Solution[e]))
+                sudokuScore = sudokuScore - 10;
         }
-        if(!text16.equals("4")){
-            sudokuScore = sudokuScore - 10;
+        for (int f = 0; f < grid6Solution.length; f++) {
+            if (!grid6[f].equals(grid6Solution[f]))
+                sudokuScore = sudokuScore - 10;
         }
-        if(!text17.equals("7")){
-            sudokuScore = sudokuScore - 10;
+        for (int g = 0; g < grid7Solution.length; g++) {
+            if (!grid7[g].equals(grid7Solution[g]))
+                sudokuScore = sudokuScore - 10;
         }
-        if(!text21.equals("1")){
-            sudokuScore = sudokuScore - 10;
+        for (int h = 0; h < grid8Solution.length; h++) {
+            if (!grid8[h].equals(grid8Solution[h]))
+                sudokuScore = sudokuScore - 10;
         }
-        if(!text22.equals("8")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text23.equals("5")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text24.equals("7")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text25.equals("2")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text26.equals("9")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text27.equals("3")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text31.equals("9")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text32.equals("2")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text33.equals("3")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text34.equals("1")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text35.equals("8")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text41.equals("6")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text42.equals("1")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text43.equals("2")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text44.equals("3")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text45.equals("7")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text51.equals("1")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text52.equals("4")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text53.equals("6")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text54.equals("8")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text55.equals("5")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text56.equals("9")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text61.equals("2")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text62.equals("5")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text63.equals("4")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text64.equals("9")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text65.equals("6")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text71.equals("6")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text72.equals("9")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text73.equals("8")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text74.equals("7")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text75.equals("4")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text81.equals("7")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text82.equals("8")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text83.equals("1")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text84.equals("3")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text85.equals("4")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text86.equals("5")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text87.equals("6")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text91.equals("3")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text92.equals("4")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text93.equals("2")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text94.equals("7")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text95.equals("6")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text96.equals("8")){
-            sudokuScore = sudokuScore - 10;
-        }
-        if(!text97.equals("1")){
-            sudokuScore = sudokuScore - 10;
+        for (int i = 0; i < grid9Solution.length; i++) {
+            if (!grid9[i].equals(grid9Solution[i]))
+                sudokuScore = sudokuScore - 10;
         }
         int finalScore = score + sudokuScore;
         EndHighScores ehs = new EndHighScores();
