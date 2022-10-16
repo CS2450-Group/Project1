@@ -1212,10 +1212,12 @@ public class Sudoku extends javax.swing.JFrame {
     }//GEN-LAST:event_box21ActionPerformed
 
     private void box22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box22ActionPerformed
+        text22 = box22.getText().trim();
         checkInt(text22);
     }//GEN-LAST:event_box22ActionPerformed
 
     private void box23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box23ActionPerformed
+        text23 = box23.getText().trim();
         checkInt(text23);
     }//GEN-LAST:event_box23ActionPerformed
 
