@@ -119,18 +119,15 @@ public class ButtonGame extends javax.swing.JFrame {
     public void getScore(int points) {
         score = points;
     }
+
     
     // create round 
     private void startGame() {
         if (rounds == 5) {
-            Sudoku sdk = new Sudoku();
-            sdk.setVisible(true);
+            Sudoku next = new Sudoku();
+            next.setVisible(true);
+            next.getScore(score);
             dispose();
-            //EndHighScores ehs = new EndHighScores();
-            //ehs.setVisible(true);
-            //ehs.setFinalScore(score);
-            //ehs.checkHighScore(score);
-            //dispose();
         }
         setColorLabel();
         makeButtonsInvisible();
