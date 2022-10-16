@@ -1448,7 +1448,7 @@ public class Sudoku extends javax.swing.JFrame {
         if(!text53.equals("6")){
             sudokuScore = sudokuScore - 10;
         }
-        if(!text54.equals("7")){
+        if(!text54.equals("8")){
             sudokuScore = sudokuScore - 10;
         }
         if(!text55.equals("5")){
@@ -1529,6 +1529,12 @@ public class Sudoku extends javax.swing.JFrame {
         if(!text97.equals("1")){
             sudokuScore = sudokuScore - 10;
         }
+        int finalScore = score + sudokuScore;
+        EndHighScores ehs = new EndHighScores();
+        ehs.setVisible(true);
+        ehs.setFinalScore(finalScore);
+        ehs.checkHighScore(finalScore);
+        dispose();
     }//GEN-LAST:event_submitButtonActionPerformed
 
     private void quitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitButtonActionPerformed
