@@ -43,8 +43,67 @@ public class Sudoku extends javax.swing.JFrame {
     //current time
     private Timer t;
     private SimpleDateFormat st;
-    
+    // current score
     int score = 0;
+    int sudokuScore = 540;
+    
+    private final static String newline = "\n";
+    
+    // inputted answers
+    String text11;
+    String text12;
+    String text13;
+    String text14;
+    String text15;
+    String text16;
+    String text17;
+    String text21;
+    String text22;
+    String text23;
+    String text24;
+    String text25;
+    String text26;
+    String text27;
+    String text31;
+    String text32;
+    String text33;
+    String text34;
+    String text35;
+    String text41;
+    String text42;
+    String text43;
+    String text44;
+    String text45;
+    String text51;
+    String text52;
+    String text53;
+    String text54;
+    String text55;
+    String text56;
+    String text61;
+    String text62;
+    String text63;
+    String text64;
+    String text65;
+    String text71;
+    String text72;
+    String text73;
+    String text74;
+    String text75;
+    String text81;
+    String text82;
+    String text83;
+    String text84;
+    String text85;
+    String text86;
+    String text87;
+    String text91;
+    String text92;
+    String text93;
+    String text94;
+    String text95;
+    String text96;
+    String text97;
     
     /**
      * Creates new form Sudoku
@@ -105,66 +164,7 @@ public class Sudoku extends javax.swing.JFrame {
     public void getScore(int points) {
         score = points;
     }
-    
-    int sudokuScore = 540;
-    
-    private final static String newline = "\n";
-
-    String text11;
-    String text12;
-    String text13;
-    String text14;
-    String text15;
-    String text16;
-    String text17;
-    String text21;
-    String text22;
-    String text23;
-    String text24;
-    String text25;
-    String text26;
-    String text27;
-    String text31;
-    String text32;
-    String text33;
-    String text34;
-    String text35;
-    String text41;
-    String text42;
-    String text43;
-    String text44;
-    String text45;
-    String text51;
-    String text52;
-    String text53;
-    String text54;
-    String text55;
-    String text56;
-    String text61;
-    String text62;
-    String text63;
-    String text64;
-    String text65;
-    String text71;
-    String text72;
-    String text73;
-    String text74;
-    String text75;
-    String text81;
-    String text82;
-    String text83;
-    String text84;
-    String text85;
-    String text86;
-    String text87;
-    String text91;
-    String text92;
-    String text93;
-    String text94;
-    String text95;
-    String text96;
-    String text97;
-    
+     
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -1534,6 +1534,7 @@ public class Sudoku extends javax.swing.JFrame {
     private void quitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitButtonActionPerformed
         EndHighScores ehs = new EndHighScores();
         ehs.setVisible(true);
+        ehs.setFinalScore(score);
         dispose();
     }//GEN-LAST:event_quitButtonActionPerformed
 
