@@ -1155,271 +1155,325 @@ public class Sudoku extends javax.swing.JFrame {
     private void box11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box11ActionPerformed
         grid1[0] = box11.getText().trim();
         checkInt(grid1[0]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box11ActionPerformed
 
     private void box12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box12ActionPerformed
         grid1[2] = box12.getText().trim();
         checkInt(grid1[2]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box12ActionPerformed
 
     private void box13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box13ActionPerformed
         grid1[1] = box13.getText().trim();
         checkInt(grid1[1]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box13ActionPerformed
 
     private void box14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box14ActionPerformed
         grid1[3] = box14.getText().trim();
         checkInt(grid1[3]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box14ActionPerformed
 
     private void box15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box15ActionPerformed
         grid1[4] = box15.getText().trim();
         checkInt(grid1[4]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box15ActionPerformed
 
     private void box16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box16ActionPerformed
         grid1[5] = box16.getText().trim();
         checkInt(grid1[5]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box16ActionPerformed
 
     private void box17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box17ActionPerformed
         grid1[6] = box17.getText().trim();
         checkInt(grid1[6]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box17ActionPerformed
 
     private void box21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box21ActionPerformed
         grid2[0] = box21.getText().trim();
         checkInt(grid2[0]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box21ActionPerformed
 
     private void box22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box22ActionPerformed
         grid2[1] = box22.getText().trim();
         checkInt(grid2[1]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box22ActionPerformed
 
     private void box23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box23ActionPerformed
         grid2[2] = box23.getText().trim();
         checkInt(grid2[2]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box23ActionPerformed
 
     private void box24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box24ActionPerformed
         grid2[3] = box24.getText().trim();
         checkInt(grid2[3]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box24ActionPerformed
 
     private void box25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box25ActionPerformed
         grid2[4] = box25.getText().trim();
         checkInt(grid2[4]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box25ActionPerformed
 
     private void box26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box26ActionPerformed
         grid2[5] = box26.getText().trim();
         checkInt(grid2[5]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box26ActionPerformed
 
     private void box27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box27ActionPerformed
         grid2[6] = box27.getText().trim();
         checkInt(grid2[6]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box27ActionPerformed
 
     private void box31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box31ActionPerformed
         grid3[0] = box31.getText().trim();
         checkInt(grid3[0]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box31ActionPerformed
 
     private void box32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box32ActionPerformed
         grid3[1] = box32.getText().trim();
         checkInt(grid3[1]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box32ActionPerformed
 
     private void box33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box33ActionPerformed
         grid3[2] = box33.getText().trim();
         checkInt(grid3[2]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box33ActionPerformed
 
     private void box34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box34ActionPerformed
         grid3[3] = box34.getText().trim();
         checkInt(grid3[3]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box34ActionPerformed
 
     private void box35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box35ActionPerformed
         grid3[4] = box35.getText().trim();
         checkInt(grid3[4]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box35ActionPerformed
 
     private void box45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box45ActionPerformed
         grid4[4] = box45.getText().trim();
         checkInt(grid4[4]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box45ActionPerformed
 
     private void box41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box41ActionPerformed
         grid4[0] = box41.getText().trim();
         checkInt(grid4[0]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box41ActionPerformed
 
     private void box42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box42ActionPerformed
         grid4[1] = box42.getText().trim();
         checkInt(grid4[1]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box42ActionPerformed
 
     private void box43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box43ActionPerformed
         grid4[2] = box43.getText().trim();
         checkInt(grid4[2]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box43ActionPerformed
 
     private void box44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box44ActionPerformed
         grid4[3] = box44.getText().trim();
         checkInt(grid4[3]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box44ActionPerformed
 
     private void box55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box55ActionPerformed
         grid5[4] = box55.getText().trim();
         checkInt(grid5[4]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box55ActionPerformed
 
     private void box51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box51ActionPerformed
         grid5[0] = box51.getText().trim();
         checkInt(grid5[0]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box51ActionPerformed
 
     private void box52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box52ActionPerformed
         grid5[1] = box52.getText().trim();
         checkInt(grid5[1]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box52ActionPerformed
 
     private void box53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box53ActionPerformed
         grid5[2] = box53.getText().trim();
         checkInt(grid5[2]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box53ActionPerformed
 
     private void box54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box54ActionPerformed
         grid5[3] = box54.getText().trim();
         checkInt(grid5[3]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box54ActionPerformed
 
     private void box65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box65ActionPerformed
         grid6[4] = box65.getText().trim();
         checkInt(grid6[4]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box65ActionPerformed
 
     private void box61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box61ActionPerformed
         grid6[0] = box61.getText().trim();
         checkInt(grid6[0]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box61ActionPerformed
 
     private void box62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box62ActionPerformed
         grid6[1] = box62.getText().trim();
         checkInt(grid6[1]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box62ActionPerformed
 
     private void box63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box63ActionPerformed
         grid6[2] = box63.getText().trim();
         checkInt(grid6[2]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box63ActionPerformed
 
     private void box64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box64ActionPerformed
         grid6[3] = box64.getText().trim();
         checkInt(grid6[3]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box64ActionPerformed
 
     private void box75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box75ActionPerformed
         grid7[4] = box75.getText().trim();
         checkInt(grid7[4]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box75ActionPerformed
 
     private void box71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box71ActionPerformed
         grid7[0] = box71.getText().trim();
         checkInt(grid7[0]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box71ActionPerformed
 
     private void box72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box72ActionPerformed
         grid7[1] = box72.getText().trim();
         checkInt(grid7[1]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box72ActionPerformed
 
     private void box73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box73ActionPerformed
         grid7[2] = box73.getText().trim();
         checkInt(grid7[2]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box73ActionPerformed
 
     private void box74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box74ActionPerformed
         grid7[3] = box74.getText().trim();
         checkInt(grid7[3]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box74ActionPerformed
 
     private void box85ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box85ActionPerformed
         grid8[4] = box85.getText().trim();
         checkInt(grid8[4]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box85ActionPerformed
 
     private void box86ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box86ActionPerformed
         grid8[5] = box86.getText().trim();
         checkInt(grid8[5]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box86ActionPerformed
 
     private void box87ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box87ActionPerformed
         grid8[6] = box87.getText().trim();
         checkInt(grid8[6]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box87ActionPerformed
 
     private void box81ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box81ActionPerformed
         grid8[0] = box81.getText().trim();
         checkInt(grid8[0]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box81ActionPerformed
 
     private void box82ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box82ActionPerformed
         grid8[1] = box82.getText().trim();
         checkInt(grid8[1]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box82ActionPerformed
 
     private void box83ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box83ActionPerformed
         grid8[2] = box83.getText().trim();
         checkInt(grid8[2]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box83ActionPerformed
 
     private void box84ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box84ActionPerformed
         grid8[3] = box84.getText().trim();
         checkInt(grid8[3]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box84ActionPerformed
 
     private void box92ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box92ActionPerformed
         grid9[1] = box92.getText().trim();
         checkInt(grid9[1]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box92ActionPerformed
 
     private void box93ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box93ActionPerformed
         grid9[2] = box93.getText().trim();
         checkInt(grid9[2]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box93ActionPerformed
 
     private void box94ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box94ActionPerformed
         grid9[3] = box94.getText().trim();
         checkInt(grid9[3]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box94ActionPerformed
 
     private void box95ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box95ActionPerformed
         grid9[4] = box95.getText().trim();
         checkInt(grid9[4]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box95ActionPerformed
 
     private void box96ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box96ActionPerformed
         grid9[5] = box96.getText().trim();
         checkInt(grid9[5]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box96ActionPerformed
 
     private void box97ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box97ActionPerformed
         grid9[6] = box97.getText().trim();
         checkInt(grid9[6]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box97ActionPerformed
 
     private void box91ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box91ActionPerformed
         grid9[0] = box91.getText().trim();
         checkInt(grid9[0]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box91ActionPerformed
 
     private void box56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box56ActionPerformed
         grid5[5] = box56.getText().trim();
         checkInt(grid5[5]);
+        jPanel1.requestFocusInWindow();
     }//GEN-LAST:event_box56ActionPerformed
 
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
