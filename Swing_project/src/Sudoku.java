@@ -45,7 +45,8 @@ public class Sudoku extends javax.swing.JFrame {
     private SimpleDateFormat st;
     // current score
     int score = 0;
-    int sudokuScore = 540;    
+    int mistakes = 0;
+    int sudokuScore = 540 - mistakes*10;    
     // inputted answers
     String[] grid1 = new String[grid1Solution.length];
     String[] grid2 = new String[grid2Solution.length];
@@ -57,7 +58,21 @@ public class Sudoku extends javax.swing.JFrame {
     String[] grid8 = new String[grid8Solution.length];
     String[] grid9 = new String[grid9Solution.length];
     
-    int mistakes = 0;
+    
+    Boolean[] checkGrid1 = new Boolean[7];
+    Boolean[] checkGrid2 = new Boolean[7];
+    Boolean[] checkGrid3 = new Boolean[5];
+    Boolean[] checkGrid4 = new Boolean[5];
+    Boolean[] checkGrid5 = new Boolean[6];
+    Boolean[] checkGrid6 = new Boolean[5];
+    Boolean[] checkGrid7 = new Boolean[5];
+    Boolean[] checkGrid8 = new Boolean[7];
+    Boolean[] checkGrid9 = new Boolean[7];
+    
+
+    
+    
+    
     
     /**
      * Creates new form Sudoku
@@ -66,6 +81,15 @@ public class Sudoku extends javax.swing.JFrame {
         initComponents();
         curDate();
         curTime();
+        createChecker(checkGrid1);
+        createChecker(checkGrid2);
+        createChecker(checkGrid3);
+        createChecker(checkGrid4);
+        createChecker(checkGrid5);
+        createChecker(checkGrid6);
+        createChecker(checkGrid7);
+        createChecker(checkGrid8);
+        createChecker(checkGrid9);
         error.setVisible(false);
 
         Action escapeExit = new AbstractAction(){
@@ -137,11 +161,27 @@ public class Sudoku extends javax.swing.JFrame {
         score = points;
     }
     
-    private void startGame(){
+    public void getMistakes(int wrong) {
+        mistakes = wrong;
+    }
+    
+    public void getSudokuScore(int points){
+        sudokuScore = points;
+    }
+    
+    public void startGame(){
         Sudoku restart = new Sudoku();
         restart.setVisible(true);
         restart.getScore(score);
+        restart.getMistakes(mistakes);
+        restart.getSudokuScore(sudokuScore);
         dispose();
+    }
+    
+    private void createChecker(Boolean[] array){
+        for (int i = 0; i < array.length; i++){
+            array[i] = false;
+        }
     }
     
     /**
@@ -1514,72 +1554,83 @@ public class Sudoku extends javax.swing.JFrame {
     }//GEN-LAST:event_box56ActionPerformed
 
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
+        mistakes = 0;
         for (int a = 0; a < grid1Solution.length; a++) {
-            if (!grid1[a].equals(grid1Solution[a])){
-               sudokuScore = sudokuScore - 10;
-               mistakes++;
+            if (!grid1[a].equals(grid1Solution[a]) && checkGrid1[a] == false){
+                sudokuScore = sudokuScore - 10;
+                mistakes++;
+                checkGrid1[a] = true;
             }
         }
         for (int b = 0; b < grid2Solution.length; b++) {
-            if (!grid2[b].equals(grid2Solution[b])){
+            if (!grid2[b].equals(grid2Solution[b]) && checkGrid2[b] == false){
                 sudokuScore = sudokuScore - 10;
                 mistakes++;
+                checkGrid2[b] = true;
             }
         }
         for (int c = 0; c < grid3Solution.length; c++) {
-            if (!grid3[c].equals(grid3Solution[c])){
+            if (!grid3[c].equals(grid3Solution[c]) && checkGrid3[c] == false){
                 sudokuScore = sudokuScore - 10;
                 mistakes++;
+                checkGrid3[c] = true;
             }  
         }
         for (int d = 0; d < grid4Solution.length; d++) {
-            if (!grid4[d].equals(grid4Solution[d])){
+            if (!grid4[d].equals(grid4Solution[d]) && checkGrid4[d] == false){
                 sudokuScore = sudokuScore - 10;
                 mistakes++;
+                checkGrid4[d] = true;
             }
         }
         for (int e = 0; e < grid5Solution.length; e++) {
-            if (!grid5[e].equals(grid5Solution[e])){
+            if (!grid5[e].equals(grid5Solution[e]) && checkGrid5[e] == false){
                 sudokuScore = sudokuScore - 10;
                 mistakes++;
+                checkGrid5[e] = true;
             }
         }
         for (int f = 0; f < grid6Solution.length; f++) {
-            if (!grid6[f].equals(grid6Solution[f])){
+            if (!grid6[f].equals(grid6Solution[f]) && checkGrid6[f] == false){
                 sudokuScore = sudokuScore - 10;
                 mistakes++;
+                checkGrid6[f] = true;
             }
         }
         for (int g = 0; g < grid7Solution.length; g++) {
-            if (!grid7[g].equals(grid7Solution[g])){
+            if (!grid7[g].equals(grid7Solution[g]) && checkGrid7[g] == false){
                 sudokuScore = sudokuScore - 10;
                 mistakes++;
+                checkGrid7[g] = true;
             }
         }
         for (int h = 0; h < grid8Solution.length; h++) {
-            if (!grid8[h].equals(grid8Solution[h])){
+            if (!grid8[h].equals(grid8Solution[h]) && checkGrid8[h] == false){
                 sudokuScore = sudokuScore - 10;
                 mistakes++;
+                checkGrid8[h] = true;
             }
         }
         for (int i = 0; i < grid9Solution.length; i++) {
-            if (!grid9[i].equals(grid9Solution[i])){
+            if (!grid9[i].equals(grid9Solution[i]) && checkGrid9[i] == false){
                 sudokuScore = sudokuScore - 10;
                 mistakes++;
+                checkGrid9[i] = true;
             }
         }
         
         if(mistakes > 0){
-            mistakes = 0;
             int result = JOptionPane.showConfirmDialog(jPanel1, "One or more inputs was incorrect. Try again?", "Incorrect Input Detected", JOptionPane.YES_NO_OPTION);
             if (result == JOptionPane.NO_OPTION) {
-               int finalScore = score + sudokuScore;
+                int finalScore = score + sudokuScore;
                 EndHighScores ehs = new EndHighScores();
                 ehs.setVisible(true);
                 ehs.setFinalScore(finalScore);
                 ehs.checkHighScore(finalScore);
                 dispose(); 
             }
+            //tryAgainPrompt.setVisible(true);
+            //tryAgainButton.setVisible(true);
         } else{
             int finalScore = score + sudokuScore;
             EndHighScores ehs = new EndHighScores();
@@ -1588,7 +1639,6 @@ public class Sudoku extends javax.swing.JFrame {
             ehs.checkHighScore(finalScore);
             dispose();
         }
-        
     }//GEN-LAST:event_submitButtonActionPerformed
 
     private void quitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitButtonActionPerformed

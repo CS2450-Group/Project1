@@ -40,6 +40,9 @@ public class ButtonGame extends javax.swing.JFrame {
     int rounds = 0;
     // current score
     int score = 0;
+    //current mistakes for sudoku game
+    int wrong = 0;
+    int mistakes = 0;
     //current time
     private Timer t;
     private SimpleDateFormat st;
@@ -119,14 +122,18 @@ public class ButtonGame extends javax.swing.JFrame {
     public void getScore(int points) {
         score = points;
     }
-
+    
+    public void getMistakes(int wrong) {
+        mistakes = wrong;
+    }
     
     // create round 
-    private void startGame() {
+    public void startGame() {
         if (rounds == 5) {
             Sudoku next = new Sudoku();
             next.setVisible(true);
             next.getScore(score);
+            next.getMistakes(wrong);
             dispose();
         }
         setColorLabel();
