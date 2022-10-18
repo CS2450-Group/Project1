@@ -57,6 +57,8 @@ public class Sudoku extends javax.swing.JFrame {
     String[] grid8 = new String[grid8Solution.length];
     String[] grid9 = new String[grid9Solution.length];
     
+    int mistakes = 0;
+    
     /**
      * Creates new form Sudoku
      */
@@ -65,6 +67,9 @@ public class Sudoku extends javax.swing.JFrame {
         curDate();
         curTime();
         error.setVisible(false);
+        tryAgainPrompt.setVisible(false);
+        tryAgainButton.setVisible(false);
+
         Action escapeExit = new AbstractAction(){
             @Override
             public void actionPerformed(ActionEvent e){
@@ -132,6 +137,13 @@ public class Sudoku extends javax.swing.JFrame {
     // get score from previous games
     public void getScore(int points) {
         score = points;
+    }
+    
+    private void startGame(){
+        Sudoku restart = new Sudoku();
+        restart.setVisible(true);
+        restart.getScore(score);
+        dispose();
     }
     
     /**
@@ -241,6 +253,8 @@ public class Sudoku extends javax.swing.JFrame {
         submitButton = new javax.swing.JButton();
         quitButton = new javax.swing.JButton();
         error = new javax.swing.JLabel();
+        tryAgainPrompt = new javax.swing.JLabel();
+        tryAgainButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(600, 400));
@@ -1117,6 +1131,20 @@ public class Sudoku extends javax.swing.JFrame {
         error.setText("ERROR: Only enter values between 1-9");
         jPanel1.add(error, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, -10, 340, 80));
 
+        tryAgainPrompt.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        tryAgainPrompt.setForeground(new java.awt.Color(255, 51, 51));
+        tryAgainPrompt.setText("Mistake encountered, try again?");
+        jPanel1.add(tryAgainPrompt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 280, -1));
+
+        tryAgainButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tryAgainButton.setText("Try again");
+        tryAgainButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tryAgainButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(tryAgainButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
+
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 600, 400);
 
@@ -1130,13 +1158,13 @@ public class Sudoku extends javax.swing.JFrame {
     }//GEN-LAST:event_box11ActionPerformed
 
     private void box12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box12ActionPerformed
-        grid1[1] = box12.getText().trim();
-        checkInt(grid1[1]);
+        grid1[2] = box12.getText().trim();
+        checkInt(grid1[2]);
     }//GEN-LAST:event_box12ActionPerformed
 
     private void box13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box13ActionPerformed
-        grid1[2] = box13.getText().trim();
-        checkInt(grid1[2]);
+        grid1[1] = box13.getText().trim();
+        checkInt(grid1[1]);
     }//GEN-LAST:event_box13ActionPerformed
 
     private void box14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box14ActionPerformed
@@ -1156,7 +1184,7 @@ public class Sudoku extends javax.swing.JFrame {
 
     private void box17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box17ActionPerformed
         grid1[6] = box17.getText().trim();
-        checkInt(grid1[7]);
+        checkInt(grid1[6]);
     }//GEN-LAST:event_box17ActionPerformed
 
     private void box21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box21ActionPerformed
@@ -1396,47 +1424,73 @@ public class Sudoku extends javax.swing.JFrame {
 
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
         for (int a = 0; a < grid1Solution.length; a++) {
-            if (!grid1[a].equals(grid1Solution[a]))
-                sudokuScore = sudokuScore - 10;
+            if (!grid1[a].equals(grid1Solution[a])){
+               sudokuScore = sudokuScore - 10;
+               mistakes++;
+            }
         }
         for (int b = 0; b < grid2Solution.length; b++) {
-            if (!grid2[b].equals(grid2Solution[b]))
+            if (!grid2[b].equals(grid2Solution[b])){
                 sudokuScore = sudokuScore - 10;
+                mistakes++;
+            }
         }
         for (int c = 0; c < grid3Solution.length; c++) {
-            if (!grid3[c].equals(grid3Solution[c]))
+            if (!grid3[c].equals(grid3Solution[c])){
                 sudokuScore = sudokuScore - 10;
+                mistakes++;
+            }  
         }
         for (int d = 0; d < grid4Solution.length; d++) {
-            if (!grid4[d].equals(grid4Solution[d]))
+            if (!grid4[d].equals(grid4Solution[d])){
                 sudokuScore = sudokuScore - 10;
+                mistakes++;
+            }
         }
         for (int e = 0; e < grid5Solution.length; e++) {
-            if (!grid5[e].equals(grid5Solution[e]))
+            if (!grid5[e].equals(grid5Solution[e])){
                 sudokuScore = sudokuScore - 10;
+                mistakes++;
+            }
         }
         for (int f = 0; f < grid6Solution.length; f++) {
-            if (!grid6[f].equals(grid6Solution[f]))
+            if (!grid6[f].equals(grid6Solution[f])){
                 sudokuScore = sudokuScore - 10;
+                mistakes++;
+            }
         }
         for (int g = 0; g < grid7Solution.length; g++) {
-            if (!grid7[g].equals(grid7Solution[g]))
+            if (!grid7[g].equals(grid7Solution[g])){
                 sudokuScore = sudokuScore - 10;
+                mistakes++;
+            }
         }
         for (int h = 0; h < grid8Solution.length; h++) {
-            if (!grid8[h].equals(grid8Solution[h]))
+            if (!grid8[h].equals(grid8Solution[h])){
                 sudokuScore = sudokuScore - 10;
+                mistakes++;
+            }
         }
         for (int i = 0; i < grid9Solution.length; i++) {
-            if (!grid9[i].equals(grid9Solution[i]))
+            if (!grid9[i].equals(grid9Solution[i])){
                 sudokuScore = sudokuScore - 10;
+                mistakes++;
+            }
         }
-        int finalScore = score + sudokuScore;
-        EndHighScores ehs = new EndHighScores();
-        ehs.setVisible(true);
-        ehs.setFinalScore(finalScore);
-        ehs.checkHighScore(finalScore);
-        dispose();
+        
+        if(mistakes > 0){
+            tryAgainPrompt.setVisible(true);
+            tryAgainButton.setVisible(true);
+            System.out.println(mistakes);
+        } else{
+            int finalScore = score + sudokuScore;
+            EndHighScores ehs = new EndHighScores();
+            ehs.setVisible(true);
+            ehs.setFinalScore(finalScore);
+            ehs.checkHighScore(finalScore);
+            dispose();
+        }
+        
     }//GEN-LAST:event_submitButtonActionPerformed
 
     private void quitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitButtonActionPerformed
@@ -1445,6 +1499,10 @@ public class Sudoku extends javax.swing.JFrame {
         ehs.setFinalScore(score);
         dispose();
     }//GEN-LAST:event_quitButtonActionPerformed
+
+    private void tryAgainButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tryAgainButtonActionPerformed
+        startGame();
+    }//GEN-LAST:event_tryAgainButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1580,5 +1638,7 @@ public class Sudoku extends javax.swing.JFrame {
     private javax.swing.JButton submitButton;
     private javax.swing.JLabel time;
     private javax.swing.JLabel title;
+    private javax.swing.JButton tryAgainButton;
+    private javax.swing.JLabel tryAgainPrompt;
     // End of variables declaration//GEN-END:variables
 }
