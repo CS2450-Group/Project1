@@ -16,7 +16,7 @@ import javax.swing.KeyStroke;
 *  class: CS 2450 – User Interface Design and Programming 
 *  
 *  assignment: Swing Project 1  
-*  date last modified: 10/8/2021  
+*  date last modified: 10/22/2021  
 *  
 *  purpose: This program accepts creates a hangman game and a color button game 
 *           in a separate window that has a title screen, main menu, game 
@@ -70,6 +70,7 @@ public class MenuScreen extends javax.swing.JFrame {
         creditsButton = new javax.swing.JButton();
         highscoreButton = new javax.swing.JButton();
         image1 = new javax.swing.JLabel();
+        playPongButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(600, 400));
@@ -115,6 +116,17 @@ public class MenuScreen extends javax.swing.JFrame {
         image1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/1453041.png"))); // NOI18N
         image1.setText("jLabel2");
 
+        playPongButton.setBackground(new java.awt.Color(0, 0, 0));
+        playPongButton.setFont(new java.awt.Font("Times New Roman", 3, 28)); // NOI18N
+        playPongButton.setForeground(new java.awt.Color(255, 255, 255));
+        playPongButton.setText("Play Pong");
+        playPongButton.setToolTipText("Start Pong game");
+        playPongButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                playPongButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -125,13 +137,15 @@ public class MenuScreen extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(creditsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(highscoreButton, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(51, 51, 51)
                         .addComponent(image1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
-                        .addComponent(playButton, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(playButton, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(highscoreButton, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(playPongButton, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(21, 21, 21))
         );
         jPanel1Layout.setVerticalGroup(
@@ -143,6 +157,8 @@ public class MenuScreen extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(playButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(playPongButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(highscoreButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(5, 5, 5)
@@ -188,6 +204,10 @@ public class MenuScreen extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_playButtonActionPerformed
 
+    private void playPongButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playPongButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_playPongButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -230,5 +250,6 @@ public class MenuScreen extends javax.swing.JFrame {
     private javax.swing.JLabel image1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton playButton;
+    private javax.swing.JButton playPongButton;
     // End of variables declaration//GEN-END:variables
 }
