@@ -16,7 +16,7 @@ import javax.swing.KeyStroke;
 *  class: CS 2450 – User Interface Design and Programming 
 *  
 *  assignment: Swing Project 1  
-*  date last modified: 10/22/2021  
+*  date last modified: 10/23/2021  
 *  
 *  purpose: This program accepts creates a hangman game and a color button game 
 *           in a separate window that has a title screen, main menu, game 
@@ -206,6 +206,9 @@ public class MenuScreen extends javax.swing.JFrame {
 
     private void playPongButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playPongButtonActionPerformed
         // TODO add your handling code here:
+        Pong pong = new Pong();
+        pong.setVisible(true);
+        dispose();
     }//GEN-LAST:event_playPongButtonActionPerformed
 
     /**

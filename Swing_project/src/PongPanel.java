@@ -21,14 +21,17 @@ import java.awt.Graphics;
 
 public class PongPanel extends javax.swing.JPanel implements Runnable {
 
+    // size of panel
+    private int panelHeight = 295;
+    private int panelWidth = 310;
     // Paddle objects
     private Paddle paddle1;
     private Paddle paddle2;
-    private final int PADDLE_HEIGHT = 100;
-    private final int PADDLE_WIDTH = 25;
+    private final int PADDLE_HEIGHT = 50;
+    private final int PADDLE_WIDTH = 15;
     // Ball object
     private Ball ball;
-    private final int BALL_DIAMETER = 20;
+    private final int BALL_DIAMETER = 15;
     // player scores
     private int score1;
     private int score2;
@@ -42,12 +45,17 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
      */
     public PongPanel() {
         initComponents();
-        score1 = 0;
-        score2 = 0;
         setPaddles();
         setBall();
+        score1 = 0;
+        score2 = 0;
         running = true;
         gameThread = new Thread(this);
+        startThread();
+    }
+    
+    // start game thread
+    private void startThread() {
         gameThread.start();
     }
     
@@ -56,17 +64,20 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
         super.paintComponent(g);
         paddle1.draw(g);
         paddle2.draw(g);
+        ball.draw(g);
     }
     
     // draw paddles
-    public void setPaddles() {
-        paddle1 = new Paddle(10, (this.getSize().height/ 2) - (PADDLE_HEIGHT/2), PADDLE_WIDTH, PADDLE_HEIGHT, 1);
-        paddle2 = new Paddle(this.getSize().width - PADDLE_WIDTH - 10, (this.getSize().height/ 2) - (PADDLE_HEIGHT/2), PADDLE_WIDTH, PADDLE_HEIGHT, 2);
+    private void setPaddles() {
+        System.out.println("Panel Height: " + panelHeight);
+        System.out.println("Panel Width: " + panelWidth);
+        paddle1 = new Paddle(10, (panelHeight/ 2) - (PADDLE_HEIGHT/2), PADDLE_WIDTH, PADDLE_HEIGHT, 1);
+        paddle2 = new Paddle(panelWidth - PADDLE_WIDTH - 10, (panelHeight/ 2) - (PADDLE_HEIGHT/2), PADDLE_WIDTH, PADDLE_HEIGHT, 2);
     }
     
     // draw ball
-    public void setBall() {
-        ball = new Ball((this.getSize().width/2) - (BALL_DIAMETER/2), (this.getSize().height/2) - (BALL_DIAMETER/2), BALL_DIAMETER);
+    private void setBall() {
+        ball = new Ball((panelWidth/2) - (BALL_DIAMETER/2), (panelHeight/2) - (BALL_DIAMETER/2), BALL_DIAMETER);
     }
     
     // move paddles
@@ -120,7 +131,7 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
     private void initComponents() {
 
         setBackground(new java.awt.Color(0, 0, 0));
-        setPreferredSize(new java.awt.Dimension(314, 295));
+        setPreferredSize(new java.awt.Dimension(310, 295));
         addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 formKeyPressed(evt);
