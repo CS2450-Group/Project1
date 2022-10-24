@@ -69,10 +69,9 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
     
     // draw paddles
     private void setPaddles() {
-        System.out.println("Panel Height: " + panelHeight);
-        System.out.println("Panel Width: " + panelWidth);
-        paddle1 = new Paddle(10, (panelHeight/ 2) - (PADDLE_HEIGHT/2), PADDLE_WIDTH, PADDLE_HEIGHT, 1);
-        paddle2 = new Paddle(panelWidth - PADDLE_WIDTH - 10, (panelHeight/ 2) - (PADDLE_HEIGHT/2), PADDLE_WIDTH, PADDLE_HEIGHT, 2);
+        int middle = (panelHeight/2) - (PADDLE_HEIGHT/2);
+        paddle1 = new Paddle(10, middle, PADDLE_WIDTH, PADDLE_HEIGHT, 1);
+        paddle2 = new Paddle(panelWidth - PADDLE_WIDTH - 10, middle, PADDLE_WIDTH, PADDLE_HEIGHT, 2);
     }
     
     // draw ball
@@ -120,7 +119,7 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
     public int getScore2() {
         return score2;
     }
-    
+       
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -170,11 +169,11 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
         // game loop for pong game
         long lastTime = System.nanoTime();
         double amountOfTicks = 60.0;
-        double ns = 1000000000 / amountOfTicks;
+        double ns = (1000000000 / amountOfTicks);
         double delta = 0;
         while (running) {
             long now = System.nanoTime();
-            delta = (delta + (now - lastTime)) / ns;
+            delta = delta + ((now - lastTime) / ns);
             lastTime = now;
             if (delta >= 1) {
                 move();

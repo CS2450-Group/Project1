@@ -30,7 +30,7 @@ public class Ball extends Rectangle{
     private int xVelocity;
     private int yVelocity;
     // speed of ball
-    private int speed = 2;
+    private final int speed = 2;
     
     // initialize Ball object
     public Ball(int xLoc, int yLoc, int diameter) {
@@ -49,13 +49,13 @@ public class Ball extends Rectangle{
     }
     
     // indicate the x direction of ball movement
-    public void setXDirection(int x) {
-        xVelocity = x;
+    public void setXDirection(int xValue) {
+        xVelocity = xValue;
     }
     
     // indicate the y direction of ball movement
-    public void setYDirection(int y) {
-        yVelocity = y;
+    public void setYDirection(int yValue) {
+        yVelocity = yValue;
     }
     
     // moves the ball in x and y direction

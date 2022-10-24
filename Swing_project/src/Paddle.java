@@ -27,7 +27,7 @@ public class Paddle extends Rectangle{
     // id of paddle
     private int id;
     // speed of paddle movement
-    private int yVelocity;
+    public int yVelocity;
     
     // initialize Paddle object
     public Paddle(int xLoc, int yLoc, int paddleWidth, int paddleHeight, int identity) {
@@ -36,8 +36,8 @@ public class Paddle extends Rectangle{
     }
     
     // indicate how much paddle moves up or down
-    public void setYDirection(int y) {
-        yVelocity = y;
+    public void setYDirection(int yValue) {
+        yVelocity = yValue;
     }
     
     // move paddle based on velocity
