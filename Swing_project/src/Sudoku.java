@@ -17,7 +17,6 @@
 * 
 ****************************************************************/
 
-import java.awt.TextArea;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
@@ -105,7 +104,7 @@ public class Sudoku extends javax.swing.JFrame {
             Action popUp = new AbstractAction(){
             @Override
             public void actionPerformed(ActionEvent e){
-                JOptionPane.showMessageDialog(null, "Fall 2022 Semester Project 1.2 by:\n\n"
+                JOptionPane.showMessageDialog(null, "Fall 2022 Semester Project by:\n\n"
                         + "Timmy Lin, 015073799\n"
                         + "Owen Lovett, 014846715\n"
                         + "Kristine Trevino Kinoshita, 014679639\n"

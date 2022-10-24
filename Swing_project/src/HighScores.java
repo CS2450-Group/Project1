@@ -16,7 +16,7 @@ import javax.swing.KeyStroke;
 *  class: CS 2450 – User Interface Design and Programming 
 *  
 *  assignment: Swing Project 1  
-*  date last modified: 10/8/2021  
+*  date last modified: 10/24/2021  
 *  
 *  purpose: This program accepts creates a hangman game and a color button game 
 *           in a separate window that has a title screen, main menu, game 
@@ -58,7 +58,7 @@ public class HighScores extends javax.swing.JFrame {
             Action popUp = new AbstractAction(){
             @Override
             public void actionPerformed(ActionEvent e){
-                JOptionPane.showMessageDialog(null, "Fall 2022 Semester Project 1.2 by:\n\n"
+                JOptionPane.showMessageDialog(null, "Fall 2022 Semester Project by:\n\n"
                         + "Timmy Lin, 015073799\n"
                         + "Owen Lovett, 014846715\n"
                         + "Kristine Trevino Kinoshita, 014679639\n"
