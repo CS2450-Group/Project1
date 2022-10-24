@@ -9,7 +9,7 @@
 *  class: CS 2450 – User Interface Design and Programming 
 *  
 *  assignment: Swing Project 1  
-*  date last modified: 10/22/2021  
+*  date last modified: 10/23/2021  
 *  
 *  purpose: This program accepts creates a hangman game and a color button game 
 *           in a separate window that has a title screen, main menu, game 
@@ -29,6 +29,8 @@ import javax.swing.Timer;
 
 public class Pong extends javax.swing.JFrame {
 
+    // game panel
+    PongPanel pongGame = new PongPanel();
     //current time
     private Timer t;
     private SimpleDateFormat st;
@@ -61,6 +63,10 @@ public class Pong extends javax.swing.JFrame {
         };
         jPanel1.getInputMap().put(KeyStroke.getKeyStroke("F1"), "popUp");
         jPanel1.getActionMap().put("popUp", popUp);
+        
+        // add game panel
+        add(pongGame);
+        pack();
     }
     
     //current date
@@ -85,6 +91,12 @@ public class Pong extends javax.swing.JFrame {
             }
         });
         t.start();
+    }
+    
+    // display player scores
+    public void setScores(int player1, int player2) {
+        Player1Score.setText(String.valueOf(player1));
+        Player2Score.setText(String.valueOf(player2));
     }
 
     /**
@@ -169,24 +181,23 @@ public class Pong extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(12, 12, 12)
                         .addComponent(Player1ScoreLabel))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
+                        .addGap(48, 48, 48)
                         .addComponent(Player1Score)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pongScreen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(quitButton))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Player2ScoreLabel))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(Player2Score)))
-                .addContainerGap(45, Short.MAX_VALUE))
+                        .addGap(42, 42, 42)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Player2Score)
+                            .addComponent(quitButton))))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
