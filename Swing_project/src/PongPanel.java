@@ -91,17 +91,17 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
         // stop paddles from leaving panel
         if (paddle1.y <= 0)
             paddle1.y = 0;
-        if (paddle1.y >= (this.getSize().height - PADDLE_HEIGHT))
-                paddle1.y = this.getSize().height - PADDLE_HEIGHT;
+        if (paddle1.y >= (panelHeight - PADDLE_HEIGHT))
+                paddle1.y = panelHeight - PADDLE_HEIGHT;
         if (paddle2.y <= 0)
             paddle2.y = 0;
-        if (paddle2.y >= (this.getSize().height - PADDLE_HEIGHT))
-                paddle2.y = this.getSize().height - PADDLE_HEIGHT;
+        if (paddle2.y >= (panelHeight - PADDLE_HEIGHT))
+                paddle2.y = panelHeight - PADDLE_HEIGHT;
         
         // prevent ball moving out from top and bottom of screen
         if (ball.y <= 0)
             ball.setYDirection(-ball.getYVelocity());
-        if (ball.y >= (this.getSize().height - BALL_DIAMETER))
+        if (ball.y >= (panelHeight - BALL_DIAMETER))
             ball.setYDirection(ball.getYVelocity());
         
         // bounce ball off paddles
@@ -109,6 +109,22 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
             ball.setXDirection(Math.abs(ball.getXVelocity()));
         if (ball.intersects(paddle2))
             ball.setXDirection(-ball.getXVelocity());
+        
+        // determine score when ball goes to other side
+        if (ball.x <= 0) {
+            score2 = score2 + 10;
+            if (score2 == 100)
+                running = false;
+            else
+                setBall();
+        }
+        if (ball.x >= panelWidth) {
+            score1 = score1 + 10;
+            if (score1 == 100)
+                running = false;
+            else
+                setBall();
+        }
     }
     
     // send player scores to JFrame
@@ -118,6 +134,14 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
     
     public int getScore2() {
         return score2;
+    }
+    
+    // set size of panel
+    @Override
+    public void setSize(int xValue, int yValue) {
+        super.setSize(xValue, yValue);
+        panelWidth = xValue;
+        panelHeight = yValue;
     }
        
     /**
