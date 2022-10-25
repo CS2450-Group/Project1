@@ -96,11 +96,6 @@ public class Pong extends javax.swing.JFrame {
         t.start();
     }
     
-    // display player scores
-    public void setScores() {
-        Player1Score.setText(String.valueOf(pongGame.getScore1()));
-        Player2Score.setText(String.valueOf(pongGame.getScore2()));
-    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -116,10 +111,7 @@ public class Pong extends javax.swing.JFrame {
         time = new javax.swing.JLabel();
         quitButton = new javax.swing.JButton();
         Player1ScoreLabel = new javax.swing.JLabel();
-        Player2ScoreLabel = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        Player1Score = new javax.swing.JLabel();
-        Player2Score = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -141,19 +133,9 @@ public class Pong extends javax.swing.JFrame {
         });
 
         Player1ScoreLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Player1ScoreLabel.setText("Player 1 Score:");
-
-        Player2ScoreLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Player2ScoreLabel.setText("Player 2 Score:");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 30)); // NOI18N
         jLabel1.setText("Pong");
-
-        Player1Score.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Player1Score.setText("00");
-
-        Player2Score.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Player2Score.setText("00");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -166,25 +148,11 @@ public class Pong extends javax.swing.JFrame {
                 .addComponent(time, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(15, 15, 15))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(Player1ScoreLabel))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(Player1Score)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 335, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(Player2ScoreLabel)
-                        .addGap(15, 15, 15))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(quitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(Player2Score)
-                                .addGap(16, 16, 16)))
-                        .addGap(48, 48, 48))))
+                .addGap(14, 14, 14)
+                .addComponent(Player1ScoreLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 478, Short.MAX_VALUE)
+                .addComponent(quitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -200,19 +168,13 @@ public class Pong extends javax.swing.JFrame {
                     .addComponent(time))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addComponent(Player2ScoreLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 172, Short.MAX_VALUE)
+                        .addGap(13, 223, Short.MAX_VALUE)
                         .addComponent(quitButton)
                         .addGap(103, 103, 103))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(Player1ScoreLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Player1Score, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Player2Score, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(25, 261, Short.MAX_VALUE))))
+                        .addGap(25, 306, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -274,10 +236,7 @@ public class Pong extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Player1Score;
     private javax.swing.JLabel Player1ScoreLabel;
-    private javax.swing.JLabel Player2Score;
-    private javax.swing.JLabel Player2ScoreLabel;
     private javax.swing.JLabel date;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
