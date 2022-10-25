@@ -23,14 +23,13 @@ import javax.swing.AbstractAction;
 import javax.swing.Action;
 import javax.swing.JOptionPane;
 import javax.swing.KeyStroke;
-import javax.swing.SwingUtilities;
 
 public class PongPanel extends javax.swing.JPanel implements Runnable {
 
     int winner = 0;
     // size of panel
     private int panelHeight = 295;
-    private int panelWidth = 310;
+    private int panelWidth = 430;
     // Paddle objects
     private Paddle paddle1;
     private Paddle paddle2;
@@ -236,7 +235,7 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
         startControl = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 0, 0));
-        setPreferredSize(new java.awt.Dimension(310, 295));
+        setPreferredSize(new java.awt.Dimension(430, 295));
         addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 formKeyPressed(evt);
@@ -249,25 +248,27 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
 
         player2Score.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         player2Score.setForeground(new java.awt.Color(255, 255, 255));
+        player2Score.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         player2Score.setText("0");
-        add(player2Score, new org.netbeans.lib.awtextra.AbsoluteConstraints(269, 6, 35, -1));
+        add(player2Score, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, 35, -1));
 
         player1Score.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         player1Score.setForeground(new java.awt.Color(255, 255, 255));
         player1Score.setText("0");
-        add(player1Score, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 6, 38, -1));
+        add(player1Score, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 38, -1));
 
         roundLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         roundLabel.setForeground(new java.awt.Color(255, 255, 255));
+        roundLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         roundLabel.setText("Round 1");
         roundLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        add(roundLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 8, 80, 24));
+        add(roundLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 80, 24));
         roundLabel.getAccessibleContext().setAccessibleName("roundLabel");
 
         startControl.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         startControl.setForeground(new java.awt.Color(255, 255, 255));
         startControl.setText("Press SPACE to start");
-        add(startControl, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 256, -1, -1));
+        add(startControl, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed

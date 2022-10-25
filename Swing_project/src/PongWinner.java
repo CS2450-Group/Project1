@@ -10,16 +10,20 @@ import javax.swing.KeyStroke;
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
-/**
- *
- * @author Sudis
- */
+/***************************************************************  
+*  file: PongWinner.java  
+*  author: Timmy Lin, Owen Lovett, Kristine Trevino Kinoshita, Scott Lee 
+*  class: CS 2450 – User Interface Design and Programming 
+*  
+*  assignment: Swing Project 1  
+*  date last modified: 10/24/2021  
+*  
+*  purpose: This program accepts creates a hangman game and a color button game 
+*           in a separate window that has a title screen, main menu, game 
+*           screen, high score screen, and credits.
+*  
+****************************************************************/
 public class PongWinner extends javax.swing.JFrame {
-
-    /**
-     * Creates new form PongWinner
-     */
-    
     
     PongPanel p = new PongPanel();
     int winner = p.getWinner();
@@ -77,11 +81,6 @@ public class PongWinner extends javax.swing.JFrame {
 
         backButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         backButton.setText("Back");
-        backButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                backButtonMouseClicked(evt);
-            }
-        });
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButtonActionPerformed(evt);
@@ -135,10 +134,6 @@ public class PongWinner extends javax.swing.JFrame {
         jf1.setVisible(true);
         dispose();
     }//GEN-LAST:event_backButtonActionPerformed
-
-    private void backButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backButtonMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_backButtonMouseClicked
 
     /**
      * @param args the command line arguments
