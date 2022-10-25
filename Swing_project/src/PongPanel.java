@@ -160,6 +160,7 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
             }
             else{
                 setBall();
+                setPaddles();
                 running = false;
                 roundLabel.setVisible(true);
                 roundLabel.setText("Round" + " " + round);
@@ -174,6 +175,7 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
             }
             else{
                 setBall();
+                setPaddles();
                 running = false;
                 roundLabel.setVisible(true);
                 roundLabel.setText("Round" + " " + round);
