@@ -20,6 +20,7 @@
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
+import java.awt.event.KeyEvent;
 import java.util.Random;
 
 public class Ball extends Rectangle{
@@ -62,6 +63,7 @@ public class Ball extends Rectangle{
     public void move() {
         x = x + xVelocity;
         y = y + yVelocity;
+        
     }
     
     // paints ball onto panel
@@ -78,6 +80,12 @@ public class Ball extends Rectangle{
     // get y velocity variable
     public int getYVelocity() {
         return yVelocity;
+    }
+    
+    public void keyPressed(KeyEvent e){
+        if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+            move();
+        }
     }
     
 }
