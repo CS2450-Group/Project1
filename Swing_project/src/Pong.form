@@ -54,46 +54,16 @@
                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                          <Component id="Player1ScoreLabel" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-                          <Component id="Player1Score" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace pref="335" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="Player2ScoreLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="quitButton" min="-2" pref="60" max="-2" attributes="0"/>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="Player2Score" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
+                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                  <Component id="Player1ScoreLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="478" max="32767" attributes="0"/>
+                  <Component id="quitButton" min="-2" pref="60" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" pref="70" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="205" max="-2" attributes="0"/>
-                          <Component id="startControl" min="-2" pref="176" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" pref="70" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="507" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -108,23 +78,14 @@
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-                          <Component id="Player2ScoreLabel" min="-2" pref="38" max="-2" attributes="0"/>
-                          <EmptySpace pref="172" max="32767" attributes="0"/>
+                          <EmptySpace min="13" pref="223" max="32767" attributes="0"/>
                           <Component id="quitButton" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="Player1ScoreLabel" min="-2" pref="35" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="Player1Score" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="Player2Score" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="startControl" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                          <EmptySpace min="25" pref="306" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -161,15 +122,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Player 1 Score:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="Player2ScoreLabel">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="18" style="0"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Player 2 Score:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
@@ -178,33 +130,6 @@
               <Font name="Segoe UI" size="30" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Pong"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="Player1Score">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="18" style="0"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="00"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="Player2Score">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="18" style="0"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="00"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="startControl">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="18" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="33" red="0" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Press SPACE to Start"/>
           </Properties>
         </Component>
       </SubComponents>
