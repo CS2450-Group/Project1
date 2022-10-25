@@ -30,7 +30,7 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
     int winner = 0;
     // size of panel
     private int panelHeight = 295;
-    private int panelWidth = 430;
+    private int panelWidth = 310;
     // Paddle objects
     private Paddle paddle1;
     private Paddle paddle2;
@@ -106,7 +106,6 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
         running = true;
         gameThread = new Thread(this);
         gameThread.start();
-        System.out.println("Started");
     }
     
     // draw paddles
@@ -237,7 +236,7 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
         startControl = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 0, 0));
-        setPreferredSize(new java.awt.Dimension(430, 295));
+        setPreferredSize(new java.awt.Dimension(310, 295));
         addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 formKeyPressed(evt);
@@ -250,9 +249,7 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
 
         player2Score.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         player2Score.setForeground(new java.awt.Color(255, 255, 255));
-        player2Score.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         player2Score.setText("0");
-        player2Score.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         add(player2Score, new org.netbeans.lib.awtextra.AbsoluteConstraints(269, 6, 35, -1));
 
         player1Score.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -270,38 +267,6 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
         startControl.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         startControl.setForeground(new java.awt.Color(255, 255, 255));
         startControl.setText("Press SPACE to start");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addComponent(player1Score, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(112, 112, 112)
-                .addComponent(roundLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
-                .addComponent(player2Score, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(144, 144, 144)
-                .addComponent(startControl)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(player2Score)
-                    .addComponent(player1Score)
-                    .addComponent(roundLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 224, Short.MAX_VALUE)
-                .addComponent(startControl)
-                .addGap(19, 19, 19))
-        );
-
-        roundLabel.getAccessibleContext().setAccessibleName("roundLabel");
         add(startControl, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 256, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
