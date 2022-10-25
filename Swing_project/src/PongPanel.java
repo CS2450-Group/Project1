@@ -160,9 +160,9 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
                 running = false;
                 winner = 2;
                 PongWinner next = new PongWinner();
+                next.setWinner(winner);
                 next.setVisible(true);
-                SwingUtilities.getWindowAncestor(next);
-                next.dispose();
+                dispose();
             }
             else{
                 setBall();
@@ -180,9 +180,9 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
                 running = false;
                 winner = 1;
                 PongWinner next = new PongWinner();
+                next.setWinner(winner);
                 next.setVisible(true);
-                SwingUtilities.getWindowAncestor(next);
-                next.dispose();
+                dispose();
             }
             else{
                 setBall();
@@ -216,6 +216,11 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
         panelHeight = yValue;
     }
     
+    public void dispose() {
+        Pong parent = (Pong) this.getTopLevelAncestor();
+        parent.dispose();
+    }
+    
        
     /**
      * This method is called from within the constructor to initialize the form.
@@ -241,21 +246,26 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
                 formKeyReleased(evt);
             }
         });
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         player2Score.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         player2Score.setForeground(new java.awt.Color(255, 255, 255));
         player2Score.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         player2Score.setText("0");
         player2Score.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        add(player2Score, new org.netbeans.lib.awtextra.AbsoluteConstraints(269, 6, 35, -1));
 
         player1Score.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         player1Score.setForeground(new java.awt.Color(255, 255, 255));
         player1Score.setText("0");
+        add(player1Score, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 6, 38, -1));
 
         roundLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         roundLabel.setForeground(new java.awt.Color(255, 255, 255));
-        roundLabel.setText("Round 0");
+        roundLabel.setText("Round 1");
         roundLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        add(roundLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 8, 80, 24));
+        roundLabel.getAccessibleContext().setAccessibleName("roundLabel");
 
         startControl.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         startControl.setForeground(new java.awt.Color(255, 255, 255));
@@ -292,6 +302,7 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
         );
 
         roundLabel.getAccessibleContext().setAccessibleName("roundLabel");
+        add(startControl, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 256, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed

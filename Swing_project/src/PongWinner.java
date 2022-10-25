@@ -20,12 +20,12 @@ public class PongWinner extends javax.swing.JFrame {
      * Creates new form PongWinner
      */
     
-    int winner = 0;
+    
     PongPanel p = new PongPanel();
+    int winner = p.getWinner();
     public PongWinner() {
         initComponents();
-        winner = p.getWinner();
-        setWinner(winner);
+        
         
         Action escapeExit = new AbstractAction(){
             @Override
@@ -52,7 +52,7 @@ public class PongWinner extends javax.swing.JFrame {
         jPanel1.getActionMap().put("popUp", popUp);
     }
 
-    private void setWinner(int player){
+    public void setWinner(int player){
         pongWinner.setText("PLAYER " + player + " HAS WON");
     }
     
