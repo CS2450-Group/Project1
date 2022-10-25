@@ -34,7 +34,7 @@ public class Paddle extends Rectangle{
         super(xLoc, yLoc, paddleWidth, paddleHeight);
         id = identity;
     }
-    
+
     // indicate how much paddle moves up or down
     public void setYDirection(int yValue) {
         yVelocity = yValue;
