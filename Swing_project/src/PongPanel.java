@@ -36,7 +36,7 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
     private int score1;
     private int score2;
     // thread for game
-    private final Thread gameThread;
+    private Thread gameThread;
     // check if game is running
     private boolean running = false;
     
@@ -49,15 +49,7 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
         setBall();
         score1 = 0;
         score2 = 0;
-        running = true;
-        gameThread = new Thread(this);
-        startThread();
         this.setFocusable(true);
-    }
-    
-    // start game thread
-    private void startThread() {
-        gameThread.start();
     }
     
     // draw on JPanel
@@ -66,6 +58,14 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
         paddle1.draw(g);
         paddle2.draw(g);
         ball.draw(g);
+    }
+    
+    // begin up game
+    public void start() {
+        running = true;
+        gameThread = new Thread(this);
+        gameThread.start();
+        System.out.println("Started");
     }
     
     // draw paddles
@@ -103,7 +103,7 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
         if (ball.y <= 0)
             ball.setYDirection(-ball.getYVelocity());
         if (ball.y >= (panelHeight - BALL_DIAMETER))
-            ball.setYDirection(ball.getYVelocity());
+            ball.setYDirection(-ball.getYVelocity());
         
         // bounce ball off paddles
         if (ball.intersects(paddle1))

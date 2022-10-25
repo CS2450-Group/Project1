@@ -19,6 +19,7 @@
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.AbstractAction;
@@ -63,6 +64,15 @@ public class Pong extends javax.swing.JFrame {
         };
         jPanel1.getInputMap().put(KeyStroke.getKeyStroke("F1"), "popUp");
         jPanel1.getActionMap().put("popUp", popUp);
+        Action gameStart = new AbstractAction(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                pongGame.start();
+                startControl.setVisible(false);
+            }
+        };
+        pongGame.getInputMap().put(KeyStroke.getKeyStroke("SPACE"), "gameStart");
+        pongGame.getActionMap().put("gameStart", gameStart);
        
         // add game panel to surface panel
         jPanel1.add(pongGame);
@@ -119,6 +129,7 @@ public class Pong extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         Player1Score = new javax.swing.JLabel();
         Player2Score = new javax.swing.JLabel();
+        startControl = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -154,6 +165,10 @@ public class Pong extends javax.swing.JFrame {
         Player2Score.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Player2Score.setText("00");
 
+        startControl.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        startControl.setForeground(new java.awt.Color(0, 51, 255));
+        startControl.setText("Press SPACE to Start");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -164,10 +179,6 @@ public class Pong extends javax.swing.JFrame {
                 .addGap(6, 6, 6)
                 .addComponent(time, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(15, 15, 15))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -188,6 +199,15 @@ public class Pong extends javax.swing.JFrame {
                                 .addComponent(Player2Score)
                                 .addGap(16, 16, 16)))
                         .addGap(48, 48, 48))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(205, 205, 205)
+                        .addComponent(startControl, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -211,7 +231,9 @@ public class Pong extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Player1Score, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Player2Score, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(startControl)
+                        .addGap(25, 25, 25))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -281,6 +303,7 @@ public class Pong extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton quitButton;
+    private javax.swing.JLabel startControl;
     private javax.swing.JLabel time;
     // End of variables declaration//GEN-END:variables
 }
