@@ -45,6 +45,7 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
     private Thread gameThread;
     // check if game is running
     private boolean running = false;
+    private int round = 1;
     
     /**
      * Creates new form PongPanel
@@ -77,6 +78,18 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
         };
         this.getInputMap().put(KeyStroke.getKeyStroke("F1"), "popUp");
         this.getActionMap().put("popUp", popUp);
+        
+        Action gameStart = new AbstractAction(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                start();
+                roundLabel.setVisible(false);
+                startControl.setVisible(false);
+                round++;
+            }
+        };
+        this.getInputMap().put(KeyStroke.getKeyStroke("SPACE"), "gameStart");
+        this.getActionMap().put("gameStart", gameStart);
     }
     
     // draw on JPanel
@@ -145,8 +158,13 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
                 running = false;
                 winner = 2;
             }
-            else
+            else{
                 setBall();
+                running = false;
+                roundLabel.setVisible(true);
+                roundLabel.setText("Round" + " " + round);
+                startControl.setVisible(true);
+            }
         }
         if (ball.x >= panelWidth) {
             score1 = score1 + 10;
@@ -154,8 +172,13 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
                 running = false;
                 winner = 1;
             }
-            else
+            else{
                 setBall();
+                running = false;
+                roundLabel.setVisible(true);
+                roundLabel.setText("Round" + " " + round);
+                startControl.setVisible(true);
+            }
         }
     }
     
@@ -191,6 +214,9 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        roundLabel = new javax.swing.JLabel();
+        startControl = new javax.swing.JLabel();
+
         setBackground(new java.awt.Color(0, 0, 0));
         setPreferredSize(new java.awt.Dimension(310, 295));
         addKeyListener(new java.awt.event.KeyAdapter() {
@@ -202,15 +228,36 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
             }
         });
 
+        roundLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        roundLabel.setForeground(new java.awt.Color(255, 255, 255));
+        roundLabel.setText("Round 1");
+
+        startControl.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        startControl.setForeground(new java.awt.Color(0, 51, 255));
+        startControl.setText("Press SPACE to Start");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(71, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(roundLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(101, 101, 101))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(startControl, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(63, 63, 63))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(roundLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 226, Short.MAX_VALUE)
+                .addComponent(startControl)
+                .addGap(14, 14, 14))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -248,5 +295,7 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel roundLabel;
+    private javax.swing.JLabel startControl;
     // End of variables declaration//GEN-END:variables
 }
