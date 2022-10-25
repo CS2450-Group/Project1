@@ -160,7 +160,9 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
                 running = false;
                 winner = 2;
                 PongWinner next = new PongWinner();
+                next.setWinner(winner);
                 next.setVisible(true);
+                dispose();
             }
             else{
                 setBall();
@@ -178,7 +180,9 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
                 running = false;
                 winner = 1;
                 PongWinner next = new PongWinner();
+                next.setWinner(winner);
                 next.setVisible(true);
+                dispose();
             }
             else{
                 setBall();
@@ -210,6 +214,11 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
         super.setSize(xValue, yValue);
         panelWidth = xValue;
         panelHeight = yValue;
+    }
+    
+    public void dispose() {
+        Pong parent = (Pong) this.getTopLevelAncestor();
+        parent.dispose();
     }
     
        
