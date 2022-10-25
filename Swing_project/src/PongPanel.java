@@ -52,6 +52,7 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
         running = true;
         gameThread = new Thread(this);
         startThread();
+        this.setFocusable(true);
     }
     
     // start game thread
@@ -143,6 +144,8 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
         panelWidth = xValue;
         panelHeight = yValue;
     }
+    
+    
        
     /**
      * This method is called from within the constructor to initialize the form.

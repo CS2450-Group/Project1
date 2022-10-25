@@ -68,6 +68,7 @@ public class Pong extends javax.swing.JFrame {
         jPanel1.add(pongGame);
         pongGame.setLocation(145, 55);
         pongGame.setSize(310, 295);
+        pongGame.grabFocus();
     }
     
     //current date
