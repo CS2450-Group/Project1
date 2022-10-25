@@ -21,6 +21,7 @@ import java.awt.Graphics;
 
 public class PongPanel extends javax.swing.JPanel implements Runnable {
 
+    int winner = 0;
     // size of panel
     private int panelHeight = 295;
     private int panelWidth = 310;
@@ -114,15 +115,19 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
         // determine score when ball goes to other side
         if (ball.x <= 0) {
             score2 = score2 + 10;
-            if (score2 == 100)
+            if (score2 == 100){
                 running = false;
+                winner = 2;
+            }
             else
                 setBall();
         }
         if (ball.x >= panelWidth) {
             score1 = score1 + 10;
-            if (score1 == 100)
+            if (score1 == 100){
                 running = false;
+                winner = 1;
+            }
             else
                 setBall();
         }
@@ -135,6 +140,10 @@ public class PongPanel extends javax.swing.JPanel implements Runnable {
     
     public int getScore2() {
         return score2;
+    }
+    
+    public int getWinner(){
+        return winner;
     }
     
     // set size of panel
